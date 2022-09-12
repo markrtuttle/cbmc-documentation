@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="smt_sortt::storert\l\< derivedt \>",height=0.2,width=0.4,color="black",URL="$classsmt__sortt_1_1storert.html",tooltip="Class for adding the ability to up and down cast smt_sortt to and from irept."];
-}

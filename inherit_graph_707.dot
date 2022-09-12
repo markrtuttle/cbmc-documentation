@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="smt_check_sat_response\l_kindt::storert\< derivedt \>",height=0.2,width=0.4,color="black",URL="$classsmt__check__sat__response__kindt_1_1storert.html",tooltip="Class for adding the ability to up and down cast smt_check_sat_response_kindt to and from irept."];
-}

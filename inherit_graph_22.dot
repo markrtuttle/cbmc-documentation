@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="ai_history_baset::compare\l_historyt",height=0.2,width=0.4,color="black",URL="$structai__history__baset_1_1compare__historyt.html",tooltip="In a number of places we need to work with sets of histories so that these (a) make use of the immuta..."];
-}

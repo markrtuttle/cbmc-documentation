@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="symex_level2t",height=0.2,width=0.4,color="black",URL="$structsymex__level2t.html",tooltip="Functor to set the level 2 renaming of SSA expressions."];
-}

@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="value_set_fit::object\l_map_dt",height=0.2,width=0.4,color="black",URL="$classvalue__set__fit_1_1object__map__dt.html",tooltip=" "];
-}

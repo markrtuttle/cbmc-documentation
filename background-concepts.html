@@ -133,7 +133,7 @@ AST</h2>
 <p>The key data structure that stores the result of this step is known as an <b>Abstract Syntax Tree</b>, or <b>AST</b> for short (cf. <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Wikipedia</a>). ASTs are still relatively close to the source code, and represent the structure of the source code while abstracting away from syntactic details, e.g., dropping parentheses, semicolons and braces as long as those are only used for grouping.</p>
 <p>Considering the example of the C program given above, we first notice that the program describes (in C terms) a single <em>translation unit</em>, consisting of four top-level <em>declarations</em> (the two function forward declarations of <code>atoi</code> and <code>printf</code>, and the function definitions of <code>factorial</code> and <code>main</code>). Let us start considering the specification of <code>atoi</code>. This gives rise to a subtree modeling that we have a function called <code>atoi</code> whose return type is <code>int</code>, with an unnamed argument of type <code>const char *</code>. We can represent this using a tree that has, for instance, the following structure (this is a simplified version of the tree that the CPROVER framework uses internally):</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_1.svg" width="206" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 AST for the `atoi` declaration</div>
 </div>
 <p>This graph shows the (simplified) AST structure for the <code>atoi</code> function. The top level says that this is a global entity, namely one that has code (i.e., a function), called <code>atoi</code> and yielding <code>int</code>. Furthermore, it has a child node initiating a parameter list, and there is a node in the parameter list for each parameter, giving its type and name, if a name is given.</p>
@@ -144,7 +144,7 @@ AST for the `atoi` declaration</div>
 </ol>
 <p>The first statement is already a basic statement: we represent it as a local declaration (similar to the global declarations above) of a variable.</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_2.svg" width="255" height="122"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 AST for `unsigned long fac = 1`</div>
 </div>
 <p>The second statement is a compound statement, which we can decompose further. At the top level, we have a node stating that this is a <code>for</code> statement, with four child nodes:</p><ol type="1">
@@ -157,17 +157,17 @@ AST for `unsigned long fac = 1`</div>
 </li>
 </ol>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_3.svg" width="1114" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 AST for the `for` loop</div>
 </div>
 <p>Finally, the third statement is again simple: it consists of a return statement node, with a child node for the variable expression <code>fac</code>. Since the AST is very similar to the first AST above, we omit it here. All in all, the AST for the function body looks like this:</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_4.svg" width="1236" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 AST for the body of `factorial`</div>
 </div>
 <p>Using the AST for the function body, we can easily produce the definition of the <code>factorial</code> function:</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_5.svg" width="1236" height="692"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 AST for `factorial` (full definition)</div>
 </div>
 <p>In the end, we produce a sequence of trees modeling each declaration in the translation unit (i.e., the file <code>factorial.c</code>).</p>
@@ -178,7 +178,7 @@ Symbol tables and variable disambiguation</h3>
 <p>The issue that this step addresses is that the meaning of a variable name depends on a given <em>scope</em> - for instance, in a C program, we can define the variable <code>i</code> as a local variable in two different functions, so that the name <code>i</code> refers to two different objects, depending on which function is being executed at a given point in time.</p>
 <p>To resolve this problem, a first transformation step is performed, changing (short) variable names to some form of unique identifier. This ensures that each variable identifier is used only once, and all accesses to a given variable can be easily found by just looking for the variable identifier. For instance, we could change each variable name into a pair of the name and a serial number. The serial number gets increased whenever a variable of that name is declared. In the example, the ASTs for <code>factorial</code> and <code>main</code> after resolving variable names would look roughly like this:</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_6.svg" width="2783" height="788"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 ASTs with resolved variables</div>
 </div>
 <p>Note that the parameter <code>n</code> in <code>factorial</code> and the local variable <code>n</code> in <code>main</code> are now disambiguated as <code>n.1</code> and <code>n.2</code>; furthermore, we leave the names of global objects as-is. In the CPROVER framework, a more elaborate system is used: local variables are prefixed with the function names, and further disambiguation is performed by adding indices. For brevity, we use indices only.</p>
@@ -247,7 +247,7 @@ Control Flow Graphs (CFG)</h2>
 <p>In particular, each member of the sequence but the first must have exactly one predecessor, and each member of the sequence but the last must have exactly one successor. These criteria explain why we have the basic blocks described above.</p>
 <p>Putting everything together, we get a control flow graph like this:</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_7.svg" width="455" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 Control flow graph for factorial</div>
 </div>
 <p>The graph can be read as follows: each node corresponds to a basic block. The initial basic block (where the function is entered) is marked with a double border, while those basic blocks that leave the function have a gray background. An edge from a basic block B to a basic block B', means that if the execution reaches the end of B, execution may continue in B'. Some edges are labeled: the edge leaving the comparison basic block with the label <code>true</code>, for instance, can only be taken if the comparison did, in fact, return <code>true</code>.</p>
@@ -269,21 +269,21 @@ SSA</h2>
 <div class="line"><span class="keywordflow">return</span> x;</div>
 </div><!-- fragment --><p>The corresponding control flow graph looks like this:</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_8.svg" width="163" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 CFG for maximum function</div>
 </div>
 <p>When we try to transform to SSA, we get: </p><div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_9.svg" width="176" height="296"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 CFG for maximum function - SSA, attempt</div>
 </div>
 <p> Depending on which path the execution takes, we have to return either <code>x.1</code> or <code>x.2</code>! The way to make this work is to introduce a function &Phi; that selects the right instance of the variable; in the example, we would have </p><div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_10.svg" width="195" height="296"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 CFG for maximum function - SSA using &Phi;</div>
 </div>
 <p>In the CPROVER framework, we provide a precise implementation of &Phi;, using explicitly tracked information about which branches were taken by the program. There are also some differences in how loops are handled (finite unrolling in CPROVER, versus a &Phi;-based approach in compilers); this approach will be discussed in a later chapter.</p>
 <p>For the time being, let us come back to <code>factorial</code>. We can now give an SSA using &Phi; functions:</p>
 <div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_11.svg" width="435" height="311"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 Control flow graph in SSA for factorial</div>
 </div>
 <p>The details of SSA construction, plus some discussion of how it is used in compilers, can be found in the <a href="https://dl.acm.org/citation.cfm?doid=115372.115320">original paper</a>.</p>
@@ -563,7 +563,7 @@ Abstract Interpretation</h3>
 <p>The third ingredient is straightforward: we use a simple map from program locations and variable names to values in the abstract domain. In more complex analyses, more involved forms of maps may be used (e.g., to handle arbitrary procedure calls, or to account for the heap).</p>
 <p>At this point, we have almost all the ingredients we need to set up an abstract interpretation. To actually analyze a function, we take its CFG and perform a <em>fixpoint algorithm</em>.</p>
 <p>Concretely, let us consider the CFG for factorial again. This time, we have named the basic blocks, and simplified the variable names. </p><div class="dotgraph">
-<div class="caption">
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_12.svg" width="415" height="331"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe><div class="caption">
 Control flow graph for factorial - named basic blocks</div>
 </div>
 <p>We provide an initial variable map: <code>n</code> is "could be 0" before BB1. As a first step, we analyze BB1 and find that the final variable map should be:</p><ul>

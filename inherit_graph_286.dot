@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="generic_parameter_specialization\l_mapt::printert",height=0.2,width=0.4,color="black",URL="$structgeneric__parameter__specialization__mapt_1_1printert.html",tooltip="A wrapper for a generic_parameter_specialization_mapt and a namespacet that can be output to a stream..."];
-}

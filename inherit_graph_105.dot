@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="code_with_references\l_listt",height=0.2,width=0.4,color="black",URL="$classcode__with__references__listt.html",tooltip="Wrapper around a list of shared pointer to code_with_referencest objects, which provides a nicer inte..."];
-}

@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="goto_inlinet::goto\l_inline_logt",height=0.2,width=0.4,color="black",URL="$classgoto__inlinet_1_1goto__inline__logt.html",tooltip=" "];
-}

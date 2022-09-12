@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="method_bytecodet::class\l_method_and_bytecodet",height=0.2,width=0.4,color="black",URL="$structmethod__bytecodet_1_1class__method__and__bytecodet.html",tooltip="Pair of class id and methodt."];
-}

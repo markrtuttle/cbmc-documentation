@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="statement_list_typecheckt\l::nesting_stack_entryt",height=0.2,width=0.4,color="black",URL="$structstatement__list__typecheckt_1_1nesting__stack__entryt.html",tooltip="Every time branching occurs inside of a boolean expression string in STL, the current value of the RL..."];
-}

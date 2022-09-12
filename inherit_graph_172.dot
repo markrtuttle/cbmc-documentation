@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="depth_iterator_expr\l_statet",height=0.2,width=0.4,color="black",URL="$structdepth__iterator__expr__statet.html",tooltip="Helper class for depth_iterator_baset."];
-}

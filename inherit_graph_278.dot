@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="gdb_apit::memory_addresst",height=0.2,width=0.4,color="black",URL="$structgdb__apit_1_1memory__addresst.html",tooltip="Memory address imbued with the explicit boolean data indicating if the address is null or not."];
-}

@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="equation_symbol_mappingt",height=0.2,width=0.4,color="black",URL="$classequation__symbol__mappingt.html",tooltip="Maps equation to expressions contained in them and conversely expressions to equations that contain t..."];
-}

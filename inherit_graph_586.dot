@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="ref_count_ift\< enabled \>",height=0.2,width=0.4,color="black",URL="$structref__count__ift.html",tooltip="Used in tree_nodet for activating or not reference counting."];
-}
