@@ -1,0 +1,24 @@
+digraph "value_sett::entryt"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="value_sett::entryt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Represents a row of a value_sett."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" identifier" ,fontname="Helvetica"];
+  Node2 [label="dstringt",height=0.2,width=0.4,color="black",URL="$classdstringt.html",tooltip="dstringt has one field, an unsigned integer no which is an index into a static table of strings."];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" suffix" ,fontname="Helvetica"];
+  Node3 [label="std::string",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" object_map" ,fontname="Helvetica"];
+  Node5 [label="reference_counting\l\< object_map_dt, empty\l_object_map \>",height=0.2,width=0.4,color="black",URL="$classreference__counting.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" d" ,fontname="Helvetica"];
+  Node6 [label="reference_counting\l\< T, empty \>::dt",height=0.2,width=0.4,color="black",URL="$classreference__counting_1_1dt.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node8 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< object_map_dt, empty\l_object_map \>" ,fontname="Helvetica"];
+  Node8 [label="reference_counting\l\< T, empty \>",height=0.2,width=0.4,color="black",URL="$classreference__counting.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" d" ,fontname="Helvetica"];
+}

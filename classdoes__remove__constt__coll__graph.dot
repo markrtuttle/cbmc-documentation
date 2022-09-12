@@ -1,0 +1,27 @@
+digraph "does_remove_constt"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="does_remove_constt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" goto_program" ,fontname="Helvetica"];
+  Node2 [label="goto_programt",height=0.2,width=0.4,color="black",URL="$classgoto__programt.html",tooltip="A generic container class for the GOTO intermediate representation of one function."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instructions" ,fontname="Helvetica"];
+  Node3 [label="std::list\< instructiont \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node4 [label="statement_list_parse\l_treet::instructiont",height=0.2,width=0.4,color="black",URL="$structstatement__list__parse__treet_1_1instructiont.html",tooltip="Represents a regular Statement List instruction which consists out of one or more codet tokens."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tokens" ,fontname="Helvetica"];
+  Node5 [label="std::vector\< codet \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node6 [label="codet",height=0.2,width=0.4,color="black",URL="$classcodet.html",tooltip="Data structure for representing an arbitrary statement in a program."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="exprt",height=0.2,width=0.4,color="red",URL="$classexprt.html",tooltip="Base class for all expressions."];
+  Node13 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< codet \>" ,fontname="Helvetica"];
+  Node13 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node14 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node17 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< instructiont \>" ,fontname="Helvetica"];
+  Node17 [label="std::list\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node14 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+}

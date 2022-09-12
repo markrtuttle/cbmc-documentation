@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="value_set_dereferencet\l::valuet",height=0.2,width=0.4,color="black",URL="$classvalue__set__dereferencet_1_1valuet.html",tooltip="Return value for build_reference_to; see that method for documentation."];
+}

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="dense_integer_mapt\l\< K, V, KeyToDenseInteger \>",height=0.2,width=0.4,color="black",URL="$classdense__integer__mapt.html",tooltip="A map type that is backed by a vector, which relies on the ability to (a) see the keys that might be ..."];
+}

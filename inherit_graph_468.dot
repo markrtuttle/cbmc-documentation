@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="local_safe_pointerst\l::type_comparet",height=0.2,width=0.4,color="black",URL="$structlocal__safe__pointerst_1_1type__comparet.html",tooltip="Comparator that regards type-equal expressions as equal, and otherwise uses the natural (operator<) o..."];
+}

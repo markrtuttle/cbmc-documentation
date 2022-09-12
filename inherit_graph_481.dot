@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="memory_snapshot_harness\l_generatort::entry_source\l_locationt",height=0.2,width=0.4,color="black",URL="$structmemory__snapshot__harness__generatort_1_1entry__source__locationt.html",tooltip="User provided source location: file name and line number; the structure wraps this option with a pars..."];
+}

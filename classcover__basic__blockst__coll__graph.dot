@@ -1,0 +1,49 @@
+digraph "cover_basic_blockst"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cover_basic_blockst",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cover_blocks_baset",height=0.2,width=0.4,color="black",URL="$classcover__blocks__baset.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block_map" ,fontname="Helvetica"];
+  Node3 [label="std::map\< goto_programt\l::const_targett, std::\lsize_t \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node4 [label="std::list\< T \>::const\l_iterator",height=0.2,width=0.4,color="grey75",tooltip="STL iterator class."];
+  Node5 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< goto_programt::const\l_targett, std::size_t \>" ,fontname="Helvetica"];
+  Node5 [label="std::map\< K, T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node6 [label="K",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node7 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block_infos" ,fontname="Helvetica"];
+  Node8 [label="std::vector\< cover\l_basic_blockst::block\l_infot \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node9 [label="cover_basic_blockst\l::block_infot",height=0.2,width=0.4,color="black",URL="$structcover__basic__blockst_1_1block__infot.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" source_lines" ,fontname="Helvetica"];
+  Node10 [label="source_linest",height=0.2,width=0.4,color="black",URL="$classsource__linest.html",tooltip=" "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block_lines" ,fontname="Helvetica"];
+  Node11 [label="std::map\< std::string,\l function_linest \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node12 [label="std::string",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node5 -> Node11 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< std::string, function\l_linest \>" ,fontname="Helvetica"];
+  Node14 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" source_location" ,fontname="Helvetica"];
+  Node14 [label="source_locationt",height=0.2,width=0.4,color="black",URL="$classsource__locationt.html",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="irept",height=0.2,width=0.4,color="black",URL="$classirept.html",tooltip="There are a large number of kinds of tree structured or tree-like data in CPROVER."];
+  Node16 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="sharing_treet\< irept,\l forward_list_as_mapt\l\< irep_idt, irept \> \>",height=0.2,width=0.4,color="black",URL="$classsharing__treet.html",tooltip=" "];
+  Node17 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" empty_d\ndata" ,fontname="Helvetica"];
+  Node17 [label="tree_nodet\< treet,\l named_subtreest, sharing \>",height=0.2,width=0.4,color="red",URL="$classtree__nodet.html",tooltip="A node with data in a tree, it contains:"];
+  Node22 -> Node16 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< irept, forward_list\l_as_mapt\< irep_idt, irept \> \>" ,fontname="Helvetica"];
+  Node22 [label="sharing_treet\< derivedt,\l named_subtreest \>",height=0.2,width=0.4,color="black",URL="$classsharing__treet.html",tooltip="Base class for tree-like data structures with sharing."];
+  Node17 -> Node22 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" empty_d\ndata" ,fontname="Helvetica"];
+  Node20 -> Node8 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< cover_basic_blockst\l::block_infot \>" ,fontname="Helvetica"];
+  Node20 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node7 -> Node20 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+}

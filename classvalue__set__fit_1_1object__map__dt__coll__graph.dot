@@ -1,0 +1,17 @@
+digraph "value_set_fit::object_map_dt"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="value_set_fit::object\l_map_dt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" blank" ,fontname="Helvetica"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="Helvetica"];
+  Node2 [label="std::map\< object_numberingt\l::number_type, offsett \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< object_numberingt\l::number_type, offsett \>" ,fontname="Helvetica"];
+  Node3 [label="std::map\< K, T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node4 [label="K",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node5 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+}

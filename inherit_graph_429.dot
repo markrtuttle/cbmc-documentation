@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="java_class_loader_baset\l::classpath_entryt",height=0.2,width=0.4,color="black",URL="$structjava__class__loader__baset_1_1classpath__entryt.html",tooltip="An entry in the classpath."];
+}

@@ -1,0 +1,43 @@
+digraph "concurrency_aware_ait&lt; domainT &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="concurrency_aware_ait\l\< domainT \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Base class for concurrency-aware abstract interpretation."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ait\< domainT \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip="ait supplies three of the four components needed: an abstract interpreter (in this case handling func..."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ai_recursive_interproceduralt",height=0.2,width=0.4,color="black",URL="$classai__recursive__interproceduralt.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ai_baset",height=0.2,width=0.4,color="black",URL="$classai__baset.html",tooltip="This is the basic interface of the abstract interpreter with default implementations of the core func..."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" message_handler" ,fontname="Helvetica"];
+  Node5 [label="message_handlert",height=0.2,width=0.4,color="black",URL="$classmessage__handlert.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" message_count" ,fontname="Helvetica"];
+  Node6 [label="std::vector\< std::size_t \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< std::size_t \>" ,fontname="Helvetica"];
+  Node7 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node8 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" domain_factory" ,fontname="Helvetica"];
+  Node9 [label="std::unique_ptr\< ai\l_domain_factory_baset \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptr" ,fontname="Helvetica"];
+  Node10 [label="ai_domain_factory_baset",height=0.2,width=0.4,color="black",URL="$classai__domain__factory__baset.html",tooltip=" "];
+  Node11 -> Node9 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< ai_domain_factory\l_baset \>" ,fontname="Helvetica"];
+  Node11 [label="std::unique_ptr\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node8 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptr" ,fontname="Helvetica"];
+  Node12 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" storage" ,fontname="Helvetica"];
+  Node12 [label="std::unique_ptr\< ai\l_storage_baset \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptr" ,fontname="Helvetica"];
+  Node13 [label="ai_storage_baset",height=0.2,width=0.4,color="black",URL="$classai__storage__baset.html",tooltip="This is the basic interface for storing domains."];
+  Node11 -> Node12 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< ai_storage_baset \>" ,fontname="Helvetica"];
+  Node14 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" history_factory" ,fontname="Helvetica"];
+  Node14 [label="std::unique_ptr\< ai\l_history_factory_baset \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptr" ,fontname="Helvetica"];
+  Node15 [label="ai_history_factory\l_baset",height=0.2,width=0.4,color="black",URL="$classai__history__factory__baset.html",tooltip="As more detailed histories can get complex (for example, nested loops or deep, mutually recursive cal..."];
+  Node11 -> Node14 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< ai_history_factory\l_baset \>" ,fontname="Helvetica"];
+  Node16 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" no_logging" ,fontname="Helvetica"];
+  Node16 [label="null_message_handlert",height=0.2,width=0.4,color="black",URL="$classnull__message__handlert.html",tooltip=" "];
+  Node5 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

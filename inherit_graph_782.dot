@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="sparse_bitvector_analysist\< V \>",height=0.2,width=0.4,color="black",URL="$classsparse__bitvector__analysist.html",tooltip="An instance of this class provides an assignment of unique numeric ID to each inserted reaching_defin..."];
+}

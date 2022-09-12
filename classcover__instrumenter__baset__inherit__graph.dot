@@ -1,0 +1,27 @@
+digraph "cover_instrumenter_baset"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cover_instrumenter\l_baset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Base class for goto program coverage instrumenters."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cover_assertion_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__assertion__instrumentert.html",tooltip="Assertion coverage instrumenter."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="cover_assume_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__assume__instrumentert.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="cover_branch_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__branch__instrumentert.html",tooltip="Branch coverage instrumenter."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="cover_condition_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__condition__instrumentert.html",tooltip="Condition coverage instrumenter."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="cover_cover_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__cover__instrumentert.html",tooltip="__CPROVER_cover coverage instrumenter"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="cover_decision_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__decision__instrumentert.html",tooltip="Decision coverage instrumenter."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="cover_location_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__location__instrumentert.html",tooltip="Basic block coverage instrumenter."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="cover_mcdc_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__mcdc__instrumentert.html",tooltip="MC/DC coverage instrumenter."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="cover_path_instrumentert",height=0.2,width=0.4,color="black",URL="$classcover__path__instrumentert.html",tooltip="Path coverage instrumenter."];
+}

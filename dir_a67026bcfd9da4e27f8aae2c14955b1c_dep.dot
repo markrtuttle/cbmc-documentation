@@ -1,0 +1,19 @@
+digraph "/home/runner/work/cbmc-documentation/cbmc-documentation/src/solvers/qbf" {
+  bgcolor=transparent;
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_19373f467389307dc54ab8a6e9e19559 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="solvers" fontname="Helvetica", fontsize="10", URL="dir_19373f467389307dc54ab8a6e9e19559.html"]
+  dir_a67026bcfd9da4e27f8aae2c14955b1c [shape=box, label="qbf", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a67026bcfd9da4e27f8aae2c14955b1c.html"];
+  }
+  dir_b7878ad5ecbf2506f4125b9d34c97e45 [shape=box label="util" URL="dir_b7878ad5ecbf2506f4125b9d34c97e45.html"];
+  dir_e391775a03ff229430b5b1f21da1ae18 [shape=box label="sat" URL="dir_e391775a03ff229430b5b1f21da1ae18.html"];
+  dir_f27efa9855da05acfb0caa0983180615 [shape=box label="prop" URL="dir_f27efa9855da05acfb0caa0983180615.html"];
+  dir_e391775a03ff229430b5b1f21da1ae18->dir_b7878ad5ecbf2506f4125b9d34c97e45 [headlabel="31", labeldistance=1.5 headhref="dir_000058_000036.html"];
+  dir_e391775a03ff229430b5b1f21da1ae18->dir_f27efa9855da05acfb0caa0983180615 [headlabel="2", labeldistance=1.5 headhref="dir_000058_000055.html"];
+  dir_a67026bcfd9da4e27f8aae2c14955b1c->dir_b7878ad5ecbf2506f4125b9d34c97e45 [headlabel="18", labeldistance=1.5 headhref="dir_000056_000036.html"];
+  dir_a67026bcfd9da4e27f8aae2c14955b1c->dir_e391775a03ff229430b5b1f21da1ae18 [headlabel="1", labeldistance=1.5 headhref="dir_000056_000058.html"];
+  dir_a67026bcfd9da4e27f8aae2c14955b1c->dir_f27efa9855da05acfb0caa0983180615 [headlabel="1", labeldistance=1.5 headhref="dir_000056_000055.html"];
+  dir_f27efa9855da05acfb0caa0983180615->dir_b7878ad5ecbf2506f4125b9d34c97e45 [headlabel="17", labeldistance=1.5 headhref="dir_000055_000036.html"];
+}

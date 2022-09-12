@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="small_shared_n_way\l_ptrt\< d_containert\l\< keyT, valueT, equalT\l \>, d_leaft\< SN_TYPE_ARGS\l \>, d_internalt\< SN_TYPE\l_ARGS \> \>",height=0.2,width=0.4,color="black",URL="$classsmall__shared__n__way__ptrt.html",tooltip=" "];
+}

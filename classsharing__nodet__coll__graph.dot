@@ -1,0 +1,16 @@
+digraph "sharing_nodet&lt; keyT, valueT, equalT &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sharing_nodet\< keyT,\l valueT, equalT \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="Helvetica"];
+  Node2 [label="small_shared_n_way\l_ptrt\< d_containert\l\< keyT, valueT, equalT\l \>, d_leaft\< SN_TYPE_ARGS\l \>, d_internalt\< SN_TYPE\l_ARGS \> \>",height=0.2,width=0.4,color="black",URL="$classsmall__shared__n__way__ptrt.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p" ,fontname="Helvetica"];
+  Node3 [label="small_shared_n_way\l_pointee_baset\< N, Num \>",height=0.2,width=0.4,color="black",URL="$classsmall__shared__n__way__pointee__baset.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< d_containert\< keyT,\l valueT, equalT \>, d\l_leaft\< SN_TYPE_ARGS \>\l, d_internalt\< SN_TYPE\l_ARGS \> \>" ,fontname="Helvetica"];
+  Node4 [label="small_shared_n_way\l_ptrt\< Ts \>",height=0.2,width=0.4,color="black",URL="$classsmall__shared__n__way__ptrt.html",tooltip="This class is similar to small_shared_ptrt and boost's intrusive_ptr."];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p" ,fontname="Helvetica"];
+}

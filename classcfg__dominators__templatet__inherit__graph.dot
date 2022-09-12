@@ -1,0 +1,15 @@
+digraph "cfg_dominators_templatet&lt; P, T, post_dom &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cfg_dominators_templatet\l\< P, T, post_dom \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Dominator graph."];
+  Node1 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< goto_programt, goto\l_programt::targett, false \>" ,fontname="Helvetica"];
+  Node2 [label="cfg_dominators_templatet\l\< goto_programt, goto_programt\l::targett, false \>",height=0.2,width=0.4,color="black",URL="$classcfg__dominators__templatet.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< P, T, false \>" ,fontname="Helvetica"];
+  Node3 [label="cfg_dominators_templatet\l\< P, T, false \>",height=0.2,width=0.4,color="black",URL="$classcfg__dominators__templatet.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< const goto_programt,\l goto_programt::const\l_targett, false \>" ,fontname="Helvetica"];
+  Node4 [label="cfg_dominators_templatet\l\< const goto_programt,\l goto_programt::const_targett,\l false \>",height=0.2,width=0.4,color="black",URL="$classcfg__dominators__templatet.html",tooltip=" "];
+}

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="cfg_instruction_to\l_dense_integert\< goto\l_programt::const_targett \>",height=0.2,width=0.4,color="black",URL="$classcfg__instruction__to__dense__integert_3_01goto__programt_1_1const__targett_01_4.html",tooltip="GOTO-instruction to location number functor."];
+}

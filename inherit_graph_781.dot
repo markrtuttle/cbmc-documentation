@@ -1,0 +1,57 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1688 [label="ai_baset",height=0.2,width=0.4,color="black",URL="$classai__baset.html",tooltip="This is the basic interface of the abstract interpreter with default implementations of the core func..."];
+  Node1688 -> Node1689 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1689 [label="ai_recursive_interproceduralt",height=0.2,width=0.4,color="black",URL="$classai__recursive__interproceduralt.html",tooltip=" "];
+  Node1689 -> Node1690 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1690 [label="ai_three_way_merget",height=0.2,width=0.4,color="black",URL="$classai__three__way__merget.html",tooltip=" "];
+  Node1690 -> Node1115 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1115 [label="variable_sensitivity\l_dependence_grapht",height=0.2,width=0.4,color="black",URL="$classvariable__sensitivity__dependence__grapht.html",tooltip=" "];
+  Node1689 -> Node1691 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1691 [label="ait\< domainT \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip="ait supplies three of the four components needed: an abstract interpreter (in this case handling func..."];
+  Node1691 -> Node1692 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1692 [label="concurrency_aware_ait\l\< domainT \>",height=0.2,width=0.4,color="black",URL="$classconcurrency__aware__ait.html",tooltip="Base class for concurrency-aware abstract interpretation."];
+  Node1689 -> Node1693 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1693 [label="ait\< constant_propagator\l_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1693 -> Node1694 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1694 [label="constant_propagator_ait",height=0.2,width=0.4,color="black",URL="$classconstant__propagator__ait.html",tooltip=" "];
+  Node1689 -> Node1695 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1695 [label="ait\< custom_bitvector\l_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1695 -> Node1696 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1696 [label="custom_bitvector_analysist",height=0.2,width=0.4,color="black",URL="$classcustom__bitvector__analysist.html",tooltip=" "];
+  Node1689 -> Node1697 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1697 [label="ait\< dep_graph_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1697 -> Node1120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1120 [label="dependence_grapht",height=0.2,width=0.4,color="black",URL="$classdependence__grapht.html",tooltip=" "];
+  Node1689 -> Node1698 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1698 [label="ait\< escape_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1698 -> Node1699 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1699 [label="escape_analysist",height=0.2,width=0.4,color="black",URL="$classescape__analysist.html",tooltip=" "];
+  Node1689 -> Node1700 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1700 [label="ait\< global_may_alias\l_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1700 -> Node1701 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1701 [label="global_may_alias_analysist",height=0.2,width=0.4,color="black",URL="$classglobal__may__alias__analysist.html",tooltip="This is a may analysis (i.e."];
+  Node1689 -> Node1702 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1702 [label="ait\< invariant_set\l_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1702 -> Node1703 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1703 [label="invariant_propagationt",height=0.2,width=0.4,color="black",URL="$classinvariant__propagationt.html",tooltip=" "];
+  Node1689 -> Node1704 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1704 [label="ait\< rd_range_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1704 -> Node1705 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1705 [label="concurrency_aware_ait\l\< rd_range_domaint \>",height=0.2,width=0.4,color="black",URL="$classconcurrency__aware__ait.html",tooltip=" "];
+  Node1705 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="reaching_definitions\l_analysist",height=0.2,width=0.4,color="black",URL="$classreaching__definitions__analysist.html",tooltip=" "];
+  Node1689 -> Node1706 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1706 [label="ait\< uninitialized\l_domaint \>",height=0.2,width=0.4,color="black",URL="$classait.html",tooltip=" "];
+  Node1119 [label="grapht\< dep_nodet \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip=" "];
+  Node1119 -> Node1120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1114 [label="grapht\< vs_dep_nodet \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip=" "];
+  Node1114 -> Node1115 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="sparse_bitvector_analysist\l\< reaching_definitiont \>",height=0.2,width=0.4,color="black",URL="$classsparse__bitvector__analysist.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

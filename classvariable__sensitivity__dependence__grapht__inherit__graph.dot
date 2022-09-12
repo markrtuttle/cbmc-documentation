@@ -1,0 +1,18 @@
+digraph "variable_sensitivity_dependence_grapht"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="variable_sensitivity\l_dependence_grapht",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ai_three_way_merget",height=0.2,width=0.4,color="black",URL="$classai__three__way__merget.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ai_recursive_interproceduralt",height=0.2,width=0.4,color="black",URL="$classai__recursive__interproceduralt.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ai_baset",height=0.2,width=0.4,color="black",URL="$classai__baset.html",tooltip="This is the basic interface of the abstract interpreter with default implementations of the core func..."];
+  Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="grapht\< vs_dep_nodet \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< vs_dep_nodet \>" ,fontname="Helvetica"];
+  Node6 [label="grapht\< N \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip="A generic directed graph with a parametric node type."];
+}

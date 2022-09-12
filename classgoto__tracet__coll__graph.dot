@@ -1,0 +1,41 @@
+digraph "goto_tracet"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="goto_tracet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Trace of a GOTO program."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" steps" ,fontname="Helvetica"];
+  Node2 [label="std::list\< goto_trace\l_stept \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node3 [label="goto_trace_stept",height=0.2,width=0.4,color="black",URL="$classgoto__trace__stept.html",tooltip="Step of the trace of a GOTO program."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" io_args" ,fontname="Helvetica"];
+  Node4 [label="std::list\< exprt \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node5 [label="exprt",height=0.2,width=0.4,color="black",URL="$classexprt.html",tooltip="Base class for all expressions."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="irept",height=0.2,width=0.4,color="black",URL="$classirept.html",tooltip="There are a large number of kinds of tree structured or tree-like data in CPROVER."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sharing_treet\< irept,\l forward_list_as_mapt\l\< irep_idt, irept \> \>",height=0.2,width=0.4,color="red",URL="$classsharing__treet.html",tooltip=" "];
+  Node15 -> Node4 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< exprt \>" ,fontname="Helvetica"];
+  Node15 [label="std::list\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node12 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node12 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node16 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type" ,fontname="Helvetica"];
+  Node16 [label="typet",height=0.2,width=0.4,color="black",URL="$classtypet.html",tooltip="The type of an expression, extends irept."];
+  Node6 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" called_function\nformat_string\nproperty_id\nfunction_id\nio_id" ,fontname="Helvetica"];
+  Node13 [label="dstringt",height=0.2,width=0.4,color="black",URL="$classdstringt.html",tooltip="dstringt has one field, an unsigned integer no which is an index into a static table of strings."];
+  Node17 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comment" ,fontname="Helvetica"];
+  Node17 [label="std::string",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node18 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" full_lhs\ncond_expr\nfull_lhs_value" ,fontname="Helvetica"];
+  Node19 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function_arguments" ,fontname="Helvetica"];
+  Node19 [label="std::vector\< exprt \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node5 -> Node19 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node11 -> Node19 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< exprt \>" ,fontname="Helvetica"];
+  Node11 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node15 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< goto_trace_stept \>" ,fontname="Helvetica"];
+}

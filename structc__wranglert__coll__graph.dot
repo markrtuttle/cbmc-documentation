@@ -1,0 +1,28 @@
+digraph "c_wranglert"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="c_wranglert",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" objects" ,fontname="Helvetica"];
+  Node2 [label="std::list\< std::pair\l\< std::regex, objectt \> \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< std::pair\< std::regex,\l objectt \> \>" ,fontname="Helvetica"];
+  Node3 [label="std::list\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node4 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" functions" ,fontname="Helvetica"];
+  Node5 [label="std::list\< std::pair\l\< std::regex, functiont \> \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< std::pair\< std::regex,\l functiont \> \>" ,fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" output" ,fontname="Helvetica"];
+  Node6 [label="std::string",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" includes\ndefines\nsource_files" ,fontname="Helvetica"];
+  Node8 [label="std::vector\< std::string \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node9 -> Node8 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< std::string \>" ,fontname="Helvetica"];
+  Node9 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+}

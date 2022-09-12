@@ -1,0 +1,21 @@
+digraph "concurrent_cfg_baset&lt; T, P, I &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="concurrent_cfg_baset\l\< T, P, I \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cfg_baset\< T, const\l goto_programt, goto\l_programt::const_targett \>",height=0.2,width=0.4,color="black",URL="$classcfg__baset.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grapht\< cfg_base_nodet\l\< T, goto_programt::const\l_targett \> \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< cfg_base_nodet\< T,\l goto_programt::const\l_targett \> \>" ,fontname="Helvetica"];
+  Node4 [label="grapht\< N \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip="A generic directed graph with a parametric node type."];
+  Node5 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< T, const goto_programt,\l goto_programt::const_targett \>" ,fontname="Helvetica"];
+  Node5 [label="cfg_baset\< T, P, I \>",height=0.2,width=0.4,color="black",URL="$classcfg__baset.html",tooltip="A multi-procedural control flow graph (CFG) whose nodes store references to instructions in a GOTO pr..."];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< T, const goto_programt,\l goto_programt::const_targett \>" ,fontname="Helvetica"];
+  Node6 [label="concurrent_cfg_baset\l\< T, const goto_programt,\l goto_programt::const_targett \>",height=0.2,width=0.4,color="black",URL="$classconcurrent__cfg__baset.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="procedure_local_concurrent\l_cfg_baset\< T, P, I \>",height=0.2,width=0.4,color="black",URL="$classprocedure__local__concurrent__cfg__baset.html",tooltip=" "];
+}

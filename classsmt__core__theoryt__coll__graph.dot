@@ -1,0 +1,50 @@
+digraph "smt_core_theoryt"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="smt_core_theoryt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" make_and" ,fontname="Helvetica"];
+  Node2 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::andt \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node3 [label="smt_core_theoryt::andt",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1andt.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::andt \>" ,fontname="Helvetica"];
+  Node4 [label="smt_function_application\l_termt::factoryt\< functiont \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" make_not" ,fontname="Helvetica"];
+  Node5 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::nott \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node6 [label="smt_core_theoryt::nott",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1nott.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::nott \>" ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" if_then_else" ,fontname="Helvetica"];
+  Node7 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::if_then_elset \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node8 [label="smt_core_theoryt::if\l_then_elset",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1if__then__elset.html",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::if_then_elset \>" ,fontname="Helvetica"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" equal" ,fontname="Helvetica"];
+  Node9 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::equalt \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node10 [label="smt_core_theoryt::equalt",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1equalt.html",tooltip=" "];
+  Node4 -> Node9 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::equalt \>" ,fontname="Helvetica"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" make_xor" ,fontname="Helvetica"];
+  Node11 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::xort \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node12 [label="smt_core_theoryt::xort",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1xort.html",tooltip=" "];
+  Node4 -> Node11 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::xort \>" ,fontname="Helvetica"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" make_or" ,fontname="Helvetica"];
+  Node13 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::ort \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node14 [label="smt_core_theoryt::ort",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1ort.html",tooltip=" "];
+  Node4 -> Node13 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::ort \>" ,fontname="Helvetica"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" distinct" ,fontname="Helvetica"];
+  Node15 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::distinctt \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node16 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node16 [label="smt_core_theoryt::distinctt",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1distinctt.html",tooltip=" "];
+  Node4 -> Node15 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::distinctt \>" ,fontname="Helvetica"];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" implies" ,fontname="Helvetica"];
+  Node17 [label="smt_function_application\l_termt::factoryt\< smt_core\l_theoryt::impliest \>",height=0.2,width=0.4,color="black",URL="$classsmt__function__application__termt_1_1factoryt.html",tooltip=" "];
+  Node18 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" function" ,fontname="Helvetica"];
+  Node18 [label="smt_core_theoryt::impliest",height=0.2,width=0.4,color="black",URL="$structsmt__core__theoryt_1_1impliest.html",tooltip=" "];
+  Node4 -> Node17 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< smt_core_theoryt\l::impliest \>" ,fontname="Helvetica"];
+}

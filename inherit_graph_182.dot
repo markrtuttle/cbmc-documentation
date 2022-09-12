@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="detail::expr_try_dynamic\l_cast_return_typet\< Ret, T \>",height=0.2,width=0.4,color="black",URL="$structdetail_1_1expr__try__dynamic__cast__return__typet.html",tooltip=" "];
+}

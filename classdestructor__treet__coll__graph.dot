@@ -1,0 +1,19 @@
+digraph "destructor_treet"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="destructor_treet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tree to keep track of the destructors generated along each branch of a function."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" destruction_graph" ,fontname="Helvetica"];
+  Node2 [label="grapht\< destructor\l_treet::destructor_nodet \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nodes" ,fontname="Helvetica"];
+  Node3 [label="std::vector\< nodet \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< nodet \>" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node5 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< destructor_treet\l::destructor_nodet \>" ,fontname="Helvetica"];
+  Node6 [label="grapht\< N \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip="A generic directed graph with a parametric node type."];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nodes" ,fontname="Helvetica"];
+}

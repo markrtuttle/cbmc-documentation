@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="numeric_castt\< mp_integer \>",height=0.2,width=0.4,color="black",URL="$structnumeric__castt_3_01mp__integer_01_4.html",tooltip="Convert expression to mp_integer."];
+}

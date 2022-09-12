@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="event_grapht::critical\l_cyclet::delayt",height=0.2,width=0.4,color="black",URL="$structevent__grapht_1_1critical__cyclet_1_1delayt.html",tooltip=" "];
+}

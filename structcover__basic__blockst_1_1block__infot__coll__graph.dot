@@ -1,0 +1,44 @@
+digraph "cover_basic_blockst::block_infot"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cover_basic_blockst\l::block_infot",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" source_lines" ,fontname="Helvetica"];
+  Node2 [label="source_linest",height=0.2,width=0.4,color="black",URL="$classsource__linest.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block_lines" ,fontname="Helvetica"];
+  Node3 [label="std::map\< std::string,\l function_linest \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node4 [label="std::map\< K, T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node5 [label="K",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node6 [label="T",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node7 [label="std::string",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< std::string, function\l_linest \>" ,fontname="Helvetica"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" source_location" ,fontname="Helvetica"];
+  Node9 [label="source_locationt",height=0.2,width=0.4,color="black",URL="$classsource__locationt.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="irept",height=0.2,width=0.4,color="black",URL="$classirept.html",tooltip="There are a large number of kinds of tree structured or tree-like data in CPROVER."];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="sharing_treet\< irept,\l forward_list_as_mapt\l\< irep_idt, irept \> \>",height=0.2,width=0.4,color="black",URL="$classsharing__treet.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" empty_d\ndata" ,fontname="Helvetica"];
+  Node12 [label="tree_nodet\< treet,\l named_subtreest, sharing \>",height=0.2,width=0.4,color="black",URL="$classtree__nodet.html",tooltip="A node with data in a tree, it contains:"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="ref_count_ift\< true \>",height=0.2,width=0.4,color="black",URL="$structref__count__ift_3_01true_01_4.html",tooltip=" "];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sub" ,fontname="Helvetica"];
+  Node14 [label="std::vector\< treet \>",height=0.2,width=0.4,color="grey75",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< treet \>" ,fontname="Helvetica"];
+  Node15 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75",tooltip="STL class."];
+  Node6 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node16 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="Helvetica"];
+  Node16 [label="dstringt",height=0.2,width=0.4,color="black",URL="$classdstringt.html",tooltip="dstringt has one field, an unsigned integer no which is an index into a static table of strings."];
+  Node17 -> Node11 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< irept, forward_list\l_as_mapt\< irep_idt, irept \> \>" ,fontname="Helvetica"];
+  Node17 [label="sharing_treet\< derivedt,\l named_subtreest \>",height=0.2,width=0.4,color="black",URL="$classsharing__treet.html",tooltip="Base class for tree-like data structures with sharing."];
+  Node12 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" empty_d\ndata" ,fontname="Helvetica"];
+}

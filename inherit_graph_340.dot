@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="grapht\< cfg_base_nodet\l\< nodet, goto_programt\l::const_targett \> \>",height=0.2,width=0.4,color="black",URL="$classgrapht.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="cfg_baset\< nodet, const\l goto_programt, goto_programt\l::const_targett \>",height=0.2,width=0.4,color="black",URL="$classcfg__baset.html",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="procedure_local_cfg\l_baset\< nodet, const\l goto_programt, goto\l_programt::const_targett \>",height=0.2,width=0.4,color="black",URL="$classprocedure__local__cfg__baset.html",tooltip=" "];
+}
