@@ -22,7 +22,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "cprover", "index.html", [
+  [ "CBMC", "index.html", [
     [ "CBMC Documentation", "index.html", null ],
     [ "Incremental SMT backend", "md__home_runner_work_cbmc-documentation_cbmc-documentation_src_solvers_smt2_incremental__r_e_a_d_m_e.html", null ],
     [ "Homebrew tap instructions", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc__a_d_r_homebrew_tap.html", [
