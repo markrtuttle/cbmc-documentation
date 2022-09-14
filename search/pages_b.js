@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['satabs_2duser_2dmanual_40399',['satabs-user-manual',['../group__module__hidden.html',1,'']]]
+  ['tutorials_40325',['Tutorials',['../tutorial.html',1,'cprover_documentation']]]
 ];

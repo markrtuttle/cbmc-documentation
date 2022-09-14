@@ -282,12 +282,12 @@ $(document).ready(function(){initNavTree('initialize__goto__model_8cpp_source.ht
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  std::list&lt;std::string&gt; binaries, sources;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="structfile.html">file</a> : files)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;file : files)</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="read__goto__binary_8cpp.html#a7708bcae3386496efb016a58aec7cd50">is_goto_binary</a>(<a class="code" href="structfile.html">file</a>, message_handler))</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      binaries.push_back(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="read__goto__binary_8cpp.html#a7708bcae3386496efb016a58aec7cd50">is_goto_binary</a>(file, message_handler))</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      binaries.push_back(file);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      sources.push_back(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      sources.push_back(file);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <a class="code" href="classlanguage__filest.html">language_filest</a> language_files;</div>
@@ -354,7 +354,6 @@ $(document).ready(function(){initNavTree('initialize__goto__model_8cpp_source.ht
 <div class="ttc" id="aclassinvalid__input__exceptiont_html"><div class="ttname"><a href="classinvalid__input__exceptiont.html">invalid_input_exceptiont</a></div><div class="ttdoc">Thrown when user-provided input cannot be processed.</div><div class="ttdef"><b>Definition:</b> <a href="exception__utils_8h_source.html#l00162">exception_utils.h:162</a></div></div>
 <div class="ttc" id="aclasslanguage__filet_html"><div class="ttname"><a href="classlanguage__filet.html">language_filet</a></div><div class="ttdef"><b>Definition:</b> <a href="language__file_8h_source.html#l00041">language_file.h:41</a></div></div>
 <div class="ttc" id="amode_8cpp_html_a86024a5932dbc55807b18a49710a1ce7"><div class="ttname"><a href="mode_8cpp.html#a86024a5932dbc55807b18a49710a1ce7">get_language_from_mode</a></div><div class="ttdeci">std::unique_ptr&lt; languaget &gt; get_language_from_mode(const irep_idt &amp;mode)</div><div class="ttdoc">Get the language corresponding to the given mode.</div><div class="ttdef"><b>Definition:</b> <a href="mode_8cpp_source.html#l00051">mode.cpp:51</a></div></div>
-<div class="ttc" id="astructfile_html"><div class="ttname"><a href="structfile.html">file</a></div><div class="ttdef"><b>Definition:</b> <a href="kdev__t_8h_source.html#l00019">kdev_t.h:19</a></div></div>
 <div class="ttc" id="aclassgoto__model__validation__optionst_html"><div class="ttname"><a href="classgoto__model__validation__optionst.html">goto_model_validation_optionst</a></div><div class="ttdef"><b>Definition:</b> <a href="validate__goto__model_8h_source.html#l00015">validate_goto_model.h:15</a></div></div>
 <div class="ttc" id="aclassgoto__modelt_html"><div class="ttname"><a href="classgoto__modelt.html">goto_modelt</a></div><div class="ttdef"><b>Definition:</b> <a href="goto__model_8h_source.html#l00025">goto_model.h:25</a></div></div>
 <div class="ttc" id="amode_8h_html"><div class="ttname"><a href="mode_8h.html">mode.h</a></div></div>

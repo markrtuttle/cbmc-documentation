@@ -13,6 +13,7 @@ var classwrite__location__contextt =
     [ "has_been_modified", "classwrite__location__contextt.html#abe3bf03f372eed5be07569af3ad1dabb", null ],
     [ "meet", "classwrite__location__contextt.html#a8243303afb73a91d12293fa7b4011ff5", null ],
     [ "merge", "classwrite__location__contextt.html#a05007b028fff1c8291b8f4458bfba95c", null ],
+    [ "mutable_clone", "classwrite__location__contextt.html#a35ef4f648f1aedafb8930a612ac9c1de", null ],
     [ "output", "classwrite__location__contextt.html#a7c0e089627ff97bc852d7abb3c321e51", null ],
     [ "output_last_written_locations", "classwrite__location__contextt.html#ab37ed06ff871102ae8e506704620ca1f", null ],
     [ "set_last_written_locations", "classwrite__location__contextt.html#adaaa1b4db98e8df9ff1cd196e9573d5b", null ],

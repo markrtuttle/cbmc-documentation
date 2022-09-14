@@ -4,7 +4,7 @@ var java__utils_8h =
     [ "java_boxed_type_infot", "structjava__boxed__type__infot.html", "structjava__boxed__type__infot" ],
     [ "JAVA_STRING_LITERAL_PREFIX", "java__utils_8h.html#a37ecc46f98ee1c8b1073a2c7d9705cf3", null ],
     [ "checked_dereference", "java__utils_8h.html#aadaf5ff75e6d95a639ed6d4e6dc66159", null ],
-    [ "class_name_from_method_name", "java__utils_8h.html#acfb4cf4a0c15557848a30dca8e1f96cc", null ],
+    [ "class_name_from_method_name", "java__utils_8h.html#a2e09e1fbfb5d08c9df24a0b6acce3c03", null ],
     [ "declaring_class", "java__utils_8h.html#a4ebae8caea79ca846955c4237d7f0915", null ],
     [ "find_closing_delimiter", "java__utils_8h.html#a1203178ec3650359e216ce5a12491873", null ],
     [ "fresh_java_symbol", "java__utils_8h.html#a49fc9008a1330e6329658847b547673b", null ],

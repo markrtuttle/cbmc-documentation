@@ -338,9 +338,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets a fresh nondet choice in range (min_value, max_value). </p>
-<p>GOTO generated resembles: </p><div class="fragment"><div class="line">int_type <a class="code" href="driver_8h.html#aeaf21f7e1cf33123c19ccc4e8343ffc3">name_prefix::nondet_int</a> = NONDET(int_type)</div>
-<div class="line"><a class="code" href="goto__program_8h.html#a9e03d66cd12c59d9d3daad1ec6296bebafb0252b8c02058a48600203a681e1ade">ASSUME</a>(<a class="code" href="driver_8h.html#aeaf21f7e1cf33123c19ccc4e8343ffc3">name_prefix::nondet_int</a> &gt;= min_value)</div>
-<div class="line"><a class="code" href="goto__program_8h.html#a9e03d66cd12c59d9d3daad1ec6296bebafb0252b8c02058a48600203a681e1ade">ASSUME</a>(<a class="code" href="driver_8h.html#aeaf21f7e1cf33123c19ccc4e8343ffc3">name_prefix::nondet_int</a> &lt;= max_value)</div>
+<p>GOTO generated resembles: </p><div class="fragment"><div class="line">int_type name_prefix::nondet_int = NONDET(int_type)</div>
+<div class="line"><a class="code" href="goto__program_8h.html#a9e03d66cd12c59d9d3daad1ec6296bebafb0252b8c02058a48600203a681e1ade">ASSUME</a>(name_prefix::nondet_int &gt;= min_value)</div>
+<div class="line"><a class="code" href="goto__program_8h.html#a9e03d66cd12c59d9d3daad1ec6296bebafb0252b8c02058a48600203a681e1ade">ASSUME</a>(name_prefix::nondet_int &lt;= max_value)</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">min_value</td><td>Minimum value (inclusive) of returned int. </td></tr>
@@ -429,7 +429,6 @@ Functions</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="adriver_8h_html_aeaf21f7e1cf33123c19ccc4e8343ffc3"><div class="ttname"><a href="driver_8h.html#aeaf21f7e1cf33123c19ccc4e8343ffc3">nondet_int</a></div><div class="ttdeci">int nondet_int()</div></div>
 <div class="ttc" id="agoto__program_8h_html_a9e03d66cd12c59d9d3daad1ec6296bebafb0252b8c02058a48600203a681e1ade"><div class="ttname"><a href="goto__program_8h.html#a9e03d66cd12c59d9d3daad1ec6296bebafb0252b8c02058a48600203a681e1ade">ASSUME</a></div><div class="ttdeci">@ ASSUME</div><div class="ttdef"><b>Definition:</b> <a href="goto__program_8h_source.html#l00035">goto_program.h:35</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

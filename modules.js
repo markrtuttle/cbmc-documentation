@@ -22,7 +22,7 @@ var modules =
     [ "solvers", "group__solvers.html", null ],
     [ "util", "group__util.html", null ],
     [ "xmllang", "group__xmllang.html", null ],
-    [ "Documentation", "group__documentation.html", "group__documentation" ],
+    [ "_hidden", "group__module__hidden.html", "group__module__hidden" ],
     [ "janalyzer", "group__janalyzer.html", null ],
     [ "java_bytecode", "group__java__bytecode.html", null ],
     [ "jbmc", "group__jbmc.html", null ],

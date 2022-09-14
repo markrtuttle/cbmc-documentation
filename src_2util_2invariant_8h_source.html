@@ -196,7 +196,7 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    const std::<span class="keywordtype">string</span> &amp;_backtrace,</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    const std::<span class="keywordtype">string</span> &amp;_condition,</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    const std::<span class="keywordtype">string</span> &amp;_reason)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    : <a class="code" href="structfile.html">file</a>(_file),</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    : <a class="code" href="classinvariant__failedt.html#ace77bda34290b4e6ec09f588e76aabab">file</a>(_file),</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <a class="code" href="classinvariant__failedt.html#ac50db3d88ba21df45f167eff1ee76174">function</a>(_function),</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <a class="code" href="classinvariant__failedt.html#a1b48263ce42e8a61982e539b7465cea0">line</a>(_line),</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <a class="code" href="classinvariant__failedt.html#a2f11e262368a732ddc11196e7c1a1194">backtrace</a>(_backtrace),</div>
@@ -290,7 +290,7 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<a class="code" href="src_2util_2invariant_8h.html#a7aac8e5c5656514dcc43a0e2e5822559">CBMC_NORETURN</a></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;std::is_base_of&lt;invariant_failedt, ET&gt;::value&gt;::type</div>
 <div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="src_2util_2invariant_8h.html#ab8bd9a33ab12d9a124bd21c8f20091fa">  239</a></span>&#160;  <a class="code" href="src_2util_2invariant_8h.html#ab8bd9a33ab12d9a124bd21c8f20091fa">invariant_violated_structured</a>(</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">const</span> std::string &amp;<span class="keyword">function</span>,</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> line,</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">const</span> std::string &amp;condition,</div>
@@ -298,7 +298,7 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  std::string backtrace=<a class="code" href="src_2util_2invariant_8h.html#a42375175231f734b4a0db0d8754be7b4">get_backtrace</a>();</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  ET to_throw(</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    file,</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">function</span>,</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    line,</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    backtrace,</div>
@@ -317,14 +317,14 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<a class="code" href="src_2util_2invariant_8h.html#a7aac8e5c5656514dcc43a0e2e5822559">CBMC_NORETURN</a></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="src_2util_2invariant_8h.html#aa2a6d8a2093cb2822d41dc9d40d6f00a">  275</a></span>&#160;<a class="code" href="src_2util_2invariant_8h.html#aa2a6d8a2093cb2822d41dc9d40d6f00a">invariant_violated_string</a>(</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keyword">const</span> std::string &amp;<span class="keyword">function</span>,</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> line,</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">const</span> std::string &amp;condition,</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keyword">const</span> std::string &amp;reason)</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  invariant_violated_structured&lt;invariant_failedt&gt;(</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="structfile.html">file</a>, <span class="keyword">function</span>, line, condition, reason);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    file, <span class="keyword">function</span>, line, condition, reason);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedetail.html">detail</a></div>
@@ -417,7 +417,7 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Diagnostics&gt;</div>
 <div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="src_2util_2invariant_8h.html#a9ac10488083bea0628e6f9dd3cea97ce">  379</a></span>&#160;<a class="code" href="src_2util_2invariant_8h.html#a7aac8e5c5656514dcc43a0e2e5822559">CBMC_NORETURN</a> <span class="keywordtype">void</span> <a class="code" href="src_2util_2invariant_8h.html#a9ac10488083bea0628e6f9dd3cea97ce">report_invariant_failure</a>(</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">const</span> std::string &amp;<span class="keyword">function</span>,</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keywordtype">int</span> line,</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  std::string reason,</div>
@@ -425,7 +425,7 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  Diagnostics &amp;&amp;... diagnostics)</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;{</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  invariant_violated_structured&lt;invariant_with_diagnostics_failedt&gt;(</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    file,</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">function</span>,</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    line,</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    reason,</div>
@@ -568,7 +568,6 @@ $(document).ready(function(){initNavTree('src_2util_2invariant_8h_source.html','
 <div class="ttc" id="aclassinvariant__failedt_html"><div class="ttname"><a href="classinvariant__failedt.html">invariant_failedt</a></div><div class="ttdoc">A logic error, augmented with a distinguished field to hold a backtrace.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_2invariant_8h_source.html#l00109">invariant.h:109</a></div></div>
 <div class="ttc" id="asrc_2util_2invariant_8h_html_a051ee2cccdee062cebc17222552d0811"><div class="ttname"><a href="src_2util_2invariant_8h.html#a051ee2cccdee062cebc17222552d0811">report_exception_to_stderr</a></div><div class="ttdeci">void report_exception_to_stderr(const invariant_failedt &amp;)</div><div class="ttdoc">Dump exception report to stderr.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_2invariant_8cpp_source.html#l00149">invariant.cpp:149</a></div></div>
 <div class="ttc" id="anamespacedetail_html_a895dfc345144723357eca4f797a2bc27"><div class="ttname"><a href="namespacedetail.html#a895dfc345144723357eca4f797a2bc27">detail::diagnostic_as_string</a></div><div class="ttdeci">std::string diagnostic_as_string(T &amp;&amp;val)</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_2invariant_8h_source.html#l00348">invariant.h:348</a></div></div>
-<div class="ttc" id="astructfile_html"><div class="ttname"><a href="structfile.html">file</a></div><div class="ttdef"><b>Definition:</b> <a href="kdev__t_8h_source.html#l00019">kdev_t.h:19</a></div></div>
 <div class="ttc" id="aclassinvariant__with__diagnostics__failedt_html_ad1c5addb648665cda0a32c7b8d7f09ad"><div class="ttname"><a href="classinvariant__with__diagnostics__failedt.html#ad1c5addb648665cda0a32c7b8d7f09ad">invariant_with_diagnostics_failedt::diagnostics</a></div><div class="ttdeci">const std::string diagnostics</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_2invariant_8h_source.html#l00146">invariant.h:146</a></div></div>
 <div class="ttc" id="anamespacedetail_html"><div class="ttname"><a href="namespacedetail.html">detail</a></div><div class="ttdef"><b>Definition:</b> <a href="type__traits_8h_source.html#l00013">type_traits.h:13</a></div></div>
 <div class="ttc" id="asrc_2util_2invariant_8h_html_a9ac10488083bea0628e6f9dd3cea97ce"><div class="ttname"><a href="src_2util_2invariant_8h.html#a9ac10488083bea0628e6f9dd3cea97ce">report_invariant_failure</a></div><div class="ttdeci">void report_invariant_failure(const std::string &amp;file, const std::string &amp;function, int line, std::string reason, std::string condition, Diagnostics &amp;&amp;... diagnostics)</div><div class="ttdoc">This is a wrapper function, used by the macro 'INVARIANT_WITH_DIAGNOSTICS'.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_2invariant_8h_source.html#l00379">invariant.h:379</a></div></div>

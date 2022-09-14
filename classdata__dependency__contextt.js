@@ -14,6 +14,7 @@ var classdata__dependency__contextt =
     [ "insert_data_deps", "classdata__dependency__contextt.html#a879da4b50345d4c380c4b499012e061f", null ],
     [ "meet", "classdata__dependency__contextt.html#ae4709d165f76b1156fabec00dfdc06cf", null ],
     [ "merge", "classdata__dependency__contextt.html#a33aa3a523f27ae74a7973c53a087f5bb", null ],
+    [ "mutable_clone", "classdata__dependency__contextt.html#a366321ed1d808b4c7e4bbb478155cadf", null ],
     [ "output", "classdata__dependency__contextt.html#a6b62f75564ce25a4ef5e2500d845918b", null ],
     [ "set_data_deps", "classdata__dependency__contextt.html#af8b8f5f233a03c0aca5d8ece47a78c0a", null ],
     [ "set_data_deps", "classdata__dependency__contextt.html#adc8df74dbeea00c63ca2e6bd12e3adbc", null ],

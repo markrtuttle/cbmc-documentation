@@ -13,6 +13,7 @@ var classfull__array__abstract__objectt =
     [ "map_put", "classfull__array__abstract__objectt.html#a05a6df3c545ef6539604de40e2a3335f", null ],
     [ "merge", "classfull__array__abstract__objectt.html#a056f016f7544ab2eef816a7ea5c75000", null ],
     [ "merge_location_context", "classfull__array__abstract__objectt.html#a56fec94de09b4e96ca1f34480e14bd42", null ],
+    [ "mutable_clone", "classfull__array__abstract__objectt.html#aa1d69f536330cb90ea57b11cc88bdff8", null ],
     [ "output", "classfull__array__abstract__objectt.html#a20c534cd37dd16938d2d3a37e10da082", null ],
     [ "read_component", "classfull__array__abstract__objectt.html#a4493b0ae0e7479cbb2cad7be92029fcf", null ],
     [ "read_element", "classfull__array__abstract__objectt.html#aacdfa1491d177384094e9fda572098e7", null ],

@@ -11,7 +11,7 @@ var classgoto__symext =
     [ "associate_array_to_pointer", "classgoto__symext.html#abce4c79349629565f62bce122462826b", null ],
     [ "cache_dereference", "classgoto__symext.html#ace878dcabea05afc08d31faa881044fe", null ],
     [ "check_break", "classgoto__symext.html#a167a7482b0fe05a23765c208b9bb0449", null ],
-    [ "clean_expr", "classgoto__symext.html#aac59c0b68a77496bf28255f64da746a4", null ],
+    [ "clean_expr", "classgoto__symext.html#a6c349b47e1fcfdb74a22bf46c4479ff4", null ],
     [ "constant_propagate_assignment_with_side_effects", "classgoto__symext.html#a38e320c22118e1de8affd2e5496b15e0", null ],
     [ "constant_propagate_case_change", "classgoto__symext.html#a5dfd76e4da9378950dc9cc68681d0e3d", null ],
     [ "constant_propagate_delete", "classgoto__symext.html#a4657c29f7f5f718b4dda37a76713c927", null ],

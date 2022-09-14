@@ -8,6 +8,7 @@ var classconstant__pointer__abstract__objectt =
     [ "get_statistics", "classconstant__pointer__abstract__objectt.html#a785aea9bfa92fc9347f690d6f839c7ee", null ],
     [ "merge", "classconstant__pointer__abstract__objectt.html#a2b7989b3f5b34beb93a1c15302d32d90", null ],
     [ "merge_constant_pointers", "classconstant__pointer__abstract__objectt.html#a64b2a6d15fd609a91bbae024c701866a", null ],
+    [ "mutable_clone", "classconstant__pointer__abstract__objectt.html#a961ed8f3f1dd27f59dd8f155e56a0078", null ],
     [ "offset", "classconstant__pointer__abstract__objectt.html#a00fd63dda4da12c4d6be84dfbee5421f", null ],
     [ "offset_from", "classconstant__pointer__abstract__objectt.html#a780164e82bf6b24709a1cc25ea095dce", null ],
     [ "output", "classconstant__pointer__abstract__objectt.html#a60162a4ccf420b9ff03da4099c3dd56a", null ],

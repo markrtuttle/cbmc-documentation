@@ -31,7 +31,6 @@ var group__module__hidden =
     [ "memory-bounds-checking", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_memory-bounds-checking", null ],
     [ "nondet-volatile", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile", null ],
     [ "other-tools", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_other-tools", null ],
-    [ "satabs-user-manual", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual", null ],
     [ "README", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_jbmc_src_janalyzer_README", null ],
     [ "README", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_jbmc_src_java_bytecode_README", null ],
     [ "README", "group__module__hidden.html#md__home_runner_work_cbmc-documentation_cbmc-documentation_jbmc_src_jbmc_README", null ],

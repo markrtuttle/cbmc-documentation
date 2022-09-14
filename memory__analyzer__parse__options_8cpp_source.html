@@ -223,15 +223,15 @@ $(document).ready(function(){initNavTree('memory__analyzer__parse__options_8cpp_
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  gdb_value_extractor.<a class="code" href="classgdb__value__extractort.html#aab24803379fff47846dee8a74400419c">analyze_symbols</a>(</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classparse__options__baset.html#a5031a82e4ab9208af3a5a812bdc9ebf8">cmdline</a>.<a class="code" href="classcmdlinet.html#a53ac09ee39059572d26c91601fc72687">get_comma_separated_values</a>(<span class="stringliteral">&quot;symbols&quot;</span>));</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::ofstream <a class="code" href="structfile.html">file</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::ofstream file;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span>(output_file)</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="structfile.html">file</a>.open(<a class="code" href="classparse__options__baset.html#a5031a82e4ab9208af3a5a812bdc9ebf8">cmdline</a>.<a class="code" href="classcmdlinet.html#a0340b7d3ea2d96c8939e831433b7ad0d">get_value</a>(<span class="stringliteral">&quot;output-file&quot;</span>));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    file.open(<a class="code" href="classparse__options__baset.html#a5031a82e4ab9208af3a5a812bdc9ebf8">cmdline</a>.<a class="code" href="classcmdlinet.html#a0340b7d3ea2d96c8939e831433b7ad0d">get_value</a>(<span class="stringliteral">&quot;output-file&quot;</span>));</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  std::ostream &amp;out =</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    output_file ? (std::ostream &amp;)<a class="code" href="structfile.html">file</a> : (std::ostream &amp;)<a class="code" href="classmemory__analyzer__parse__optionst.html#a48b99f3843de1160c617cb42f686d4c4">message</a>.<a class="code" href="classmessaget.html#a948a1e5ddef8d250c65b41ec9b7012ee">result</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    output_file ? (std::ostream &amp;)file : (std::ostream &amp;)<a class="code" href="classmemory__analyzer__parse__optionst.html#a48b99f3843de1160c617cb42f686d4c4">message</a>.<a class="code" href="classmessaget.html#a948a1e5ddef8d250c65b41ec9b7012ee">result</a>();</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordflow">if</span>(symtab_snapshot)</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  {</div>
@@ -246,7 +246,7 @@ $(document).ready(function(){initNavTree('memory__analyzer__parse__options_8cpp_
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">if</span>(output_file)</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="structfile.html">file</a>.close();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    file.close();</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  }</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
@@ -291,7 +291,6 @@ $(document).ready(function(){initNavTree('memory__analyzer__parse__options_8cpp_
 <div class="ttc" id="aclassgdb__value__extractort_html_af0c8e70e75b0126995c5a08a2c7ebb44"><div class="ttname"><a href="classgdb__value__extractort.html#af0c8e70e75b0126995c5a08a2c7ebb44">gdb_value_extractort::get_snapshot_as_symbol_table</a></div><div class="ttdeci">symbol_tablet get_snapshot_as_symbol_table()</div><div class="ttdoc">Get memory snapshot as symbol table Build a new symbol_tablet and for each lhs symbol from collected ...</div><div class="ttdef"><b>Definition:</b> <a href="analyze__symbol_8cpp_source.html#l00189">analyze_symbol.cpp:189</a></div></div>
 <div class="ttc" id="aclassdeserialization__exceptiont_html"><div class="ttname"><a href="classdeserialization__exceptiont.html">deserialization_exceptiont</a></div><div class="ttdoc">Thrown when failing to deserialize a value from some low level format, like JSON or raw bytes.</div><div class="ttdef"><b>Definition:</b> <a href="exception__utils_8h_source.html#l00079">exception_utils.h:79</a></div></div>
 <div class="ttc" id="aclassmemory__analyzer__parse__optionst_html_a48b99f3843de1160c617cb42f686d4c4"><div class="ttname"><a href="classmemory__analyzer__parse__optionst.html#a48b99f3843de1160c617cb42f686d4c4">memory_analyzer_parse_optionst::message</a></div><div class="ttdeci">messaget message</div><div class="ttdef"><b>Definition:</b> <a href="memory__analyzer__parse__options_8h_source.html#l00039">memory_analyzer_parse_options.h:39</a></div></div>
-<div class="ttc" id="astructfile_html"><div class="ttname"><a href="structfile.html">file</a></div><div class="ttdef"><b>Definition:</b> <a href="kdev__t_8h_source.html#l00019">kdev_t.h:19</a></div></div>
 <div class="ttc" id="aclassgdb__value__extractort_html_aab24803379fff47846dee8a74400419c"><div class="ttname"><a href="classgdb__value__extractort.html#aab24803379fff47846dee8a74400419c">gdb_value_extractort::analyze_symbols</a></div><div class="ttdeci">void analyze_symbols(const std::list&lt; std::string &gt; &amp;symbols)</div><div class="ttdoc">For each input symbol in symbols: map its value address to its symbol_exprt (via the values map) and ...</div><div class="ttdef"><b>Definition:</b> <a href="analyze__symbol_8cpp_source.html#l00109">analyze_symbol.cpp:109</a></div></div>
 <div class="ttc" id="agoto__model_8h_html"><div class="ttname"><a href="goto__model_8h.html">goto_model.h</a></div></div>
 <div class="ttc" id="aclassgoto__modelt_html"><div class="ttname"><a href="classgoto__modelt.html">goto_modelt</a></div><div class="ttdef"><b>Definition:</b> <a href="goto__model_8h_source.html#l00025">goto_model.h:25</a></div></div>

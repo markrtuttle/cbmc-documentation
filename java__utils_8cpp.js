@@ -1,7 +1,7 @@
 var java__utils_8cpp =
 [
     [ "checked_dereference", "java__utils_8cpp.html#aadaf5ff75e6d95a639ed6d4e6dc66159", null ],
-    [ "class_name_from_method_name", "java__utils_8cpp.html#acfb4cf4a0c15557848a30dca8e1f96cc", null ],
+    [ "class_name_from_method_name", "java__utils_8cpp.html#a2e09e1fbfb5d08c9df24a0b6acce3c03", null ],
     [ "declare_function", "java__utils_8cpp.html#a501a7723438188cb1973c7c2275f767c", null ],
     [ "declaring_class", "java__utils_8cpp.html#a4ebae8caea79ca846955c4237d7f0915", null ],
     [ "find_closing_delimiter", "java__utils_8cpp.html#aa43306c4f90470803e34ff4019dfb2fc", null ],

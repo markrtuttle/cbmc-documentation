@@ -9,6 +9,7 @@ var classliveness__contextt =
     [ "has_location", "classliveness__contextt.html#a273ba36136ef6f7cd38c59cc2594c24f", null ],
     [ "merge", "classliveness__contextt.html#a9eca500db8b69d4ac9b91d731f62df02", null ],
     [ "merge_location_context", "classliveness__contextt.html#a6cc36775300a506c6bd3625d7174fb3a", null ],
+    [ "mutable_clone", "classliveness__contextt.html#a9bf377a6e522b7af24663967cc2197ba", null ],
     [ "output", "classliveness__contextt.html#a2e09fe0c95ee03e952938c747e0cb731", null ],
     [ "reset_location_on_merge", "classliveness__contextt.html#afdc6b877aec5045cddeb6b6718baa929", null ],
     [ "set_location", "classliveness__contextt.html#a125b82451129bac9e31a354afa94593e", null ],

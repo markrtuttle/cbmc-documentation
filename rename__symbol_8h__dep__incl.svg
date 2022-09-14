@@ -22,7 +22,24 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="link__goto__model_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="name__mangler_8h.html" target="_top" xlink:title="Mangle names of file&#45;local functions to make them unique.">
+<polygon fill="none" stroke="black" points="402,-89.5 402,-130.5 602,-130.5 602,-89.5 402,-89.5"/>
+<text text-anchor="start" x="410" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="410" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="middle" x="502" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/goto&#45;programs/name_mangler.h</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node2 -->
+<g id="edge1" class="edge">
+<title>Node1&#45;&gt;Node2</title>
+<path fill="none" stroke="midnightblue" d="M709.63,-164.86C667.71,-153.98 617.66,-141 577.2,-130.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="708.99,-168.31 719.55,-167.43 710.74,-161.53 708.99,-168.31"/>
+</g>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="link__goto__model_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="695,-0.5 695,-52.5 895,-52.5 895,-0.5 695,-0.5"/>
 <text text-anchor="start" x="703" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
 <text text-anchor="start" x="703" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
@@ -31,28 +48,11 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
-<title>Node1&#45;&gt;Node2</title>
+<!-- Node1&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node1&#45;&gt;Node6</title>
 <path fill="none" stroke="midnightblue" d="M766.98,-159.65C760.09,-151.18 753.64,-141.34 750,-131 743.8,-113.39 744.2,-106.74 750,-89 754.32,-75.8 762.66,-63.08 771,-52.67"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="764.45,-162.07 773.66,-167.32 769.73,-157.48 764.45,-162.07"/>
-</g>
-<!-- Node3 -->
-<g id="node3" class="node">
-<title>Node3</title>
-<g id="a_node3"><a xlink:href="name__mangler_8h.html" target="_top" xlink:title="Mangle names of file&#45;local functions to make them unique.">
-<polygon fill="none" stroke="black" points="402,-89.5 402,-130.5 602,-130.5 602,-89.5 402,-89.5"/>
-<text text-anchor="start" x="410" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="410" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="middle" x="502" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/goto&#45;programs/name_mangler.h</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
-<title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M709.63,-164.86C667.71,-153.98 617.66,-141 577.2,-130.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="708.99,-168.31 719.55,-167.43 710.74,-161.53 708.99,-168.31"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
@@ -88,10 +88,10 @@
 <path fill="none" stroke="midnightblue" d="M877.42,-164.79C917.71,-153.93 965.77,-140.98 1004.62,-130.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="876.37,-161.45 867.62,-167.43 878.19,-168.21 876.37,-161.45"/>
 </g>
-<!-- Node4 -->
-<g id="node4" class="node">
-<title>Node4</title>
-<g id="a_node4"><a xlink:href="compile_8cpp.html" target="_top" xlink:title=" ">
+<!-- Node3 -->
+<g id="node3" class="node">
+<title>Node3</title>
+<g id="a_node3"><a xlink:href="compile_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-6 0,-47 200,-47 200,-6 0,-6"/>
 <text text-anchor="start" x="8" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
 <text text-anchor="start" x="8" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
@@ -99,16 +99,16 @@
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node3&#45;&gt;Node4</title>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
 <path fill="none" stroke="midnightblue" d="M391.66,-89.02C336.67,-78.78 269.21,-65.79 209,-53 200.16,-51.12 190.94,-49.08 181.76,-47.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="391.31,-92.51 401.78,-90.9 392.59,-85.63 391.31,-92.51"/>
 </g>
-<!-- Node5 -->
-<g id="node5" class="node">
-<title>Node5</title>
-<g id="a_node5"><a xlink:href="recursive__initialization_8cpp.html" target="_top" xlink:title=" ">
+<!-- Node4 -->
+<g id="node4" class="node">
+<title>Node4</title>
+<g id="a_node4"><a xlink:href="recursive__initialization_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="218.5,-6 218.5,-47 453.5,-47 453.5,-6 218.5,-6"/>
 <text text-anchor="start" x="226.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
 <text text-anchor="start" x="226.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
@@ -116,16 +116,16 @@
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
-<title>Node3&#45;&gt;Node5</title>
+<!-- Node2&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node2&#45;&gt;Node4</title>
 <path fill="none" stroke="midnightblue" d="M453.06,-84.97C428.42,-72.87 398.94,-58.4 375.72,-47"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="451.72,-88.21 462.24,-89.48 454.8,-81.93 451.72,-88.21"/>
 </g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="name__mangler_8cpp.html" target="_top" xlink:title=" ">
+<!-- Node5 -->
+<g id="node5" class="node">
+<title>Node5</title>
+<g id="a_node5"><a xlink:href="name__mangler_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="471.5,-6 471.5,-47 676.5,-47 676.5,-6 471.5,-6"/>
 <text text-anchor="start" x="479.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
 <text text-anchor="start" x="479.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
@@ -133,15 +133,15 @@
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
-<title>Node3&#45;&gt;Node6</title>
+<!-- Node2&#45;&gt;Node5 -->
+<g id="edge4" class="edge">
+<title>Node2&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M526.11,-81.71C536.14,-70.36 547.56,-57.43 556.73,-47.05"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="523.43,-79.46 519.43,-89.27 528.67,-84.09 523.43,-79.46"/>
 </g>
-<!-- Node7&#45;&gt;Node2 -->
+<!-- Node7&#45;&gt;Node6 -->
 <g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node2</title>
+<title>Node7&#45;&gt;Node6</title>
 <path fill="none" stroke="midnightblue" d="M837.33,-81.4C830.01,-72.08 821.88,-61.73 814.72,-52.61"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="834.58,-83.57 843.51,-89.27 840.08,-79.24 834.58,-83.57"/>
 </g>

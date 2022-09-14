@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tutorials_40400',['Tutorials',['../tutorial.html',1,'md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page']]]
+  ['user_20guide_40326',['User guide',['../user_guide.html',1,'index']]]
 ];

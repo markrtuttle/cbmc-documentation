@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['architecture_20decision_20records_40351',['Architecture Decision Records',['../md__home_runner_work_cbmc-documentation_cbmc-documentation_doc__a_d_r__r_e_a_d_m_e.html',1,'']]]
+  ['background_2dconcepts_40279',['background-concepts',['../group__module__hidden.html',1,'(Global Namespace)'],['../background-concepts.html',1,'cprover_documentation']]]
 ];

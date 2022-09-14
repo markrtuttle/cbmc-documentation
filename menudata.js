@@ -23,7 +23,7 @@ for the JavaScript code in this file
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
 {text:"Related Pages",url:"pages.html"},
-{text:"Modules",url:"modules.html"},
+{text:"Directories",url:"modules.html"},
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
@@ -312,7 +312,6 @@ var menudata={children:[
 {text:"h",url:"globals_type.html#index_h"},
 {text:"i",url:"globals_type.html#index_i"},
 {text:"j",url:"globals_type.html#index_j"},
-{text:"k",url:"globals_type.html#index_k"},
 {text:"l",url:"globals_type.html#index_l"},
 {text:"m",url:"globals_type.html#index_m"},
 {text:"n",url:"globals_type.html#index_n"},

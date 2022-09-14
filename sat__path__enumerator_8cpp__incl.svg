@@ -1112,9 +1112,9 @@
 <path fill="none" stroke="midnightblue" d="M1519.37,-660.48C1496,-650.4 1456.92,-633.55 1430.14,-622"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1431.44,-618.75 1420.87,-618.01 1428.67,-625.18 1431.44,-618.75"/>
 </g>
-<!-- Node142 -->
+<!-- Node141 -->
 <g id="node59" class="node">
-<title>Node142</title>
+<title>Node141</title>
 <g id="a_node59"><a xlink:href="bv__pointers_8h.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="red" points="1488.64,-593.5 1488.64,-623.5 1589.64,-623.5 1589.64,-593.5 1488.64,-593.5"/>
 <text text-anchor="start" x="1496.64" y="-611.5" font-family="Helvetica,sans-Serif" font-size="10.00">solvers/flattening</text>
@@ -1122,24 +1122,24 @@
 </a>
 </g>
 </g>
-<!-- Node82&#45;&gt;Node142 -->
+<!-- Node82&#45;&gt;Node141 -->
 <g id="edge143" class="edge">
-<title>Node82&#45;&gt;Node142</title>
+<title>Node82&#45;&gt;Node141</title>
 <path fill="none" stroke="midnightblue" d="M1539.14,-660.48C1539.14,-653.47 1539.14,-643.19 1539.14,-633.7"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1542.64,-633.52 1539.14,-623.52 1535.64,-633.52 1542.64,-633.52"/>
 </g>
-<!-- Node159 -->
+<!-- Node158 -->
 <g id="node60" class="node">
-<title>Node159</title>
+<title>Node158</title>
 <g id="a_node60"><a xlink:href="satcheck_8h.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1607.64,-599 1607.64,-618 1732.64,-618 1732.64,-599 1607.64,-599"/>
 <text text-anchor="middle" x="1670.14" y="-606" font-family="Helvetica,sans-Serif" font-size="10.00">solvers/sat/satcheck.h</text>
 </a>
 </g>
 </g>
-<!-- Node82&#45;&gt;Node159 -->
+<!-- Node82&#45;&gt;Node158 -->
 <g id="edge144" class="edge">
-<title>Node82&#45;&gt;Node159</title>
+<title>Node82&#45;&gt;Node158</title>
 <path fill="none" stroke="midnightblue" d="M1557.91,-660.48C1579.99,-650.45 1616.86,-633.7 1642.28,-622.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1643.75,-625.33 1651.4,-618.01 1640.85,-618.96 1643.75,-625.33"/>
 </g>

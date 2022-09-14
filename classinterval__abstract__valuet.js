@@ -14,6 +14,7 @@ var classinterval__abstract__valuet =
     [ "make_interval", "classinterval__abstract__valuet.html#ad03b22bf6791eb37230c3a9b77af0733", null ],
     [ "meet_with_value", "classinterval__abstract__valuet.html#aab7323c493bc33d8ae832f3b55b6ea00", null ],
     [ "merge_with_value", "classinterval__abstract__valuet.html#a064b41c71791c3bf26aef3bf731e5a25", null ],
+    [ "mutable_clone", "classinterval__abstract__valuet.html#a352116489591fe75d2362fa9e8f10bf6", null ],
     [ "output", "classinterval__abstract__valuet.html#a4786cf5b9f967acb48b7c51a5085bd4a", null ],
     [ "set_top_internal", "classinterval__abstract__valuet.html#ac9d8c6c903cd7b25135e7397ec807032", null ],
     [ "to_constant", "classinterval__abstract__valuet.html#a79cf03e847fef666bacde94ae51cd227", null ],

@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *tptr=line.c_str();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> state=0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string <a class="code" href="structfile.html">file</a>, line_no, column, _error_msg, <span class="keyword">function</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string file, line_no, column, _error_msg, <span class="keyword">function</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    tptr+=5;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">if</span>(state==0) <span class="comment">// file</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="structfile.html">file</a>+=*tptr;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        file+=*tptr;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(state==1) <span class="comment">// line number</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        line_no+=*tptr;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(state==2) <span class="comment">// column</span></div>
@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>(state==4)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#aeac5d6e9903cb150b7688a2ea5a84421">set_file</a>(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#aeac5d6e9903cb150b7688a2ea5a84421">set_file</a>(file);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#affd0be5e28a571c5cbbd9d91ae4ba0eb">set_function</a>(<span class="keyword">function</span>);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#aeb4caa8fd6855cfc473b4e9d01c0ea09">set_line</a>(line_no);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#a0ab8f3dbe30f278557972c875e900130">set_column</a>(column);</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *tptr=line.c_str();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> state=0;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::string <a class="code" href="structfile.html">file</a>, line_no;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::string file, line_no;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">while</span>(*tptr!=0)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
@@ -207,7 +207,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">if</span>(*tptr==<span class="charliteral">&#39;:&#39;</span>)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          state++;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          <a class="code" href="structfile.html">file</a>+=*tptr;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          file+=*tptr;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(state==1)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      {</div>
@@ -224,7 +224,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">if</span>(state==2)</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#aeac5d6e9903cb150b7688a2ea5a84421">set_file</a>(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#aeac5d6e9903cb150b7688a2ea5a84421">set_file</a>(file);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#affd0be5e28a571c5cbbd9d91ae4ba0eb">set_function</a>(<a class="code" href="irep_8h.html#a1ad4faefa9ca542d481e74be9cc01c2c">irep_idt</a>());</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#aeb4caa8fd6855cfc473b4e9d01c0ea09">set_line</a>(line_no);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      saved_error_location.<a class="code" href="classsource__locationt.html#a0ab8f3dbe30f278557972c875e900130">set_column</a>(<a class="code" href="irep_8h.html#a1ad4faefa9ca542d481e74be9cc01c2c">irep_idt</a>());</div>
@@ -327,13 +327,13 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
 <div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="c__preprocess_8cpp.html#a07db2d842098347f9f2bc9c41beb5238">  238</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="c__preprocess_8cpp.html#a07db2d842098347f9f2bc9c41beb5238">c_preprocess_visual_studio</a>(</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  std::ostream &amp;outstream,</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <a class="code" href="classmessage__handlert.html">message_handlert</a> &amp;message_handler)</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="comment">// check extension</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(<a class="code" href="structfile.html">file</a>))</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(<a class="code" href="structfile.html">file</a>, outstream, message_handler);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(file))</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(file, outstream, message_handler);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <a class="code" href="classmessaget.html">messaget</a> message(message_handler);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
@@ -396,7 +396,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">// Finally, the file to be preprocessed</span></div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="comment">// (this is already in UTF-8).</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    command_file &lt;&lt; <a class="code" href="run_8cpp.html#a97bb622b088eeb21188b7e4f55604d60">shell_quote</a>(<a class="code" href="structfile.html">file</a>) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    command_file &lt;&lt; <a class="code" href="run_8cpp.html#a97bb622b088eeb21188b7e4f55604d60">shell_quote</a>(file) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="comment">// _popen isn&#39;t very reliable on WIN32</span></div>
@@ -453,13 +453,13 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
 <div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="c__preprocess_8cpp.html#a802d980341684c945f4d2bddb936a9dc">  366</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="c__preprocess_8cpp.html#a802d980341684c945f4d2bddb936a9dc">c_preprocess_codewarrior</a>(</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  std::ostream &amp;outstream,</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  <a class="code" href="classmessage__handlert.html">message_handlert</a> &amp;message_handler)</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="comment">// check extension</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(<a class="code" href="structfile.html">file</a>))</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(<a class="code" href="structfile.html">file</a>, outstream, message_handler);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(file))</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(file, outstream, message_handler);</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <span class="comment">// preprocessing</span></div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <a class="code" href="classmessaget.html">messaget</a> message(message_handler);</div>
@@ -485,7 +485,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    command.push_back(opt);</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <a class="code" href="classtemporary__filet.html">temporary_filet</a> tmpi(<span class="stringliteral">&quot;tmp.cl&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  command.push_back(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  command.push_back(file);</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  command.push_back(<span class="stringliteral">&quot;-o&quot;</span>);</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  command.push_back(tmpi());</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
@@ -520,14 +520,14 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
 <div class="line"><a name="l00434"></a><span class="lineno"><a class="line" href="c__preprocess_8cpp.html#ae1a5ce99bf834702e54cd1da1e0c07cd">  434</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="c__preprocess_8cpp.html#ae1a5ce99bf834702e54cd1da1e0c07cd">c_preprocess_gcc_clang</a>(</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  std::ostream &amp;outstream,</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <a class="code" href="classmessage__handlert.html">message_handlert</a> &amp;message_handler,</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  <a class="code" href="structconfigt_1_1ansi__ct.html#adbaf349966324503f4957fc2d8ff591e">configt::ansi_ct::preprocessort</a> preprocessor)</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;{</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <span class="comment">// check extension</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(<a class="code" href="structfile.html">file</a>))</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(<a class="code" href="structfile.html">file</a>, outstream, message_handler);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(file))</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(file, outstream, message_handler);</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="comment">// preprocessing</span></div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <a class="code" href="classmessaget.html">messaget</a> message(message_handler);</div>
@@ -594,13 +594,13 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  <span class="comment">// Set the standard</span></div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  <span class="keywordflow">if</span>(</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.cpp&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.CPP&quot;</span>) ||</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.cpp&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.CPP&quot;</span>) ||</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;#ifndef _WIN32</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.C&quot;</span>) ||</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.C&quot;</span>) ||</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;#endif</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.c++&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.C++&quot;</span>) ||</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.cp&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.CP&quot;</span>) ||</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.cc&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(<a class="code" href="structfile.html">file</a>, <span class="stringliteral">&quot;.cxx&quot;</span>))</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.c++&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.C++&quot;</span>) ||</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.cp&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.CP&quot;</span>) ||</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.cc&quot;</span>) || <a class="code" href="suffix_8h.html#a01816fa76558ff033b634a5d15c52014">has_suffix</a>(file, <span class="stringliteral">&quot;.cxx&quot;</span>))</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  {</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordflow">switch</span>(<a class="code" href="config_8cpp.html#ad2957e882e3568503e4f786a480f2bfe">config</a>.<a class="code" href="classconfigt.html#aedbfce998716782dc36030eb658cb8fb">cpp</a>.<a class="code" href="structconfigt_1_1cppt.html#a071eda14d883ad4b67bc7955907b3911">cpp_standard</a>)</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    {</div>
@@ -713,7 +713,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;<span class="preprocessor">  #endif</span></div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160; </div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;  <span class="comment">// the file that is to be preprocessed</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;  argv.push_back(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;  argv.push_back(file);</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160; </div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;  <span class="comment">// execute clang or gcc</span></div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;  result = <a class="code" href="run_8cpp.html#a32e6ac327187b7ac705f730a35ab0628">run</a>(argv[0], argv, <span class="stringliteral">&quot;&quot;</span>, outstream, stderr_file());</div>
@@ -732,13 +732,13 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;}</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160; </div>
 <div class="line"><a name="l00647"></a><span class="lineno"><a class="line" href="c__preprocess_8cpp.html#a2f952e62b81b13298615aa73b71ad1f7">  647</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="c__preprocess_8cpp.html#a2f952e62b81b13298615aa73b71ad1f7">c_preprocess_arm</a>(</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;  std::ostream &amp;outstream,</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;  <a class="code" href="classmessage__handlert.html">message_handlert</a> &amp;message_handler)</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;{</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;  <span class="comment">// check extension</span></div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(<a class="code" href="structfile.html">file</a>))</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(<a class="code" href="structfile.html">file</a>, outstream, message_handler);</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="c__preprocess_8cpp.html#ae97d5f7ab2b09e524207a0eb72023c83">is_dot_i_file</a>(file))</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(file, outstream, message_handler);</div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160; </div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;  <span class="comment">// preprocessing using armcc</span></div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;  <a class="code" href="classmessaget.html">messaget</a> message(message_handler);</div>
@@ -781,7 +781,7 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    argv.push_back(<span class="stringliteral">&quot;-I&quot;</span> + include_path);</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  <span class="comment">// the file that is to be preprocessed</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  argv.push_back(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  argv.push_back(file);</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160; </div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;  <span class="keywordtype">int</span> result;</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
@@ -802,20 +802,20 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;}</div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160; </div>
 <div class="line"><a name="l00718"></a><span class="lineno"><a class="line" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">  718</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="c__preprocess_8cpp.html#a47c5b7dc261fe5d6c3098392a720bd4a">c_preprocess_none</a>(</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <span class="keyword">const</span> std::string &amp;<a class="code" href="structfile.html">file</a>,</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <span class="keyword">const</span> std::string &amp;file,</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;  std::ostream &amp;outstream,</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;  <a class="code" href="classmessage__handlert.html">message_handlert</a> &amp;message_handler)</div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;{</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="preprocessor">  #ifdef _MSC_VER</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  std::ifstream infile(<a class="code" href="unicode_8cpp.html#a684683d701fe53be069b2e5f883044cd">widen</a>(<a class="code" href="structfile.html">file</a>));</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  std::ifstream infile(<a class="code" href="unicode_8cpp.html#a684683d701fe53be069b2e5f883044cd">widen</a>(file));</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="preprocessor">  #else</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  std::ifstream infile(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  std::ifstream infile(file);</div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="preprocessor">  #endif</span></div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;  <span class="keywordflow">if</span>(!infile)</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;  {</div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <a class="code" href="classmessaget.html">messaget</a> message(message_handler);</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    message.<a class="code" href="classmessaget.html#a108043e0a9925dcebbb8a793611428b6">error</a>() &lt;&lt; <span class="stringliteral">&quot;failed to open &#39;&quot;</span> &lt;&lt; <a class="code" href="structfile.html">file</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; <a class="code" href="classmessaget.html#af53bf1a50370a1e7ad55df9dd0e6fdd0">messaget::eom</a>;</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    message.<a class="code" href="classmessaget.html#a108043e0a9925dcebbb8a793611428b6">error</a>() &lt;&lt; <span class="stringliteral">&quot;failed to open &#39;&quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; <a class="code" href="classmessaget.html#af53bf1a50370a1e7ad55df9dd0e6fdd0">messaget::eom</a>;</div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;  }</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160; </div>
@@ -864,7 +864,6 @@ $(document).ready(function(){initNavTree('c__preprocess_8cpp_source.html',''); i
 <div class="ttc" id="astructconfigt_1_1cppt_html_a5638b695d4ab23a8235fa55525db4533a9d1cd85666e4cb9b5085dbab0e493f9d"><div class="ttname"><a href="structconfigt_1_1cppt.html#a5638b695d4ab23a8235fa55525db4533a9d1cd85666e4cb9b5085dbab0e493f9d">configt::cppt::cpp_standardt::CPP03</a></div><div class="ttdeci">@ CPP03</div></div>
 <div class="ttc" id="astructconfigt_1_1ansi__ct_html_adbaf349966324503f4957fc2d8ff591e"><div class="ttname"><a href="structconfigt_1_1ansi__ct.html#adbaf349966324503f4957fc2d8ff591e">configt::ansi_ct::preprocessort</a></div><div class="ttdeci">preprocessort</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00239">config.h:239</a></div></div>
 <div class="ttc" id="aprefix_8h_html"><div class="ttname"><a href="prefix_8h.html">prefix.h</a></div></div>
-<div class="ttc" id="astructfile_html"><div class="ttname"><a href="structfile.html">file</a></div><div class="ttdef"><b>Definition:</b> <a href="kdev__t_8h_source.html#l00019">kdev_t.h:19</a></div></div>
 <div class="ttc" id="ac__preprocess_8cpp_html_a53d7cab482154055b62e3563af35d0f9"><div class="ttname"><a href="c__preprocess_8cpp.html#a53d7cab482154055b62e3563af35d0f9">error_parse</a></div><div class="ttdeci">static void error_parse(std::istream &amp;errors, bool warning_only, messaget &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="c__preprocess_8cpp_source.html#l00145">c_preprocess.cpp:145</a></div></div>
 <div class="ttc" id="ac__preprocess_8h_html"><div class="ttname"><a href="c__preprocess_8h.html">c_preprocess.h</a></div></div>
 <div class="ttc" id="arun_8cpp_html_a32e6ac327187b7ac705f730a35ab0628"><div class="ttname"><a href="run_8cpp.html#a32e6ac327187b7ac705f730a35ab0628">run</a></div><div class="ttdeci">int run(const std::string &amp;what, const std::vector&lt; std::string &gt; &amp;argv)</div><div class="ttdef"><b>Definition:</b> <a href="run_8cpp_source.html#l00048">run.cpp:48</a></div></div>

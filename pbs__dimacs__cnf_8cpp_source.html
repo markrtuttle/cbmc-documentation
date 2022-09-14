@@ -216,12 +216,12 @@ $(document).ready(function(){initNavTree('pbs__dimacs__cnf_8cpp_source.html','')
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> res = system(command.c_str());</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="src_2util_2invariant_8h.html#a3846e19582b97ae45a1650a541cac0a2">CHECK_RETURN</a>(0 == res);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  std::ifstream <a class="code" href="structfile.html">file</a>(<span class="stringliteral">&quot;temp.out&quot;</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  std::ifstream file(<span class="stringliteral">&quot;temp.out&quot;</span>);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  std::string line;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">int</span> v;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">bool</span> satisfied = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="structfile.html">file</a>.fail())</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span>(file.fail())</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classpropt.html#afdb08f757ee6d3a90a7732de7372dade">log</a>.<a class="code" href="classmessaget.html#a108043e0a9925dcebbb8a793611428b6">error</a>() &lt;&lt; <span class="stringliteral">&quot;Unable to read SAT results!&quot;</span> &lt;&lt; <a class="code" href="classmessaget.html#af53bf1a50370a1e7ad55df9dd0e6fdd0">messaget::eom</a>;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -229,9 +229,9 @@ $(document).ready(function(){initNavTree('pbs__dimacs__cnf_8cpp_source.html','')
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="classpbs__dimacs__cnft.html#a5d8a9c8c8082906fc7b86bf9c7d47bd4">opt_sum</a> = -1;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">while</span>(<a class="code" href="structfile.html">file</a> &amp;&amp; !<a class="code" href="structfile.html">file</a>.eof())</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">while</span>(file &amp;&amp; !file.eof())</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    std::getline(<a class="code" href="structfile.html">file</a>, line);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    std::getline(file, line);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">if</span>(</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      strstr(line.c_str(), <span class="stringliteral">&quot;Variable Assignments Satisfying CNF Formula:&quot;</span>) !=</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keyword">nullptr</span>)</div>
@@ -242,9 +242,9 @@ $(document).ready(function(){initNavTree('pbs__dimacs__cnf_8cpp_source.html','')
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      satisfied = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <a class="code" href="classpbs__dimacs__cnft.html#a690b05971eb0327e4645b4ca85e1cefa">assigned</a>.clear();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; (<a class="code" href="structfile.html">file</a> &amp;&amp; (i &lt; <a class="code" href="classcnft.html#a9524544b46ee5dd67d66365e1ceb1dd0">no_variables</a>())); ++i)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; (file &amp;&amp; (i &lt; <a class="code" href="classcnft.html#a9524544b46ee5dd67d66365e1ceb1dd0">no_variables</a>())); ++i)</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="structfile.html">file</a> &gt;&gt; v;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        file &gt;&gt; v;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span>(v &gt; 0)</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
@@ -302,15 +302,15 @@ $(document).ready(function(){initNavTree('pbs__dimacs__cnf_8cpp_source.html','')
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
 <div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classpbs__dimacs__cnft.html#a96629036ddbc6fe84ece50faf926bd84">  208</a></span>&#160;<a class="code" href="classpropt.html#abc5dd44f95571105f68cc1724b5fa06c">propt::resultt</a> <a class="code" href="classpbs__dimacs__cnft.html#a96629036ddbc6fe84ece50faf926bd84">pbs_dimacs_cnft::do_prop_solve</a>()</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  std::ofstream <a class="code" href="structfile.html">file</a>(<span class="stringliteral">&quot;temp.cnf&quot;</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  std::ofstream file(<span class="stringliteral">&quot;temp.cnf&quot;</span>);</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="classdimacs__cnft.html#aeece13e342d24281f7f67575d4f49c48">write_dimacs_cnf</a>(<a class="code" href="structfile.html">file</a>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="classdimacs__cnft.html#aeece13e342d24281f7f67575d4f49c48">write_dimacs_cnf</a>(file);</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  std::ofstream pbfile(<span class="stringliteral">&quot;temp.cnf.pb&quot;</span>);</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <a class="code" href="classpbs__dimacs__cnft.html#ab001af208004d6262a92fd72bfdd9300">write_dimacs_pb</a>(pbfile);</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <a class="code" href="structfile.html">file</a>.close();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  file.close();</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  pbfile.close();</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="comment">// We start counting at 1, thus there is one variable fewer.</span></div>
@@ -398,7 +398,6 @@ $(document).ready(function(){initNavTree('pbs__dimacs__cnf_8cpp_source.html','')
 <div class="ttc" id="aclasspbs__dimacs__cnft_html_ab001af208004d6262a92fd72bfdd9300"><div class="ttname"><a href="classpbs__dimacs__cnft.html#ab001af208004d6262a92fd72bfdd9300">pbs_dimacs_cnft::write_dimacs_pb</a></div><div class="ttdeci">virtual void write_dimacs_pb(std::ostream &amp;out)</div><div class="ttdef"><b>Definition:</b> <a href="pbs__dimacs__cnf_8cpp_source.html#l00019">pbs_dimacs_cnf.cpp:19</a></div></div>
 <div class="ttc" id="aclasspbs__dimacs__cnft_html_a96629036ddbc6fe84ece50faf926bd84"><div class="ttname"><a href="classpbs__dimacs__cnft.html#a96629036ddbc6fe84ece50faf926bd84">pbs_dimacs_cnft::do_prop_solve</a></div><div class="ttdeci">resultt do_prop_solve() override</div><div class="ttdef"><b>Definition:</b> <a href="pbs__dimacs__cnf_8cpp_source.html#l00208">pbs_dimacs_cnf.cpp:208</a></div></div>
 <div class="ttc" id="aclassliteralt_html_a166dd1aad4e915ef8fc874402dccfe6c"><div class="ttname"><a href="classliteralt.html#a166dd1aad4e915ef8fc874402dccfe6c">literalt::dimacs</a></div><div class="ttdeci">int dimacs() const</div><div class="ttdef"><b>Definition:</b> <a href="literal_8h_source.html#l00117">literal.h:117</a></div></div>
-<div class="ttc" id="astructfile_html"><div class="ttname"><a href="structfile.html">file</a></div><div class="ttdef"><b>Definition:</b> <a href="kdev__t_8h_source.html#l00019">kdev_t.h:19</a></div></div>
 <div class="ttc" id="aclasspbs__dimacs__cnft_html_a2da856cfe06247a43d188fdad4b9862b"><div class="ttname"><a href="classpbs__dimacs__cnft.html#a2da856cfe06247a43d188fdad4b9862b">pbs_dimacs_cnft::binary_search</a></div><div class="ttdeci">bool binary_search</div><div class="ttdef"><b>Definition:</b> <a href="pbs__dimacs__cnf_8h_source.html#l00040">pbs_dimacs_cnf.h:40</a></div></div>
 <div class="ttc" id="aclasspbs__dimacs__cnft_html_a40dc88b66d9e118e8e1857565f3fc49e"><div class="ttname"><a href="classpbs__dimacs__cnft.html#a40dc88b66d9e118e8e1857565f3fc49e">pbs_dimacs_cnft::l_get</a></div><div class="ttdeci">tvt l_get(literalt a) const override</div><div class="ttdef"><b>Definition:</b> <a href="pbs__dimacs__cnf_8cpp_source.html#l00245">pbs_dimacs_cnf.cpp:245</a></div></div>
 <div class="ttc" id="aclasspbs__dimacs__cnft_html_aab1a46db3221f484a17928d45ae1e741"><div class="ttname"><a href="classpbs__dimacs__cnft.html#aab1a46db3221f484a17928d45ae1e741">pbs_dimacs_cnft::pbs_solve</a></div><div class="ttdeci">bool pbs_solve()</div><div class="ttdef"><b>Definition:</b> <a href="pbs__dimacs__cnf_8cpp_source.html#l00061">pbs_dimacs_cnf.cpp:61</a></div></div>

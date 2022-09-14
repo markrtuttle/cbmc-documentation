@@ -6,6 +6,7 @@ var classvalue__set__pointer__abstract__objectt =
     [ "value_set_pointer_abstract_objectt", "classvalue__set__pointer__abstract__objectt.html#a96420e7e913591b9961073d036de7aaf", null ],
     [ "get_values", "classvalue__set__pointer__abstract__objectt.html#a856fd007b2c52a462014491fbd69934d", null ],
     [ "merge", "classvalue__set__pointer__abstract__objectt.html#a2f9675e5b94174d5bb45b8f24ab56a32", null ],
+    [ "mutable_clone", "classvalue__set__pointer__abstract__objectt.html#a2718049fcb9daf26a0be38f9a52895f2", null ],
     [ "output", "classvalue__set__pointer__abstract__objectt.html#a7d7fc7bbc7a0667bfa116586946e518b", null ],
     [ "ptr_comparison_expr", "classvalue__set__pointer__abstract__objectt.html#af7081701b022b839d2464243b0d65686", null ],
     [ "ptr_diff", "classvalue__set__pointer__abstract__objectt.html#a2320748ac05929cac9a7a72bb93033fe", null ],

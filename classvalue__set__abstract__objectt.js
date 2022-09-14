@@ -9,6 +9,7 @@ var classvalue__set__abstract__objectt =
     [ "make_value_set", "classvalue__set__abstract__objectt.html#ad059ac03cfb1a2b6b205545898b8b3db", null ],
     [ "meet_with_value", "classvalue__set__abstract__objectt.html#a47825e2a50e00d77a967b04eaf3e85aa", null ],
     [ "merge_with_value", "classvalue__set__abstract__objectt.html#a322106a7e54443d9edfe7ceda78ebb2e", null ],
+    [ "mutable_clone", "classvalue__set__abstract__objectt.html#ab3b8e253f2992a12ac1c2c784b4922a5", null ],
     [ "output", "classvalue__set__abstract__objectt.html#a20e418e0a47ca28f5f4a378bc52cad27", null ],
     [ "resolve_values", "classvalue__set__abstract__objectt.html#a1709cd26b6a36b92c1f1401c66ed4b10", null ],
     [ "set_top_internal", "classvalue__set__abstract__objectt.html#a9d37099f2c4ccb334eca1815e7c66875", null ],

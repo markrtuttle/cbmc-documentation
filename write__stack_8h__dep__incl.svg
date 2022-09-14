@@ -5,18 +5,18 @@
  -->
 <!-- Title: /home/runner/work/cbmc&#45;documentation/cbmc&#45;documentation/src/analyses/variable&#45;sensitivity/write_stack.h Pages: 1 -->
 <svg width="877pt" height="328pt"
- viewBox="0.00 0.00 877.00 328.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 876.50 328.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 324)">
 <title>/home/runner/work/cbmc&#45;documentation/cbmc&#45;documentation/src/analyses/variable&#45;sensitivity/write_stack.h</title>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="333,-267.5 333,-319.5 533,-319.5 533,-267.5 333,-267.5"/>
-<text text-anchor="start" x="341" y="-307.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="341" y="-296.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="341" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="433" y="-274.5" font-family="Helvetica,sans-Serif" font-size="10.00">/write_stack.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="551,-267.5 551,-319.5 751,-319.5 751,-267.5 551,-267.5"/>
+<text text-anchor="start" x="559" y="-307.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="559" y="-296.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="559" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="651" y="-274.5" font-family="Helvetica,sans-Serif" font-size="10.00">/write_stack.h</text>
 </a>
 </g>
 </g>
@@ -24,144 +24,144 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="constant__pointer__abstract__object_8h.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="224,-178.5 224,-230.5 424,-230.5 424,-178.5 224,-178.5"/>
-<text text-anchor="start" x="232" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="232" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="232" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="324" y="-185.5" font-family="Helvetica,sans-Serif" font-size="10.00">/constant_pointer_abstract_object.h</text>
+<polygon fill="none" stroke="black" points="442,-178.5 442,-230.5 642,-230.5 642,-178.5 442,-178.5"/>
+<text text-anchor="start" x="450" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="450" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="450" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="542" y="-185.5" font-family="Helvetica,sans-Serif" font-size="10.00">/constant_pointer_abstract_object.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M393.45,-260.93C380.95,-250.96 367.31,-240.07 355.46,-230.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="391.47,-263.83 401.47,-267.34 395.84,-258.36 391.47,-263.83"/>
+<path fill="none" stroke="midnightblue" d="M611.45,-260.93C598.95,-250.96 585.31,-240.07 573.46,-230.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="609.47,-263.83 619.47,-267.34 613.84,-258.36 609.47,-263.83"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
 <g id="a_node9"><a xlink:href="write__stack_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="442,-178.5 442,-230.5 642,-230.5 642,-178.5 442,-178.5"/>
-<text text-anchor="start" x="450" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="450" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="450" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="542" y="-185.5" font-family="Helvetica,sans-Serif" font-size="10.00">/write_stack.cpp</text>
+<polygon fill="none" stroke="black" points="660,-178.5 660,-230.5 860,-230.5 860,-178.5 660,-178.5"/>
+<text text-anchor="start" x="668" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="668" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="668" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="760" y="-185.5" font-family="Helvetica,sans-Serif" font-size="10.00">/write_stack.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M472.55,-260.93C485.05,-250.96 498.69,-240.07 510.54,-230.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="470.16,-258.36 464.53,-267.34 474.53,-263.83 470.16,-258.36"/>
+<path fill="none" stroke="midnightblue" d="M690.55,-260.93C703.05,-250.96 716.69,-240.07 728.54,-230.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="688.16,-258.36 682.53,-267.34 692.53,-263.83 688.16,-258.36"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="constant__pointer__abstract__object_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-89.5 0,-141.5 202,-141.5 202,-89.5 0,-89.5"/>
-<text text-anchor="start" x="8" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="8" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="8" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="101" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/constant_pointer_abstract_object.cpp</text>
+<g id="a_node3"><a xlink:href="variable__sensitivity__object__factory_8h.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223,-89.5 223,-141.5 423,-141.5 423,-89.5 223,-89.5"/>
+<text text-anchor="start" x="231" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="231" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="231" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="323" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/variable_sensitivity_object_factory.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M250.22,-174.72C222.71,-163.98 191.71,-151.89 165.13,-141.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="249.21,-178.08 259.8,-178.45 251.75,-171.56 249.21,-178.08"/>
-</g>
-<!-- Node4 -->
-<g id="node4" class="node">
-<title>Node4</title>
-<g id="a_node4"><a xlink:href="value__set__pointer__abstract__object_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="220.5,-89.5 220.5,-141.5 427.5,-141.5 427.5,-89.5 220.5,-89.5"/>
-<text text-anchor="start" x="228.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="228.5" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="228.5" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="324" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/value_set_pointer_abstract_object.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M324,-168.19C324,-159.28 324,-149.9 324,-141.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="320.5,-168.34 324,-178.34 327.5,-168.34 320.5,-168.34"/>
-</g>
-<!-- Node5 -->
-<g id="node5" class="node">
-<title>Node5</title>
-<g id="a_node5"><a xlink:href="variable__sensitivity__object__factory_8h.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="446,-89.5 446,-141.5 646,-141.5 646,-89.5 446,-89.5"/>
-<text text-anchor="start" x="454" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="454" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="454" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="546" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/variable_sensitivity_object_factory.h</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
-<title>Node2&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M397.45,-174.72C424.84,-163.98 455.69,-151.89 482.15,-141.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="395.95,-171.55 387.91,-178.45 398.5,-178.06 395.95,-171.55"/>
-</g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="abstract__environment_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="223,-0.5 223,-52.5 423,-52.5 423,-0.5 223,-0.5"/>
-<text text-anchor="start" x="231" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="231" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="231" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="323" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/abstract_environment.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node5&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
-<title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M472.22,-85.72C444.71,-74.98 413.71,-62.89 387.13,-52.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="471.21,-89.08 481.8,-89.45 473.75,-82.56 471.21,-89.08"/>
+<path fill="none" stroke="midnightblue" d="M469.55,-174.72C442.52,-163.98 412.09,-151.89 385.98,-141.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="468.36,-178.01 478.95,-178.45 470.95,-171.51 468.36,-178.01"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="variable__sensitivity__object__factory_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="441.5,-0.5 441.5,-52.5 650.5,-52.5 650.5,-0.5 441.5,-0.5"/>
-<text text-anchor="start" x="449.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="449.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="449.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
-<text text-anchor="middle" x="546" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/variable_sensitivity_object_factory.cpp</text>
+<g id="a_node7"><a xlink:href="constant__pointer__abstract__object_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="441,-89.5 441,-141.5 643,-141.5 643,-89.5 441,-89.5"/>
+<text text-anchor="start" x="449" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="449" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="449" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="542" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/constant_pointer_abstract_object.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node7 -->
+<!-- Node2&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
-<title>Node5&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M546,-79.19C546,-70.28 546,-60.9 546,-52.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="542.5,-79.34 546,-89.34 549.5,-79.34 542.5,-79.34"/>
+<title>Node2&#45;&gt;Node7</title>
+<path fill="none" stroke="midnightblue" d="M542,-168.19C542,-159.28 542,-149.9 542,-141.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="538.5,-168.34 542,-178.34 545.5,-168.34 538.5,-168.34"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="build__analyzer_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="669,-6 669,-47 869,-47 869,-6 669,-6"/>
-<text text-anchor="start" x="677" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
-<text text-anchor="start" x="677" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="middle" x="769" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">/src/goto&#45;analyzer/build_analyzer.cpp</text>
+<g id="a_node8"><a xlink:href="value__set__pointer__abstract__object_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="661.5,-89.5 661.5,-141.5 868.5,-141.5 868.5,-89.5 661.5,-89.5"/>
+<text text-anchor="start" x="669.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="669.5" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="669.5" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="765" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/value_set_pointer_abstract_object.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node8 -->
+<!-- Node2&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
-<title>Node5&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M619.66,-85.76C652.13,-73.09 689.46,-58.53 718.67,-47.13"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="618.25,-82.56 610.2,-89.45 620.79,-89.08 618.25,-82.56"/>
+<title>Node2&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M615.78,-174.72C643.29,-163.98 674.29,-151.89 700.87,-141.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="614.25,-171.56 606.2,-178.45 616.79,-178.08 614.25,-171.56"/>
+</g>
+<!-- Node4 -->
+<g id="node4" class="node">
+<title>Node4</title>
+<g id="a_node4"><a xlink:href="abstract__environment_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-0.5 0,-52.5 200,-52.5 200,-0.5 0,-0.5"/>
+<text text-anchor="start" x="8" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="100" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/abstract_environment.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node3&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M249.22,-85.72C221.71,-74.98 190.71,-62.89 164.13,-52.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="248.21,-89.08 258.8,-89.45 250.75,-82.56 248.21,-89.08"/>
+</g>
+<!-- Node5 -->
+<g id="node5" class="node">
+<title>Node5</title>
+<g id="a_node5"><a xlink:href="variable__sensitivity__object__factory_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="218.5,-0.5 218.5,-52.5 427.5,-52.5 427.5,-0.5 218.5,-0.5"/>
+<text text-anchor="start" x="226.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="226.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="start" x="226.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/src/analyses/variable&#45;sensitivity</text>
+<text text-anchor="middle" x="323" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/variable_sensitivity_object_factory.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node5 -->
+<g id="edge4" class="edge">
+<title>Node3&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M323,-79.19C323,-70.28 323,-60.9 323,-52.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="319.5,-79.34 323,-89.34 326.5,-79.34 319.5,-79.34"/>
+</g>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="build__analyzer_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="446,-6 446,-47 646,-47 646,-6 446,-6"/>
+<text text-anchor="start" x="454" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
+<text text-anchor="start" x="454" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
+<text text-anchor="middle" x="546" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">/src/goto&#45;analyzer/build_analyzer.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node3&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M396.66,-85.76C429.13,-73.09 466.46,-58.53 495.67,-47.13"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="395.25,-82.56 387.2,-89.45 397.79,-89.08 395.25,-82.56"/>
 </g>
 </g>
 </svg>

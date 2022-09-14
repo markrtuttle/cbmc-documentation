@@ -12,6 +12,7 @@ var classconstant__abstract__valuet =
     [ "internal_hash", "classconstant__abstract__valuet.html#a4ca8fe50d29103b122e8ed94d7d2a08d", null ],
     [ "meet_with_value", "classconstant__abstract__valuet.html#ae8f4b22989e98c09e794c56b70c676ec", null ],
     [ "merge_with_value", "classconstant__abstract__valuet.html#ae6ec4604e377ad18e9b70ce66658d78f", null ],
+    [ "mutable_clone", "classconstant__abstract__valuet.html#ab80d07b2fbe2934feaf9518129f62b0d", null ],
     [ "output", "classconstant__abstract__valuet.html#a0ca7dc6da2bdbd68544a97a5f2ecdba9", null ],
     [ "to_constant", "classconstant__abstract__valuet.html#acdcadb7d0ab17e6032690797bf447a75", null ],
     [ "to_interval", "classconstant__abstract__valuet.html#a730659f0378b9ed146db43d772b3e24a", null ],

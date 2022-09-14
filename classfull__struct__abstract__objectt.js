@@ -10,6 +10,7 @@ var classfull__struct__abstract__objectt =
     [ "merge", "classfull__struct__abstract__objectt.html#ab7b018484f10771e8bb188acae18abfe", null ],
     [ "merge_constant_structs", "classfull__struct__abstract__objectt.html#a6602b48d83b02bdb89efda57bbc6d274", null ],
     [ "merge_location_context", "classfull__struct__abstract__objectt.html#a7744c9bdaa31b9c89a39b477163a9fdb", null ],
+    [ "mutable_clone", "classfull__struct__abstract__objectt.html#a23879f815bef40992d717cfa2c313d3c", null ],
     [ "output", "classfull__struct__abstract__objectt.html#a01f6eebfb4204c97f14d11c4ebf5104c", null ],
     [ "read_component", "classfull__struct__abstract__objectt.html#a8616351888a49993db6e0e4a55e12608", null ],
     [ "statistics", "classfull__struct__abstract__objectt.html#a3e0a7be5b3e851ca42ee61fb65c36bb3", null ],

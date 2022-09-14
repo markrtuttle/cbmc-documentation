@@ -250,12 +250,12 @@ $(document).ready(function(){initNavTree('interpreter_8cpp_source.html',''); ini
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    ch=tolower(<a class="code" href="classinterpretert.html#a37ffdef85bc750855b5784a50933c47b">command</a>[1]);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span>(ch==<span class="charliteral">&#39; &#39;</span>)</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      std::ofstream <a class="code" href="structfile.html">file</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <a class="code" href="structfile.html">file</a>.open(<a class="code" href="classinterpretert.html#a37ffdef85bc750855b5784a50933c47b">command</a>+2);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="structfile.html">file</a>.is_open())</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      std::ofstream file;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      file.open(<a class="code" href="classinterpretert.html#a37ffdef85bc750855b5784a50933c47b">command</a>+2);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">if</span>(file.is_open())</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        json_steps.<a class="code" href="classjsont.html#aa48361a732cb68bcb1e8bbde6858e5fe">output</a>(<a class="code" href="structfile.html">file</a>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="structfile.html">file</a>.close();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        json_steps.<a class="code" href="classjsont.html#aa48361a732cb68bcb1e8bbde6858e5fe">output</a>(file);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        file.close();</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
@@ -271,12 +271,12 @@ $(document).ready(function(){initNavTree('interpreter_8cpp_source.html',''); ini
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    ch=tolower(<a class="code" href="classinterpretert.html#a37ffdef85bc750855b5784a50933c47b">command</a>[1]);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span>(ch==<span class="charliteral">&#39; &#39;</span>)</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      std::ofstream <a class="code" href="structfile.html">file</a>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <a class="code" href="structfile.html">file</a>.open(<a class="code" href="classinterpretert.html#a37ffdef85bc750855b5784a50933c47b">command</a>+2);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="structfile.html">file</a>.is_open())</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      std::ofstream file;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      file.open(<a class="code" href="classinterpretert.html#a37ffdef85bc750855b5784a50933c47b">command</a>+2);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordflow">if</span>(file.is_open())</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="classinterpretert.html#a611d1b2eb1f489fd418abbf9d0e3bcf9">steps</a>.<a class="code" href="classgoto__tracet.html#ac34a1801586fb56790e277a97e63d4bf">output</a>(<a class="code" href="classinterpretert.html#acd624d0da919c748e27c3d5b4111759c">ns</a>, <a class="code" href="structfile.html">file</a>);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <a class="code" href="structfile.html">file</a>.close();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="classinterpretert.html#a611d1b2eb1f489fd418abbf9d0e3bcf9">steps</a>.<a class="code" href="classgoto__tracet.html#ac34a1801586fb56790e277a97e63d4bf">output</a>(<a class="code" href="classinterpretert.html#acd624d0da919c748e27c3d5b4111759c">ns</a>, file);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        file.close();</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
@@ -1174,7 +1174,6 @@ $(document).ready(function(){initNavTree('interpreter_8cpp_source.html',''); ini
 <div class="ttc" id="aclasssparse__vectort_html_af283db014d34348f846f724dee216d22"><div class="ttname"><a href="classsparse__vectort.html#af283db014d34348f846f724dee216d22">sparse_vectort::size</a></div><div class="ttdeci">uint64_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="sparse__vector_8h_source.html#l00043">sparse_vector.h:43</a></div></div>
 <div class="ttc" id="aclassieee__floatt_html_a237e8e418644bf492dbfecd256762e07"><div class="ttname"><a href="classieee__floatt.html#a237e8e418644bf492dbfecd256762e07">ieee_floatt::unpack</a></div><div class="ttdeci">void unpack(const mp_integer &amp;i)</div><div class="ttdef"><b>Definition:</b> <a href="ieee__float_8cpp_source.html#l00319">ieee_float.cpp:319</a></div></div>
 <div class="ttc" id="afixedbv_8h_html"><div class="ttname"><a href="fixedbv_8h.html">fixedbv.h</a></div></div>
-<div class="ttc" id="astructfile_html"><div class="ttname"><a href="structfile.html">file</a></div><div class="ttdef"><b>Definition:</b> <a href="kdev__t_8h_source.html#l00019">kdev_t.h:19</a></div></div>
 <div class="ttc" id="aclassinterpretert_html_a4eb2a78e5a3a59a9853b71a6f88a212b"><div class="ttname"><a href="classinterpretert.html#a4eb2a78e5a3a59a9853b71a6f88a212b">interpretert::address_to_symbol</a></div><div class="ttdeci">symbol_exprt address_to_symbol(const mp_integer &amp;address) const</div><div class="ttdef"><b>Definition:</b> <a href="interpreter__class_8h_source.html#l00126">interpreter_class.h:126</a></div></div>
 <div class="ttc" id="asrc_2util_2invariant_8h_html"><div class="ttname"><a href="src_2util_2invariant_8h.html">invariant.h</a></div></div>
 <div class="ttc" id="aclassinterpretert_html_acfefc942aececfd8725ffa61405322f1"><div class="ttname"><a href="classinterpretert.html#acfefc942aececfd8725ffa61405322f1">interpretert::evaluate_boolean</a></div><div class="ttdeci">bool evaluate_boolean(const exprt &amp;expr)</div><div class="ttdef"><b>Definition:</b> <a href="interpreter__class_8h_source.html#l00276">interpreter_class.h:276</a></div></div>
