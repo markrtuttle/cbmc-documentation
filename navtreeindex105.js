@@ -1,5 +1,8 @@
 var NAVTREEINDEX105 =
 {
+"optional_8h_source.html":[5,0,2,26,143],
+"optional__utils_8h.html":[5,0,2,26,144],
+"optional__utils_8h.html#af55c415ccf535a2d3b6e21e0ba71725a":[5,0,2,26,144,0],
 "optional__utils_8h_source.html":[5,0,2,26,144],
 "options_8cpp.html":[5,0,2,26,145],
 "options_8cpp_source.html":[5,0,2,26,145],
@@ -21,7 +24,7 @@ var NAVTREEINDEX105 =
 "osx__fat__reader_8h.html#a9471312cf7941789585c27e737e518cc":[5,0,2,13,77,4],
 "osx__fat__reader_8h_source.html":[5,0,2,13,77],
 "other-tools.html":[0,4,15],
-"other-tools.html#autotoc_md87":[0,4,15,0],
+"other-tools.html#autotoc_md88":[0,4,15,0],
 "overflow__instrumenter_8cpp.html":[5,0,2,12,0,13],
 "overflow__instrumenter_8cpp_source.html":[5,0,2,12,0,13],
 "overflow__instrumenter_8h.html":[5,0,2,12,0,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX105 =
 "pointer__predicates_8h.html#a1579332740730bec2ce3fce72fe9f408":[5,0,2,26,160,7],
 "pointer__predicates_8h.html#a4f4f8c2889a0c8ee9c61a7389bd29cbc":[5,0,2,26,160,11],
 "pointer__predicates_8h.html#a517bf9699d30f655a00cb661c1ca8035":[5,0,2,26,160,3],
-"pointer__predicates_8h.html#a62fc3446bf06c94b641130c95e629e11":[5,0,2,26,160,12],
-"pointer__predicates_8h.html#a7d09f325360eb12489ecdd12c34d8268":[5,0,2,26,160,1],
-"pointer__predicates_8h.html#a83701b9b55107f667a8b5cc491671d63":[5,0,2,26,160,16],
-"pointer__predicates_8h.html#a9a5e9fac06ef8279cf0827099bc60ce9":[5,0,2,26,160,5]
+"pointer__predicates_8h.html#a62fc3446bf06c94b641130c95e629e11":[5,0,2,26,160,12]
 };

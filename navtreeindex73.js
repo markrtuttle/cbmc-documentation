@@ -1,5 +1,6 @@
 var NAVTREEINDEX73 =
 {
+"float__utils_8cpp.html":[5,0,2,23,2,4],
 "float__utils_8cpp_source.html":[5,0,2,23,2,4],
 "float__utils_8h.html":[5,0,2,23,2,5],
 "float__utils_8h_source.html":[5,0,2,23,2,5],
@@ -46,11 +47,11 @@ var NAVTREEINDEX73 =
 "flow__insensitive__analysis_8h.html":[5,0,2,0,28],
 "flow__insensitive__analysis_8h_source.html":[5,0,2,0,28],
 "folder-walkthrough.html":[0,4,13],
-"folder-walkthrough.html#autotoc_md67":[0],
-"folder-walkthrough.html#autotoc_md68":[1],
-"folder-walkthrough.html#autotoc_md69":[2],
-"folder-walkthrough.html#autotoc_md70":[3],
-"folder-walkthrough.html#autotoc_md71":[4],
+"folder-walkthrough.html#autotoc_md68":[0],
+"folder-walkthrough.html#autotoc_md69":[1],
+"folder-walkthrough.html#autotoc_md70":[2],
+"folder-walkthrough.html#autotoc_md71":[3],
+"folder-walkthrough.html#autotoc_md72":[4],
 "format_8h.html":[5,0,2,26,60],
 "format_8h.html#a61196a1705b48aa9e0b23cf0ffe32060":[5,0,2,26,60,2],
 "format_8h.html#a74b453cb3c0deb818d6f2e0f683996ca":[5,0,2,26,60,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX73 =
 "functions_s.html":[4,2,0,19],
 "functions_t.html":[4,2,0,20],
 "functions_type.html":[4,2,3],
-"functions_type.html":[4,2,3,0],
-"functions_type_b.html":[4,2,3,1]
+"functions_type.html":[4,2,3,0]
 };

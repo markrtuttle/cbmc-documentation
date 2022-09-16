@@ -1,5 +1,8 @@
 var NAVTREEINDEX98 =
 {
+"java__types_8h.html#a2bb9adb1014158656f2e342d4e1bbebb":[5,0,1,0,1,88,18],
+"java__types_8h.html#a36a4c8942455e10afad46d9ca3a82409":[5,0,1,0,1,88,70],
+"java__types_8h.html#a3c56e22e7dec53a7acd66424f17c6e22":[5,0,1,0,1,88,40],
 "java__types_8h.html#a3cbb61d76f726c3876277dc82df9a1b5":[5,0,1,0,1,88,50],
 "java__types_8h.html#a4615a7a07e0bb6636a1b01369bb8718f":[5,0,1,0,1,88,28],
 "java__types_8h.html#a49052368d7846279ccce118b080bb76e":[5,0,1,0,1,88,76],
@@ -246,8 +249,5 @@ var NAVTREEINDEX98 =
 "jsil__parser_8h.html#a9c6c4a93fa01f18cf2e8779c4821c3dd":[5,0,2,15,13,3],
 "jsil__parser_8h.html#abb103aa9db12e65e954f9094a3ff21d5":[5,0,2,15,13,4],
 "jsil__parser_8h.html#abe854d80cabd6380ab7f932de4df5d5a":[5,0,2,15,13,2],
-"jsil__parser_8h.html#ad79917e6dc81de832b201615e3c37ec2":[5,0,2,15,13,1],
-"jsil__parser_8h_source.html":[5,0,2,15,13],
-"jsil__typecheck_8cpp.html":[5,0,2,15,14],
-"jsil__typecheck_8cpp.html#a6934bac37e7fafd2c60f5a5c76f0b375":[5,0,2,15,14,1]
+"jsil__parser_8h.html#ad79917e6dc81de832b201615e3c37ec2":[5,0,2,15,13,1]
 };

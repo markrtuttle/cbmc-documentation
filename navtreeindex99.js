@@ -1,5 +1,8 @@
 var NAVTREEINDEX99 =
 {
+"jsil__parser_8h_source.html":[5,0,2,15,13],
+"jsil__typecheck_8cpp.html":[5,0,2,15,14],
+"jsil__typecheck_8cpp.html#a6934bac37e7fafd2c60f5a5c76f0b375":[5,0,2,15,14,1],
 "jsil__typecheck_8cpp.html#a6c02ba24bffd19350f46a216560557af":[5,0,2,15,14,0],
 "jsil__typecheck_8cpp_source.html":[5,0,2,15,14],
 "jsil__typecheck_8h.html":[5,0,2,15,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX99 =
 "lexical__loops_8h.html#aadb5d35f23c54e1f0c14cd90227d4c5a":[5,0,2,0,50,2],
 "lexical__loops_8h.html#afd32460cb325865c6603ea19aee27dd6":[5,0,2,0,50,1],
 "lexical__loops_8h_source.html":[5,0,2,0,50],
-"lift__clinit__calls_8cpp.html":[5,0,1,0,1,96],
-"lift__clinit__calls_8cpp.html#af3451a522ee32cb64d9cca2e31c17278":[5,0,1,0,1,96,0],
-"lift__clinit__calls_8cpp_source.html":[5,0,1,0,1,96],
-"lift__clinit__calls_8h.html":[5,0,1,0,1,97]
+"lift__clinit__calls_8cpp.html":[5,0,1,0,1,96]
 };

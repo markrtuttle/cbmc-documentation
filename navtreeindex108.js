@@ -1,5 +1,8 @@
 var NAVTREEINDEX108 =
 {
+"remove__virtual__functions_8h.html#a8429ec63a77a5107780893a4c75c394b":[5,0,2,13,111,9],
+"remove__virtual__functions_8h.html#a997d562b02289589c77e6c6a304f0650":[5,0,2,13,111,1],
+"remove__virtual__functions_8h.html#aa191f30fabf9e2847ef85069e4f89e4f":[5,0,2,13,111,12],
 "remove__virtual__functions_8h.html#aca6cc439b33e675b72072f935000fe7e":[5,0,2,13,111,4],
 "remove__virtual__functions_8h.html#ad7c93f5b8600a3fe546a94e07b4f34ce":[5,0,2,13,111,3],
 "remove__virtual__functions_8h.html#ad7c93f5b8600a3fe546a94e07b4f34cea3c32a578399207daddde681b1e83c1da":[5,0,2,13,111,3,1],
@@ -234,9 +237,9 @@ var NAVTREEINDEX108 =
 "restrict__function__pointers_8h.html#af85602cd437bd9f6429a27b033d7104a":[5,0,2,13,115,4],
 "restrict__function__pointers_8h_source.html":[5,0,2,13,115],
 "restricting-function-pointers.html":[0,4,8],
-"restricting-function-pointers.html#autotoc_md88":[2,0],
-"restricting-function-pointers.html#autotoc_md89":[2,1],
-"restricting-function-pointers.html#autotoc_md90":[2,2],
+"restricting-function-pointers.html#autotoc_md89":[2,0],
+"restricting-function-pointers.html#autotoc_md90":[2,1],
+"restricting-function-pointers.html#autotoc_md91":[2,2],
 "rewrite__index_8cpp.html":[5,0,2,22,6],
 "rewrite__index_8cpp.html#a2e29e6bd7c97537693fdc12aee5b9fb4":[5,0,2,22,6,0],
 "rewrite__index_8cpp_source.html":[5,0,2,22,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX108 =
 "rewrite__union_8cpp.html":[5,0,2,13,116],
 "rewrite__union_8cpp.html#a48d154a1d1dc8de80eb5b9344e621749":[5,0,2,13,116,2],
 "rewrite__union_8cpp.html#a4e2669aaa8f60049f099ce374bc56e88":[5,0,2,13,116,3],
-"rewrite__union_8cpp.html#a538c7e03b6f8f87a928d6009439788f5":[5,0,2,13,116,4],
-"rewrite__union_8cpp.html#a77bd7e12165a7a0d79ad1811268a3479":[5,0,2,13,116,0],
-"rewrite__union_8cpp.html#a7928ffebbe06fef6d042dff9c7ba635a":[5,0,2,13,116,5],
-"rewrite__union_8cpp.html#a7cd0f15b02fb2106206516922639d207":[5,0,2,13,116,1]
+"rewrite__union_8cpp.html#a538c7e03b6f8f87a928d6009439788f5":[5,0,2,13,116,4]
 };
