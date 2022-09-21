@@ -92,40 +92,30 @@ $(document).ready(function(){initNavTree('md__home_runner_work_cbmc-documentatio
 <div class="title">memory-analyzer </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>memory-analyzer Memory Analyzer</p>
+<div class="textblock"><p>\page memory-analyzer Memory Analyzer</p>
 <p>The memory analyzer is a front-end that runs and queries GDB in order to obtain a snapshot of the state of the input program at a particular program location. Such a snapshot could be useful on its own: to check the values of variables at a particular program location. Furthermore, since the snapshot is a state of a valid concrete execution, it can also be used for subsequent analyses.</p>
-<h2><a class="anchor" id="usage"></a>
+<h2><a class="anchor" id="autotoc_md87"></a>
 Usage</h2>
 <p>In order to analyze a program with <code>memory-analyzer</code> it needs to be compiled with <code>goto-gcc</code> (assuming <code>goto-gcc</code> is on the <code>PATH</code>):</p>
-<div class="fragment"><div class="line">$ goto-gcc -g input_program.c -o input_program_exe</div>
-</div><!-- fragment --><p>Calling <code>goto-gcc</code> instead of simply compiling with <code>gcc</code> or <code>goto-cc</code> produces an ELF binary with a goto section that contains the goto model (goto program + symbol table) <a href="../goto-cc/variants/">goto-cc-variants</a>.</p>
+<p><code>sh $ goto-gcc -g input_program.c -o input_program_exe</code></p>
+<p>Calling <code>goto-gcc</code> instead of simply compiling with <code>gcc</code> or <code>goto-cc</code> produces an ELF binary with a goto section that contains the goto model (goto program + symbol table) <a href="../goto-cc/variants/">goto-cc-variants</a>.</p>
 <p>The memory analyzer supports two ways of running GDB on the user code: either to run the code from a core-file or up to a break-point. If the user already has a core-file, they can specify it with the option <code>--core-file cf</code>. If the user knows the point of their program from where they want to run the analysis, they can specify it with the option <code>--breakpoint bp</code>. Only one of core-file/break-point option can be used.</p>
 <p>The tool also expects a comma-separated list of symbols to be analysed <code>--symbols s1, s2, ...</code>. Given its dependence on GDB, <code>memory-analyzer</code> is a Unix-only tool. The tool calls <code>gdb</code> to obtain the snapshot which is why the <code>-g</code> option is necessary when compiling for the program symbols to be visible.</p>
 <p>Take for example the following program:</p>
-<div class="fragment"><div class="line">// main.c</div>
-<div class="line">void checkpoint() {}</div>
-<div class="line"> </div>
-<div class="line">int array[] = {1, 2, 3};</div>
-<div class="line"> </div>
-<div class="line">int main()</div>
-<div class="line">{</div>
-<div class="line">  array[1] = 4;</div>
-<div class="line"> </div>
-<div class="line">  checkpoint();</div>
-<div class="line"> </div>
-<div class="line">  return 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>Say we are interested in the evaluation of <code>array</code> at the call-site of <code>checkpoint</code>. We compile the program with</p>
-<div class="fragment"><div class="line">$ goto-gcc -g main.c -o main_exe</div>
-</div><!-- fragment --><p>And then we call <code>memory-analyzer</code> with:</p>
-<div class="fragment"><div class="line">$ memory-analyzer --breakpoint checkpoint --symbols array main_exe</div>
-</div><!-- fragment --><p>to obtain as output the human readable list of values for each requested symbol: </p><pre class="fragment">{
-  array = { 1, 4, 3 };
-}
-</pre><p>The above option is useful for the user and their preliminary analysis but does not contain enough information for further automated analyses. To that end, memory analyzer has an option for the snapshot to be represented in the format of a symbol table (with <code>--symtab-snapshot</code>). Finally, to obtain an output in JSON format, e.g., for further analyses by <code>goto-harness</code> the additional option <code>--json-ui</code> needs to be passed to <code>memory-analyzer</code>.</p>
-<div class="fragment"><div class="line">$ memory-analyzer --symtab-snapshot --json-ui \</div>
-<div class="line">--breakpoint checkpoint --symbols array main_exe &gt; snapshot.json</div>
-</div><!-- fragment --><p>Last modified: 2022-09-21 18:26:09 -0400 </p>
+<p>```C // main.c void checkpoint() {}</p>
+<p>int array[] = {1, 2, 3};</p>
+<p>int <a class="el" href="file__converter_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> { array[1] = 4;</p>
+<p>checkpoint();</p>
+<p>return 0; } ```</p>
+<p>Say we are interested in the evaluation of <code>array</code> at the call-site of <code>checkpoint</code>. We compile the program with</p>
+<p><code>sh $ goto-gcc -g main.c -o main_exe</code></p>
+<p>And then we call <code>memory-analyzer</code> with:</p>
+<p><code>sh $ memory-analyzer --breakpoint checkpoint --symbols array main_exe</code></p>
+<p>to obtain as output the human readable list of values for each requested symbol:</p>
+<p><code>{ array = { 1, 4, 3 }; }</code></p>
+<p>The above option is useful for the user and their preliminary analysis but does not contain enough information for further automated analyses. To that end, memory analyzer has an option for the snapshot to be represented in the format of a symbol table (with <code>--symtab-snapshot</code>). Finally, to obtain an output in JSON format, e.g., for further analyses by <code>goto-harness</code> the additional option <code>--json-ui</code> needs to be passed to <code>memory-analyzer</code>.</p>
+<p><code>sh $ memory-analyzer --symtab-snapshot --json-ui \ --breakpoint checkpoint --symbols array main_exe &gt; snapshot.json</code></p>
+<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

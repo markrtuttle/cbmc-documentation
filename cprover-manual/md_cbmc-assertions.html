@@ -66,44 +66,30 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
-<h3><a class="anchor" id="assertion-checking"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 Assertion Checking</h3>
-<p><a href="http://en.wikipedia.org/wiki/Assertion_%28computing%29">Assertions</a> are statements within the program that attempt to capture the programmer’s intent. The ANSI C standard defines a header file <a href="http://en.wikipedia.org/wiki/Assert.h">assert.h</a>, which offers a macro <code>assert(cond)</code>. When executing a statement such as:</p>
-<div class="fragment"><div class="line">assert(p!=NULL);</div>
-</div><!-- fragment --><p>the execution is aborted with an error message if the condition evaluates to <em>false</em>, that is, if <code>p</code> is NULL in the example above. The CPROVER tools can check the validity of the programmer-annotated assertions statically. Specifically, the CPROVER tools will check that the assertions hold for <em>any</em> nondeterministic choice that the program can make. The static assertion checks can be disabled using the <code>--no-assertions</code> command line option.</p>
+<p><a href="http://en.wikipedia.org/wiki/Assertion_%28computing%29">Assertions</a> are statements within the program that attempt to capture the programmer's intent. The ANSI C standard defines a header file <a href="http://en.wikipedia.org/wiki/Assert.h">assert.h</a>, which offers a macro <code>assert(cond)</code>. When executing a statement such as:</p>
+<p><code>C assert(p!=NULL);</code></p>
+<p>the execution is aborted with an error message if the condition evaluates to <em>false</em>, that is, if <code>p</code> is NULL in the example above. The CPROVER tools can check the validity of the programmer-annotated assertions statically. Specifically, the CPROVER tools will check that the assertions hold for <em>any</em> nondeterministic choice that the program can make. The static assertion checks can be disabled using the <code>--no-assertions</code> command line option.</p>
 <p>In addition, there is a CPROVER-specific way to specify assertions, using the built-in function <code>__CPROVER_assert</code>:</p>
-<div class="fragment"><div class="line">__CPROVER_assert(p!=NULL, &quot;p is not NULL&quot;);</div>
-</div><!-- fragment --><p>The (mandatory) string that is passed as the second argument provides an informal description of the assertion. It is shown in the list of properties together with the condition.</p>
+<p><code>C __CPROVER_assert(p!=NULL, "p is not NULL");</code></p>
+<p>The (mandatory) string that is passed as the second argument provides an informal description of the assertion. It is shown in the list of properties together with the condition.</p>
 <p>The assertion language of the CPROVER tools is identical to the language used for expressions. Note that <a class="el" href="md_modeling-nondeterminism.html">nondeterminism</a> can be exploited in order to check a range of choices. As an example, the following code fragment asserts that <b>all</b> elements of the array are zero:</p>
-<div class="fragment"><div class="line">int a[100], i;</div>
-<div class="line"> </div>
-<div class="line">...</div>
-<div class="line"> </div>
-<div class="line">i=nondet_uint();</div>
-<div class="line">if(i&gt;=0 &amp;&amp; i&lt;100)</div>
-<div class="line">  assert(a[i]==0);</div>
-</div><!-- fragment --><p>The nondeterministic choice will guess the element of the array that is nonzero. The code fragment above is therefore equivalent to:</p>
-<div class="fragment"><div class="line">int a[100], i;</div>
-<div class="line"> </div>
-<div class="line">...</div>
-<div class="line"> </div>
-<div class="line">for(i=0; i&lt;100; i++)</div>
-<div class="line">  assert(a[i]==0);</div>
-</div><!-- fragment --><p>CPROVER also supports writing function pre and postconditions, using the built-in functions <code>__CPROVER_precondition</code> and <code>__CPROVER_postcondition</code>. They can be used to express intent, and at the moment they are just transformed to assertions in the goto program. As such, they can be used as simple assertions in code. However, it is advised to use <code>__CPROVER_precondition</code> at the beginning of a function’s body, and <code>__CPROVER_postcondition</code> before the exit points in a function (either the return statements, or the end of the body if the function returns void). The following is an example usage:</p>
-<div class="fragment"><div class="line">int foo(int a, int b) {</div>
-<div class="line">  __CPROVER_precondition(a &gt;= 0);</div>
-<div class="line">  __CPROVER_precondition(b &gt; 0);</div>
-<div class="line"> </div>
-<div class="line">  int rval = a / b;</div>
-<div class="line"> </div>
-<div class="line">  __CPROVER_postcondition(rval &gt;= 0);</div>
-<div class="line">  return rval;</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>A future release of CPROVER will support using these pre and postconditions to create a function contract, which can be used for modular verification.</p>
+<p>```C int a[100], i;</p>
+<p>...</p>
+<p>i=nondet_uint(); if(i&gt;=0 &amp;&amp; i&lt;100) assert(a[i]==0); ```</p>
+<p>The nondeterministic choice will guess the element of the array that is nonzero. The code fragment above is therefore equivalent to:</p>
+<p>```C int a[100], i;</p>
+<p>...</p>
+<p>for(i=0; i&lt;100; i++) assert(a[i]==0); ```</p>
+<p>CPROVER also supports writing function pre and postconditions, using the built-in functions <code>__CPROVER_precondition</code> and <code>__CPROVER_postcondition</code>. They can be used to express intent, and at the moment they are just transformed to assertions in the goto program. As such, they can be used as simple assertions in code. However, it is advised to use <code>__CPROVER_precondition</code> at the beginning of a function's body, and <code>__CPROVER_postcondition</code> before the exit points in a function (either the return statements, or the end of the body if the function returns void). The following is an example usage:</p>
+<p>```C int foo(int a, int b) { __CPROVER_precondition(a &gt;= 0); __CPROVER_precondition(b &gt; 0);</p>
+<p>int rval = a / b;</p>
+<p>__CPROVER_postcondition(rval &gt;= 0); return rval; } ```</p>
+<p>A future release of CPROVER will support using these pre and postconditions to create a function contract, which can be used for modular verification.</p>
 <p>Future CPROVER releases will support explicit quantifiers with a syntax that resembles Spec#:</p>
-<div class="fragment"><div class="line">__CPROVER_forall { *type identifier* ; *expression* }</div>
-<div class="line">__CPROVER_exists { *type identifier* ; *expression* }</div>
-</div><!-- fragment --><p>Last modified: 2022-09-21 18:26:09 -0400 </p>
+<p><code>C __CPROVER_forall { *type identifier* ; *expression* } __CPROVER_exists { *type identifier* ; *expression* }</code></p>
+<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

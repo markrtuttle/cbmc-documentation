@@ -66,9 +66,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
-<h1><a class="anchor" id="introduction"></a>
+<h1><a class="anchor" id="autotoc_md150"></a>
 Introduction</h1>
-<h2><a class="anchor" id="motivation"></a>
+<h2><a class="anchor" id="autotoc_md151"></a>
 Motivation</h2>
 <p>Numerous tools to hunt down functional design flaws in silicon have been available for many years, mainly due to the enormous cost of hardware bugs. The use of such tools is widespread. In contrast, the market for tools that address the need for quality software is still in its infancy.</p>
 <p>Research in software quality has enormous breadth. We focus the presentation using two criteria:</p>
@@ -76,13 +76,13 @@ Motivation</h2>
 <li>We believe that any form of quality requires a specific <em>guarantee</em>, in theory and practice.</li>
 <li>The sheer size of software designs requires techniques that are highly <em>automated</em>.</li>
 </ol>
-<p>In practice, quality guarantees usually do not refer to “total correctness” of a design, as ensuring the absence of all bugs is too expensive for most applications. In contrast, a guarantee of the absence of specific flaws is achievable, and is a good metric of quality.</p>
-<h2><a class="anchor" id="bounded-model-checking-with-cbmc"></a>
+<p>In practice, quality guarantees usually do not refer to "total correctness" of a design, as ensuring the absence of all bugs is too expensive for most applications. In contrast, a guarantee of the absence of specific flaws is achievable, and is a good metric of quality.</p>
+<h2><a class="anchor" id="autotoc_md152"></a>
 Bounded Model Checking with CBMC</h2>
 <p>CBMC implements a technique called <em>Bounded Model Checking</em> (BMC). In BMC, the transition relation for a complex state machine and its specification are jointly unwound to obtain a Boolean formula, which is then checked for satisfiability by using an efficient SAT procedure. If the formula is satisfiable, a counterexample is extracted from the output of the SAT procedure. If the formula is not satisfiable, the program can be unwound more to determine if a longer counterexample exists.</p>
 <p>In many engineering domains, real-time guarantees are a strict requirement. An example is software embedded in automotive controllers. As a consequence, the loop constructs in these types of programs often have a strict bound on the number of iterations. CBMC is able to formally verify such bounds by means of <em>unwinding assertions</em>. Once this bound is established, CBMC is able to prove the absence of errors.</p>
 <p>A more detailed description of how to apply CBMC to verify programs is in our <a class="el" href="md_cbmc-tutorial.html">CBMC Tutorial</a>.</p>
-<p>Last modified: 2022-09-21 18:26:09 -0400 </p>
+<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

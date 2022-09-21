@@ -92,56 +92,57 @@ $(document).ready(function(){initNavTree('md__home_runner_work_cbmc-documentatio
 <div class="title">folder-walkthrough </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>module_hidden folder-walkthrough Folder Walkthrough</p>
+<div class="textblock"><p>\ingroup module_hidden</p>
+<p>\page folder-walkthrough Folder Walkthrough</p>
 <p>\author Martin Brain, Peter Schrammel</p>
-<h2><a class="anchor" id="src"></a>
+<h2><a class="anchor" id="autotoc_md68"></a>
 &lt;tt&gt;src/&lt;/tt&gt;</h2>
 <p>The source code is divided into a number of sub-directories, each containing the code for a different part of the system.</p>
 <ul>
 <li>GOTO-Programs<ul>
-<li>goto-programs</li>
-<li>linking</li>
+<li>\ref goto-programs</li>
+<li>\ref linking</li>
 </ul>
 </li>
 <li>Symbolic Execution<ul>
-<li>goto-checker</li>
-<li>goto-symex</li>
+<li>\ref goto-checker</li>
+<li>\ref goto-symex</li>
 </ul>
 </li>
 <li>Static Analyses<ul>
-<li>analyses</li>
-<li>pointer-analysis</li>
+<li>\ref analyses</li>
+<li>\ref pointer-analysis</li>
 </ul>
 </li>
 <li>Solvers<ul>
-<li>solvers</li>
+<li>\ref solvers</li>
 </ul>
 </li>
 <li>Language Front Ends<ul>
-<li>Language API: langapi</li>
-<li>C: ansi-c</li>
-<li>C++: cpp</li>
-<li>Java: java_bytecode</li>
-<li>JavaScript: jsil</li>
+<li>Language API: \ref langapi</li>
+<li>C: \ref ansi-c</li>
+<li>C++: \ref cpp</li>
+<li>Java: \ref java_bytecode</li>
+<li>JavaScript: \ref jsil</li>
 </ul>
 </li>
 <li>Tools<ul>
-<li>cbmc</li>
-<li>goto-analyzer</li>
-<li>goto-cc</li>
-<li>goto-diff</li>
-<li>goto-harness</li>
-<li>goto-instrument</li>
-<li>jbmc</li>
+<li>\ref cbmc</li>
+<li>\ref goto-analyzer</li>
+<li>\ref goto-cc</li>
+<li>\ref goto-diff</li>
+<li>\ref goto-harness</li>
+<li>\ref goto-instrument</li>
+<li>\ref jbmc</li>
 </ul>
 </li>
 <li>Utilities<ul>
-<li>big-int</li>
-<li>json</li>
-<li>xmllang</li>
-<li>util</li>
-<li>miniz</li>
-<li>nonstd</li>
+<li>\ref big-int</li>
+<li>\ref json</li>
+<li>\ref xmllang</li>
+<li>\ref util</li>
+<li>\ref miniz</li>
+<li>\ref nonstd</li>
 </ul>
 </li>
 </ul>
@@ -152,36 +153,36 @@ $(document).ready(function(){initNavTree('md__home_runner_work_cbmc-documentatio
 <li><code>common</code>: System specific magic required to get the system to build. This should only need to be edited if porting CBMC to a new platform / build environment.</li>
 <li><code>doxygen.cfg</code>: The config file for doxygen.cfg</li>
 </ul>
-<h2><a class="anchor" id="doc"></a>
+<h2><a class="anchor" id="autotoc_md69"></a>
 &lt;tt&gt;doc/&lt;/tt&gt;</h2>
 <p>Contains the CBMC man page. Doxygen HTML pages are generated into the <code>doc/html</code> directory when running <code>doxygen</code> from <code>src</code>.</p>
-<h2><a class="anchor" id="regression"></a>
+<h2><a class="anchor" id="autotoc_md70"></a>
 &lt;tt&gt;regression/&lt;/tt&gt;</h2>
-<p>The <code>regression/</code> directory contains the regression test suites. See compilation-and-development for information on how to run and develop regression tests.</p>
-<h2><a class="anchor" id="unit"></a>
+<p>The <code>regression/</code> directory contains the regression test suites. See \ref compilation-and-development for information on how to run and develop regression tests.</p>
+<h2><a class="anchor" id="autotoc_md71"></a>
 &lt;tt&gt;unit/&lt;/tt&gt;</h2>
-<p>The <code>unit/</code> directory contains the unit test suites. See compilation-and-development for information on how to run and develop unit tests.</p>
-<h2><a class="anchor" id="directory-dependencies"></a>
+<p>The <code>unit/</code> directory contains the unit test suites. See \ref compilation-and-development for information on how to run and develop unit tests.</p>
+<h2><a class="anchor" id="autotoc_md72"></a>
 Directory dependencies</h2>
 <p>This diagram shows <em>intended</em> directory dependencies. Arrows should be read transitively - dependencies of dependencies are often used directly.</p>
-<p>There are <code>module_dependencies.txt</code> files in each directory, which are checked by the linter. Where directories in <code>module_dependencies.txt</code> are marked with comments such as ‘dubious’ or ‘should go away’, these dependencies have generally not been included in the diagram.</p>
-<p>digraph directory_dependencies { node [style = filled, color = white];</p>
-<p>subgraph cluster_executables { label = “Executables”; style = filled; color = lightgrey; node [style = filled, color = white]; CBMC [URL = “cbmc”]; goto_cc [label = “goto-cc”, URL = “goto-cc”]; goto_analyzer [label = “goto-analyzer”, URL = “goto-analyzer”]; goto_instrument [label = “goto-instrument”, URL = “goto-instrument”]; goto_diff [label = “goto-diff”, URL = “goto-diff”]; janalyzer [URL = “janalyzer”]; jdiff [URL = “jdiff”]; JBMC [URL = “jbmc”]; smt2_solver; }</p>
-<p>subgraph cluster_symbolic_execution { label = “Symbolic Execution”; style = filled; color = lightgrey; node [style = filled, color = white]; goto_symex [label = “goto-symex”, URL = “goto-symex”]; }</p>
-<p>subgraph cluster_abstract_interpretation { label = “Abstract Interpretation”; style = filled; color = lightgrey; node [style = filled, color = white]; pointer_analysis [label = “pointer-analysis”, URL = “pointer-analysis”]; analyses [URL = “analyses”]; }</p>
-<p>subgraph cluster_goto_programs { label = “Goto Programs”; style = filled; color = lightgrey; goto_programs [label = “goto-programs”, URL = “goto-programs”]; linking [URL = “linking”]; }</p>
-<p>subgraph cluster_solvers { label = “Solvers” style = filled; color = lightgrey; solvers [URL = “solvers”]; }</p>
-<p>subgraph cluster_languages { label = “Languages”; style = filled; color = lightgrey; ansi_c [label = “ansi-c”, URL = “ansi-c”]; langapi [URL = “langapi”]; cpp [URL = “cpp”]; jsil [URL = “jsil”]; java_bytecode [URL = “java_bytecode”]; <br  />
+<p>There are <code>module_dependencies.txt</code> files in each directory, which are checked by the linter. Where directories in <code>module_dependencies.txt</code> are marked with comments such as 'dubious' or 'should go away', these dependencies have generally not been included in the diagram.</p>
+<p>\dot digraph directory_dependencies { node [style = filled, color = white];</p>
+<p>subgraph cluster_executables { label = "Executables"; style = filled; color = lightgrey; node [style = filled, color = white]; CBMC [URL = "\\ref cbmc"]; goto_cc [label = "goto-cc", URL = "\\ref goto-cc"]; goto_analyzer [label = "goto-analyzer", URL = "\\ref goto-analyzer"]; goto_instrument [label = "goto-instrument", URL = "\\ref goto-instrument"]; goto_diff [label = "goto-diff", URL = "\\ref goto-diff"]; janalyzer [URL = "\\ref janalyzer"]; jdiff [URL = "\\ref jdiff"]; JBMC [URL = "\\ref jbmc"]; smt2_solver; }</p>
+<p>subgraph cluster_symbolic_execution { label = "Symbolic Execution"; style = filled; color = lightgrey; node [style = filled, color = white]; goto_symex [label = "goto-symex", URL = "\\ref goto-symex"]; }</p>
+<p>subgraph cluster_abstract_interpretation { label = "Abstract Interpretation"; style = filled; color = lightgrey; node [style = filled, color = white]; pointer_analysis [label = "pointer-analysis", URL = "\\ref pointer-analysis"]; analyses [URL = "\\ref analyses"]; }</p>
+<p>subgraph cluster_goto_programs { label = "Goto Programs"; style = filled; color = lightgrey; goto_programs [label = "goto-programs", URL = "\\ref goto-programs"]; linking [URL = "\\ref linking"]; }</p>
+<p>subgraph cluster_solvers { label = "Solvers" style = filled; color = lightgrey; solvers [URL = "\\ref solvers"]; }</p>
+<p>subgraph cluster_languages { label = "Languages"; style = filled; color = lightgrey; ansi_c [label = "ansi-c", URL = "\\ref ansi-c"]; langapi [URL = "\\ref langapi"]; cpp [URL = "\\ref cpp"]; jsil [URL = "\\ref jsil"]; java_bytecode [URL = "\\ref java\_bytecode"]; <br  />
  }</p>
-<p>subgraph cluster_utilities { label = “Utilities”; style = filled; color = lightgrey; big_int [label = “big-int”, URL = “big-int”]; miniz [URL = “miniz”]; util [URL = “util”]; nonstd [URL = “nonstd”]; json [URL = “json”]; xmllang [URL = “xmllang”]; assembler [URL = “assembler”]; }</p>
+<p>subgraph cluster_utilities { label = "Utilities"; style = filled; color = lightgrey; big_int [label = "big-int", URL = "\\ref big-int"]; miniz [URL = "\\ref miniz"]; util [URL = "\\ref util"]; nonstd [URL = "\\ref nonstd"]; json [URL = "\\ref json"]; xmllang [URL = "\\ref xmllang"]; assembler [URL = "\\ref assembler"]; }</p>
 <p>JBMC -&gt; { CBMC, java_bytecode }; jdiff -&gt; { goto_diff, java_bytecode }; janalyzer -&gt; { goto_analyzer, java_bytecode }; CBMC -&gt; { goto_instrument, jsil }; goto_diff -&gt; { goto_instrument }; goto_analyzer -&gt; { analyses, jsil, cpp }; goto_instrument -&gt; { goto_symex, cpp }; goto_cc -&gt; { cpp, jsil }; smt2_solver -&gt; solvers;</p>
 <p>java_bytecode -&gt; { analyses, miniz }; jsil -&gt; linking; cpp -&gt; ansi_c; ansi_c -&gt; langapi; langapi -&gt; goto_programs;</p>
 <p>goto_symex -&gt; { solvers, pointer_analysis };</p>
 <p>pointer_analysis -&gt; { analyses, goto_programs }; analyses -&gt; pointer_analysis;</p>
 <p>solvers -&gt; util;</p>
 <p>linking -&gt; goto_programs; goto_programs -&gt; { linking, xmllang, json, assembler };</p>
-<p>json -&gt; util; xmllang -&gt; util; assembler -&gt; util; util -&gt; big_int; util -&gt; nonstd; }</p>
-<p>Last modified: 2022-09-21 18:26:09 -0400 </p>
+<p>json -&gt; util; xmllang -&gt; util; assembler -&gt; util; util -&gt; big_int; util -&gt; nonstd; } \enddot</p>
+<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -49,17 +49,17 @@ var NAVTREE =
     [ "README", "md__home_runner_work_cbmc-documentation_cbmc-documentation_src_xmllang__r_e_a_d_m_e.html", null ],
     [ "background-concepts", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_background-concepts.html", null ],
     [ "cbmc-architecture", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html", [
-      [ "Concepts", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#concepts", [
-        [ "{C, java bytecode} → Parse tree → Symbol table → GOTO programs → GOTO program transformations → BMC → counterexample (goto_tracet) → printing", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#c-java-bytecode-parse-tree-symbol-table-goto-programs-goto-program-transformations-bmc-counterexample-goto_tracet-printing", null ],
-        [ "Instrumentation: goto functions → goto functions", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#instrumentation-goto-functions-goto-functions", null ],
-        [ "Goto functions → BMC → Counterexample (trace)", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#goto-functions-bmc-counterexample-trace", null ],
-        [ "Trace → interpreter → memory map", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#trace-interpreter-memory-map", null ],
-        [ "Goto functions → abstract interpretation", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#goto-functions-abstract-interpretation", null ],
-        [ "Executables (flow of transformations):", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#executables-flow-of-transformations", [
-          [ "goto-cc", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#goto-cc", null ],
-          [ "goto-instrument", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#goto-instrument", null ],
-          [ "cbmc", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#cbmc", null ],
-          [ "goto-analyzer", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#goto-analyzer", null ]
+      [ "Concepts", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md57", [
+        [ "{C, java bytecode} → Parse tree → Symbol table → GOTO programs → GOTO program transformations → BMC → counterexample (goto_tracet) → printing", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md58", null ],
+        [ "Instrumentation: goto functions → goto functions", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md59", null ],
+        [ "Goto functions → BMC → Counterexample (trace)", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md60", null ],
+        [ "Trace → interpreter → memory map", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md61", null ],
+        [ "Goto functions → abstract interpretation", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md62", null ],
+        [ "Executables (flow of transformations):", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md63", [
+          [ "goto-cc", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md64", null ],
+          [ "goto-instrument", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md65", null ],
+          [ "cbmc", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md66", null ],
+          [ "goto-analyzer", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#autotoc_md67", null ]
         ] ]
       ] ]
     ] ],
@@ -67,27 +67,33 @@ var NAVTREE =
     [ "compilation-and-development", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_compilation-and-development.html", null ],
     [ "folder-walkthrough", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html", null ],
     [ "front-page", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html", [
-      [ "Versions", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#versions", null ],
-      [ "Report bugs", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#report-bugs", null ],
-      [ "Contributing to the code base", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#contributing-to-the-code-base", null ],
-      [ "License", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#license", null ],
-      [ "Overview of Documentation", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#overview-of-documentation", [
-        [ "<tt>src/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#src", null ],
-        [ "<tt>doc/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#doc", null ],
-        [ "<tt>regression/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#regression", null ],
-        [ "<tt>unit/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#unit", null ],
-        [ "Directory dependencies", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#directory-dependencies", [
-          [ "For users:", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#for-users", null ],
-          [ "For contributors:", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#for-contributors", null ]
+      [ "Versions", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md73", null ],
+      [ "Report bugs", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md74", null ],
+      [ "Contributing to the code base", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md75", null ],
+      [ "License", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md76", null ],
+      [ "Overview of Documentation", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md77", [
+        [ "<tt>src/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#autotoc_md68", null ],
+        [ "<tt>doc/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#autotoc_md69", null ],
+        [ "<tt>regression/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#autotoc_md70", null ],
+        [ "<tt>unit/</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#autotoc_md71", null ],
+        [ "Directory dependencies", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_folder-walkthrough.html#autotoc_md72", [
+          [ "For users:", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md78", null ],
+          [ "For contributors:", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_front-page.html#autotoc_md79", null ]
         ] ]
       ] ]
     ] ],
     [ "howto", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html", null ],
     [ "memory-analyzer", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_memory-analyzer.html", null ],
     [ "memory-bounds-checking", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_memory-bounds-checking.html", null ],
-    [ "nondet-volatile", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html", null ],
+    [ "nondet-volatile", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html", [
+      [ "include <assert.h>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html#autotoc_md88", null ],
+      [ "include <limits.h>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html#autotoc_md89", null ],
+      [ "include <stdint.h>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html#autotoc_md90", null ],
+      [ "include <assert.h>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html#autotoc_md91", null ],
+      [ "include <stdint.h>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_nondet-volatile.html#autotoc_md92", null ]
+    ] ],
     [ "other-tools", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_other-tools.html", [
-      [ "Other Tools", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_other-tools.html#other-tools", null ]
+      [ "Other Tools", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_other-tools.html#autotoc_md93", null ]
     ] ],
     [ "restrict-function-pointer", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_restrict-function-pointer.html", null ],
     [ "contributing", "md_contributing.html", null ],
@@ -243,33 +249,33 @@ var NAVTREEINDEX =
 "java__utils_8h.html#ae9f1998eb704537399274ea422ce152c",
 "json__parser_8h.html#a02d54439dc189ccfa00eac45011a9c86",
 "local__may__alias_8h_source.html",
-"merged__type_8h.html",
-"miniz_8cpp.html#ab04a0655cd1e3bcac5e8f48c18df1a57ac3538fb6973847de5f8bd315ba8d0e1d",
-"miniz_8h.html#a8b4c858b16cf5ea4508ca2e38a8e2a0a",
-"mp__arith_8cpp.html#a3f0d8d58c35c071e9f9aecef49ef440c",
-"padding_8cpp.html#ab04fe4f1a4f793415c7d0274cbcda583",
-"precondition_8cpp.html#a394cc0d4162f3a2e4db562d51a65e5b0",
-"refine__arithmetic_8cpp.html#a090a0b2bbb0e01b8ec51121970d550c1",
-"renaming__level_8cpp.html#ae89ae3dbfab4ab2900c603b29796f581",
-"safety__checker_8h_source.html",
-"simplify__expr_8cpp.html#abbafad2ae15f15c637b3f7e038b69f14",
-"smt__solver__process_8h_source.html",
-"statement__list__parse__tree__io_8h.html#ae21edded34c6a65d63fc2e276d03ee8e",
-"std__expr_8h.html#a192776b7e7b44bb6c095c15e4812bf2e",
-"string2int_8h.html#a5c425a891b4d941d793640a6ff5f9197",
-"string__refinement__invariant_8h.html",
-"structc__wranglert.html#a8da82ffbcedad2fb5ca74158f3a98117",
-"structconstant__propagator__domaint_1_1valuest.html#a3e809906c0dfcd1dc19208d6e6c8ce87",
-"structfunction__call__harness__generatort_1_1implt.html#a1f1a59fc29d0e6b0f0c1bcb0179c8820",
-"structjava__bytecode__convert__methodt_1_1local__variable__with__holest.html#a287ee21640425289bb0390f7e3e32e91",
-"structlocal__bitvector__analysist_1_1flagst.html#a0ed3cc31da3694a4900aeffdb2326f64",
-"structpointer__arithmetict.html#a87d4e5d8bdc30fdfbd803105e9834276",
-"structsmt__bit__vector__theoryt_1_1rotate__rightt.html",
-"structstring__container__statisticst.html#aa2de4a376997374b75fc6e3d872ba4d9",
-"structvsd__configt.html#ab3c11f211080cab248c996ed43f90773",
-"threeval_8h.html#a88ca418f963463cef3fae8a356efcc2a",
-"util_8h.html",
-"wmm_8h.html#a658c2a0a6277ef45f721102f5a5293d9a9753f29ac8af3898f619c8cfb0433f61"
+"memory__units_8h_source.html",
+"miniz_8cpp.html#ab04a0655cd1e3bcac5e8f48c18df1a57ab5a6b8b6b4b9f098c4ec926a6d22c432",
+"miniz_8h.html#a87d141052bcd5ec8a80812a565c70369",
+"mp__arith_8cpp.html#a146a9868afe5cddd8384186982d39345",
+"padding_8cpp.html#a4741a4d1120e3aa9fe608f788dccfd4a",
+"postcondition_8cpp_source.html",
+"reference__counting_8h.html",
+"renaming__level_8cpp.html",
+"safety__checker_8cpp.html",
+"simplify__expr_8cpp.html#a46bb4b16d333d7f28dd96826e5a928d2",
+"smt__responses_8h_source.html",
+"statement__list__parse__tree__io_8h.html#a74f0fc50fe5548321ca6006bf3452e33",
+"std__expr_8h.html#a12b435d4696cdc708b3c69e958544ae4",
+"string2int_8h.html#a1114ac3b0c943e45af7348b45aa98699",
+"string__refinement_8h.html#a9135d29d4eb9f527e80e67dcfdbd6001",
+"structc__wranglert.html",
+"structconstant__propagator__domaint_1_1valuest.html#a03659e04b4c921f06b719539a824b0bd",
+"structfull__slicert_1_1cfg__nodet.html#abd852fd6be92819f3be6ca0d9df1936d",
+"structjava__bytecode__convert__methodt_1_1converted__instructiont.html#ad6ed09dd166587eba11f568792e63597",
+"structlinkingt_1_1adjust__type__infot.html#a6da4dc707c6561819458cd9bbcb909cd",
+"structpointee__address__equalt.html",
+"structsmt__bit__vector__theoryt_1_1rotate__leftt.html#a380b60a06b4ad7816bd5ef49bc3cf6c3",
+"structstring__constraintst.html#ab0b0c20f811b24e4e991462a460b073a",
+"structvsd__configt.html#a8b1af88fd3e05f0754e6787edec5196d",
+"three__way__merge__abstract__interpreter_8h_source.html",
+"util_8cpp.html#a22e2242e278f0cecb1afc042ccd6ba37",
+"witness__provider_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -92,7 +92,8 @@ $(document).ready(function(){initNavTree('md__home_runner_work_cbmc-documentatio
 <div class="title">nondet-volatile </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>module_hidden nondet-volatile Modelling of Volatile Variables</p>
+<div class="textblock"><p>\ingroup module_hidden</p>
+<p>\page nondet-volatile Modelling of Volatile Variables</p>
 <p>This document describes the options available in goto-instrument for modelling the behaviour of volatile variables. The following options are provided:</p>
 <ul>
 <li><code>--nondet-volatile</code></li>
@@ -101,82 +102,44 @@ $(document).ready(function(){initNavTree('md__home_runner_work_cbmc-documentatio
 </ul>
 <p>By default, cbmc treats volatile variables the same as non-volatile variables. That is, it assumes that a volatile variable does not change between subsequent reads, unless it was written to by the program. With the above options, goto-instrument can be instructed to instrument the given goto program such as to (1) make reads from all volatile expressions non-deterministic (<code>--nondet-volatile</code>), (2) make reads from specific variables non-deterministic (<code>--nondet-volatile-variable</code>), or (3) model reads from specific variables by given models (<code>--nondet-volatile-model</code>).</p>
 <p>Below we give two usage examples for the options. Consider the following test, for function <code>get_celsius()</code> and with harness <code>test_get_celsius()</code>:</p>
-<div class="fragment"><div class="line">#include &lt;assert.h&gt;</div>
-<div class="line">#include &lt;limits.h&gt;</div>
-<div class="line">#include &lt;stdint.h&gt;</div>
-<div class="line"> </div>
-<div class="line">// hardware sensor for temperature in kelvin</div>
-<div class="line">extern volatile uint16_t temperature;</div>
-<div class="line"> </div>
-<div class="line">int get_celsius()</div>
-<div class="line">{</div>
-<div class="line">  if(temperature &gt; (1000 + 273))</div>
-<div class="line">  {</div>
-<div class="line">    return INT_MIN; // value indicating error</div>
-<div class="line">  }</div>
-<div class="line">  </div>
-<div class="line">  return temperature - 273;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">void test_get_celsius()</div>
-<div class="line">{</div>
-<div class="line">  int t = get_celsius();</div>
-<div class="line">  </div>
-<div class="line">  assert(t == INT_MIN || t &lt;= 1000);</div>
-<div class="line">  assert(t == INT_MIN || t &gt;= -273);</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>Here the variable <code>temperature</code> corresponds to a hardware sensor. It returns the current temperature on each read. The <code>get_celsius()</code> function converts the value in Kelvin to degrees Celsius, given the value is in the expected range. However, it has a bug where it reads <code>temperature</code> a second time after the check, which may yield a value for which the check would not succeed. Verifying this program as is with cbmc would yield a verification success. We can use goto-instrument to make reads from <code>temperature</code> non-deterministic: </p><pre class="fragment">goto-cc -o get_celsius_test.gb get_celsius_test.c
-goto-instrument --nondet-volatile-variable temperature get_celsius_test.gb get_celsius_test-mod.gb
-cbmc --function test_get_celsius get_celsius_test-mod.gb
-</pre><p>Here the final invocation of cbmc correctly reports a verification failure.</p>
+<p>```C</p>
+<h1><a class="anchor" id="autotoc_md88"></a>
+include &lt;assert.h&gt;</h1>
+<h1><a class="anchor" id="autotoc_md89"></a>
+include &lt;limits.h&gt;</h1>
+<h1><a class="anchor" id="autotoc_md90"></a>
+include &lt;stdint.h&gt;</h1>
+<p>// hardware sensor for temperature in kelvin extern volatile uint16_t temperature;</p>
+<p>int get_celsius() { if(temperature &gt; (1000 + 273)) { return INT_MIN; // value indicating error }</p>
+<p>return temperature - 273; }</p>
+<p>void test_get_celsius() { int t = get_celsius();</p>
+<p>assert(t == INT_MIN || t &lt;= 1000); assert(t == INT_MIN || t &gt;= -273); } ```</p>
+<p>Here the variable <code>temperature</code> corresponds to a hardware sensor. It returns the current temperature on each read. The <code>get_celsius()</code> function converts the value in Kelvin to degrees Celsius, given the value is in the expected range. However, it has a bug where it reads <code>temperature</code> a second time after the check, which may yield a value for which the check would not succeed. Verifying this program as is with cbmc would yield a verification success. We can use goto-instrument to make reads from <code>temperature</code> non-deterministic:</p>
+<p><code>goto-cc -o get_celsius_test.gb get_celsius_test.c goto-instrument --nondet-volatile-variable temperature get_celsius_test.gb get_celsius_test-mod.gb cbmc --function test_get_celsius get_celsius_test-mod.gb</code></p>
+<p>Here the final invocation of cbmc correctly reports a verification failure.</p>
 <p>However, simply treating volatile variables as non-deterministic may for some use cases be too inaccurate. Consider the following test, for function <code>get_message()</code> and with harness <code>test_get_message()</code>:</p>
-<div class="fragment"><div class="line">#include &lt;assert.h&gt;</div>
-<div class="line">#include &lt;stdint.h&gt;</div>
-<div class="line"> </div>
-<div class="line">extern volatile uint32_t clock;</div>
-<div class="line"> </div>
-<div class="line">typedef struct message {</div>
-<div class="line">  uint32_t timestamp;</div>
-<div class="line">  void *data;</div>
-<div class="line">} message_t;</div>
-<div class="line"> </div>
-<div class="line">void *read_data();</div>
-<div class="line"> </div>
-<div class="line">message_t get_message()</div>
-<div class="line">{</div>
-<div class="line">  message_t msg;</div>
-<div class="line">  </div>
-<div class="line">  msg.timestamp = clock;</div>
-<div class="line">  msg.data = read_data();</div>
-<div class="line">  </div>
-<div class="line">  return msg;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">void test_get_message()</div>
-<div class="line">{</div>
-<div class="line">  message_t msg1 = get_message();</div>
-<div class="line">  message_t msg2 = get_message();</div>
-<div class="line">  </div>
-<div class="line">  assert(msg1.timestamp &lt;= msg2.timestamp);</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>The harness verifies that <code>get_message()</code> assigns non-decreasing timestamps to the returned messages. However, simply treating <code>clock</code> as non-deterministic would not allow to prove this property. Thus, we can supply a model for reads from <code>clock</code>:</p>
-<div class="fragment"><div class="line">// model for reads of the variable clock</div>
-<div class="line">uint32_t clock_read_model()</div>
-<div class="line">{</div>
-<div class="line">  static uint32_t clock_value = 0;</div>
-<div class="line">  </div>
-<div class="line">  uint32_t increment;</div>
-<div class="line">  __CPROVER_assume(increment &lt;= 100);</div>
-<div class="line">  </div>
-<div class="line">  clock_value += increment;</div>
-<div class="line">  </div>
-<div class="line">  return clock_value;</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>The model is stateful in that it keeps the current clock value between invocations in the variable <code>clock_value</code>. On each invocation, it increments the clock by a non-determinstic value in the range 0 to 100. We can tell goto-instrument to use the model <code>clock_read_model()</code> for reads from the variable <code>clock</code> as follows: </p><pre class="fragment">goto-cc -o get_message_test.gb get_message_test.c
-goto-instrument --nondet-volatile-model clock:clock_read_model get_message_test.gb get_message_test-mod.gb
-cbmc --function get_message_test get_message_test-mod.gb
-</pre><p>Now the final invocation of cbmc reports verification success.</p>
-<p>Last modified: 2022-09-21 18:26:09 -0400 </p>
+<p>```C</p>
+<h1><a class="anchor" id="autotoc_md91"></a>
+include &lt;assert.h&gt;</h1>
+<h1><a class="anchor" id="autotoc_md92"></a>
+include &lt;stdint.h&gt;</h1>
+<p>extern volatile uint32_t clock;</p>
+<p>typedef struct message { uint32_t timestamp; void *data; } message_t;</p>
+<p>void *read_data();</p>
+<p>message_t get_message() { message_t msg;</p>
+<p>msg.timestamp = clock; msg.data = read_data();</p>
+<p>return msg; }</p>
+<p>void test_get_message() { message_t msg1 = get_message(); message_t msg2 = get_message();</p>
+<p>assert(msg1.timestamp &lt;= msg2.timestamp); } ```</p>
+<p>The harness verifies that <code>get_message()</code> assigns non-decreasing timestamps to the returned messages. However, simply treating <code>clock</code> as non-deterministic would not allow to prove this property. Thus, we can supply a model for reads from <code>clock</code>:</p>
+<p>```C // model for reads of the variable clock uint32_t clock_read_model() { static uint32_t clock_value = 0;</p>
+<p>uint32_t increment; __CPROVER_assume(increment &lt;= 100);</p>
+<p>clock_value += increment;</p>
+<p>return clock_value; } ```</p>
+<p>The model is stateful in that it keeps the current clock value between invocations in the variable <code>clock_value</code>. On each invocation, it increments the clock by a non-determinstic value in the range 0 to 100. We can tell goto-instrument to use the model <code>clock_read_model()</code> for reads from the variable <code>clock</code> as follows:</p>
+<p><code>goto-cc -o get_message_test.gb get_message_test.c goto-instrument --nondet-volatile-model clock:clock_read_model get_message_test.gb get_message_test-mod.gb cbmc --function get_message_test get_message_test-mod.gb</code></p>
+<p>Now the final invocation of cbmc reports verification success.</p>
+<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
