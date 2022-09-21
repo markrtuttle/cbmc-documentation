@@ -24,7 +24,6 @@
 </script>
 <script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="cbmc_style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -134,7 +133,7 @@ symbolt, symbol_tablet, and namespacet</h2>
 <p>A symbol table is a mapping from symbol names to <a class="el" href="classsymbolt.html">symbolt</a> objects, which store a symbol's name, attributes, type and perhaps value. They are used to describe local and global variables, type definitions and function prototypes and definitions.</p>
 <p>All symbols store a type (an instance of <a class="el" href="classtypet.html">typet</a>). For function or method symbols these are <a class="el" href="classcode__typet.html">code_typet</a> instances.</p>
 <p>Global variable symbols may have a value (an <a class="el" href="classexprt.html">exprt</a>), in which case it is used to initialise the global.</p>
-<p>Method or function symbols may also have a value, in which case it is a <a class="el" href="classcodet.html">codet</a> and gives the function definition. A method or function symbol without a value is a prototype (for example, it might be an <code>extern</code> declaration in C). A function symbol that has been converted to a GOTO function <em>may</em> be replaced with a special "compiled" value, but this varies from driver program to program &ndash; at the time of writing, only <a class="el" href="group__goto-cc.html">goto-cc</a> does this.</p>
+<p>Method or function symbols may also have a value, in which case it is a <a class="el" href="classcodet.html">codet</a> and gives the function definition. A method or function symbol without a value is a prototype (for example, it might be an <code>extern</code> declaration in C). A function symbol that has been converted to a GOTO function <em>may</em> be replaced with a special "compiled" value, but this varies from driver program to program &ndash; at the time of writing, only <a class="el" href="md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_cbmc-architecture.html#goto-cc">goto-cc</a> does this.</p>
 <p>Local variables' symbol values are always ignored; any initialiser must be explicitly assigned after they are instantiated by a declaration (<a class="el" href="classcode__declt.html">code_declt</a>).</p>
 <p>Symbol expressions (<a class="el" href="classsymbol__exprt.html">symbol_exprt</a>) and types (<a class="el" href="classtag__typet.html">tag_typet</a>) refer to symbols stored in a symbol table. Symbol expressions can be thought of as referring to the table for more detail about a symbol (for example, is it a local or a global variable, or perhaps a function?), and have a type which must match the type given in the symbol table. Symbol types can be thought of as shorthands or aliases for a type given in more detail in the symbol table, for example permitting a shorthand for a large structure type, as well as permitting the construction of expressions referring to that type before its full definition is known.</p>
 <p>Note the implementation of <a class="el" href="classsymbol__tablet.html">symbol_tablet</a> is split into a base interface (<a class="el" href="classsymbol__table__baset.html">symbol_table_baset</a>) and an implementation (<a class="el" href="classsymbol__tablet.html">symbol_tablet</a>). There is one alternate implementation (<a class="el" href="classjournalling__symbol__tablet.html">journalling_symbol_tablet</a>) which additionally maintains a log or journal of symbol creation, modification and deletions.</p>
@@ -158,7 +157,7 @@ Symbol details</h3>
 cmdlinet</h2>
 <p>See <a class="el" href="group__util.html#cmdlinet">cmdlinet</a>.</p>
 <div class="dotgraph">
-<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_23.svg" width="1024" height="59"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<iframe scrolling="no" frameborder="0" src="dot_inline_dotgraph_9.svg" width="1024" height="59"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <h2><a class="anchor" id="ast-examples-section"></a>
 Examples: how to represent the AST of statements, in C and in java</h2>
 <h3><a class="anchor" id="ast-example-1-section"></a>

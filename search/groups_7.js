@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['miniz_40279',['miniz',['../group__miniz.html',1,'']]]
+  ['nonstd_40276',['nonstd',['../group__nonstd.html',1,'']]]
 ];

@@ -24,7 +24,6 @@
 </script>
 <script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="cbmc_style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,9 +100,9 @@ Folder CBMC</h1>
 Architecture</h2>
 <p>CBMC operates in three phases:</p>
 <ol type="1">
-<li>Parse command-line options; convert passed source files into a GOTO model (for more detail see <a class="el" href="background-concepts.html#AST_section">AST</a>).</li>
+<li>Parse command-line options; convert passed source files into a GOTO model (for more detail see AST_section).</li>
 <li>Run <code>goto-symex</code> to turn the GOTO model into a SAT or SMT equation (for more detail see <a class="el" href="group__goto-symex.html">goto-symex</a>).</li>
-<li>Solve the equation and report results (described here, but see <a class="el" href="background-concepts.html#BMC_section">Bounded model checking</a> for more information).</li>
+<li>Solve the equation and report results (described here, but see BMC_section for more information).</li>
 </ol>
 <p>The GOTO model is generated using <code>initialize_goto_model</code>; see documentaton in the <code>goto-programs/</code> directory. Goto-symex is similarly documented in its own directory.</p>
 <h2><a class="anchor" id="autotoc_md12"></a>

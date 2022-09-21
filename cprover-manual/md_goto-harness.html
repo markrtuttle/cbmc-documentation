@@ -66,11 +66,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>CPROVER Manual TOC</p>
-<h1><a class="anchor" id="autotoc_md105"></a>
+<h1><a class="anchor" id="goto-harness"></a>
 Goto Harness</h1>
 <p>This is a tool for generating harnesses, that is, functions that instrument another function under analysis, by setting up an appropriate environment before calling them.</p>
 <p>This is useful when trying to analyse an isolated unit of a program without having to manually construct an appropriate environment.</p>
-<h2><a class="anchor" id="autotoc_md106"></a>
+<h2><a class="anchor" id="quick-start-guide"></a>
 Quick Start Guide</h2>
 <p>For a given C program - <code>program.c</code> - to generate a harness for a function <code>test_function</code>, we have to do the following:</p>
 <div class="fragment"><div class="line"># Compile the program</div>
@@ -79,15 +79,15 @@ Quick Start Guide</h2>
 <div class="line">$ goto-harness --harness-type call-function --harness-function-name generated_harness_test_function --function test_function program.gb harness.c</div>
 <div class="line"># Run the checks targetting the generated harness</div>
 <div class="line">$ cbmc --pointer-check harness.c program.c --function generated_harness_test_function</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
+</div><!-- fragment --><h2><a class="anchor" id="detailed-usage"></a>
 Detailed Usage</h2>
 <p>We have two types of harnesses we can generate for now:</p>
 <ul>
 <li>The <code>function-call</code> harness, which automatically synthesises an environment without having any information about the program state.</li>
 <li>The <code>memory-snapshot</code> harness, which loads an existing program state (in form of a JSON file) and selectively <em>havoc-ing</em> some variables.</li>
 </ul>
-<p>The harness generator can either produce the harness (i.e., the function environment) as C code, or a full GOTO binary. C code is generated when the output file name ends in ".c".</p>
-<h3><a class="anchor" id="autotoc_md108"></a>
+<p>The harness generator can either produce the harness (i.e., the function environment) as C code, or a full GOTO binary. C code is generated when the output file name ends in “.c”.</p>
+<h3><a class="anchor" id="the-function-call-harness-generator"></a>
 The function call harness generator</h3>
 <p>For the most basic use of the <code>function-call</code> harness generator, imagine that we have the following C program:</p>
 <div class="fragment"><div class="line">// main.c</div>
@@ -116,37 +116,37 @@ The function call harness generator</h3>
 <li>then we pass the input GOTO-binary and a name for the output C file.</li>
 </ul>
 <p>What comes out of this is a C file that looks like this:</p>
-<div class="fragment"><div class="line"><span class="comment">// function_to_test</span></div>
-<div class="line"><span class="comment">// file main.c line 3</span></div>
-<div class="line"><span class="keywordtype">signed</span> <span class="keywordtype">int</span> function_to_test(<span class="keywordtype">signed</span> <span class="keywordtype">int</span> some_argument);</div>
-<div class="line"><span class="comment">// harness</span></div>
-<div class="line"><span class="comment">// </span></div>
-<div class="line"><span class="keywordtype">void</span> harness(<span class="keywordtype">void</span>);</div>
-<div class="line"><span class="comment">// type_constructor_int</span></div>
-<div class="line"><span class="comment">// </span></div>
-<div class="line"><span class="keywordtype">void</span> type_constructor_int(<span class="keywordtype">signed</span> <span class="keywordtype">int</span> depth_int, <span class="keywordtype">signed</span> <span class="keywordtype">int</span> *result_int);</div>
+<div class="fragment"><div class="line">// function_to_test</div>
+<div class="line">// file main.c line 3</div>
+<div class="line">signed int function_to_test(signed int some_argument);</div>
+<div class="line">// harness</div>
+<div class="line">// </div>
+<div class="line">void harness(void);</div>
+<div class="line">// type_constructor_int</div>
+<div class="line">// </div>
+<div class="line">void type_constructor_int(signed int depth_int, signed int *result_int);</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// __GOTO_HARNESS::max_depth</span></div>
-<div class="line"><span class="comment">// file __GOTO_HARNESSharness.c</span></div>
-<div class="line"><span class="keywordtype">signed</span> <span class="keywordtype">int</span> max_depth=2;</div>
-<div class="line"><span class="comment">// __GOTO_HARNESS::min_depth</span></div>
-<div class="line"><span class="comment">// file __GOTO_HARNESSharness.c</span></div>
-<div class="line"><span class="keywordtype">signed</span> <span class="keywordtype">int</span> min_depth=1;</div>
+<div class="line">// __GOTO_HARNESS::max_depth</div>
+<div class="line">// file __GOTO_HARNESSharness.c</div>
+<div class="line">signed int max_depth=2;</div>
+<div class="line">// __GOTO_HARNESS::min_depth</div>
+<div class="line">// file __GOTO_HARNESSharness.c</div>
+<div class="line">signed int min_depth=1;</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// harness</span></div>
-<div class="line"><span class="comment">// </span></div>
-<div class="line"><span class="keywordtype">void</span> harness(<span class="keywordtype">void</span>)</div>
+<div class="line">// harness</div>
+<div class="line">// </div>
+<div class="line">void harness(void)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordtype">signed</span> <span class="keywordtype">int</span> some_argument;</div>
+<div class="line">  signed int some_argument;</div>
 <div class="line">  type_constructor_int(0, &amp;some_argument);</div>
 <div class="line">  function_to_test(some_argument);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// type_constructor_int</span></div>
-<div class="line"><span class="comment">// </span></div>
-<div class="line"><span class="keywordtype">void</span> type_constructor_int(<span class="keywordtype">signed</span> <span class="keywordtype">int</span> depth_int, <span class="keywordtype">signed</span> <span class="keywordtype">int</span> *result_int)</div>
+<div class="line">// type_constructor_int</div>
+<div class="line">// </div>
+<div class="line">void type_constructor_int(signed int depth_int, signed int *result_int)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordtype">signed</span> <span class="keywordtype">int</span> nondet;</div>
+<div class="line">  signed int nondet;</div>
 <div class="line">  *result_int = nondet;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>After you have generated the harness file, you have two choices. The first one is to pass it along with the original file containing the function to be harnessed to CBMC for analysis, something that would look like this:</p>
@@ -160,21 +160,23 @@ The function call harness generator</h3>
 </div><!-- fragment --><p>Or, you could choose to turn it into another goto binary with <code>goto-cc</code>, to be served as input to another instrumentation tool (like <code>goto-instrument</code>).</p>
 <hr  />
 <p>The example above demonstrates the simplest case, which is roughly the same as the entry point <code>cbmc</code> automatically generates for functions. However, the <code>function-call</code> harness can also non-deterministically initialise global variables, array and struct elements. Consider this more complicated example:</p>
-<div class="fragment"><div class="line"><span class="comment">// list_example.c</span></div>
-<div class="line"><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="fragment"><div class="line">// list_example.c</div>
+<div class="line">#include &lt;assert.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>linked_list linked_list;</div>
-<div class="line"><span class="keyword">struct </span>linked_list {</div>
-<div class="line">    <span class="keywordtype">int</span> value;</div>
+<div class="line">typedef struct linked_list linked_list;</div>
+<div class="line">struct linked_list {</div>
+<div class="line">    int value;</div>
 <div class="line">    linked_list *next;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line">linked_list *global_linked_list;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> initialize_global(<span class="keywordtype">void</span>)</div>
+<div class="line">/// initialize all values in the global</div>
+<div class="line">/// list to 0</div>
+<div class="line">void initialize_global(void)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordflow">for</span>(linked_list *ll = global_linked_list;</div>
+<div class="line">  for(linked_list *ll = global_linked_list;</div>
 <div class="line">    ll != NULL;</div>
 <div class="line">    ll = ll-&gt;next)</div>
 <div class="line">  {</div>
@@ -182,15 +184,19 @@ The function call harness generator</h3>
 <div class="line">  }</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> initialize_other(linked_list *ll)</div>
+<div class="line">/// try to initialize all values in the linked list</div>
+<div class="line">/// to 0 - but this version contains two bugs,</div>
+<div class="line">/// as it won&#39;t work with nullpointer arguments</div>
+<div class="line">/// and it will also not initialize the last element</div>
+<div class="line">void initialize_other(linked_list *ll)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">do</span> {</div>
+<div class="line">    do {</div>
 <div class="line">        ll-&gt;value = 0;</div>
 <div class="line">        ll = ll-&gt;next;</div>
-<div class="line">    } <span class="keywordflow">while</span>(ll-&gt;next != NULL);</div>
+<div class="line">    } while(ll-&gt;next != NULL);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> check_list(linked_list *list_parameter)</div>
+<div class="line">void check_list(linked_list *list_parameter)</div>
 <div class="line">{</div>
 <div class="line">    assert(list_parameter != global_linked_list);</div>
 <div class="line">    initialize_global();</div>
@@ -198,20 +204,20 @@ The function call harness generator</h3>
 <div class="line">    linked_list *global_cursor = global_linked_list;</div>
 <div class="line">    linked_list *parameter_cursor = list_parameter;</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">// global list should be a prefix of the parameter now,</span></div>
-<div class="line">    <span class="comment">// or the other way round</span></div>
-<div class="line">    <span class="keywordflow">while</span>(global_cursor != NULL &amp;&amp; parameter_cursor != NULL)</div>
+<div class="line">    // global list should be a prefix of the parameter now,</div>
+<div class="line">    // or the other way round</div>
+<div class="line">    while(global_cursor != NULL &amp;&amp; parameter_cursor != NULL)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="comment">// this assertion should fail since we didn&#39;t</span></div>
-<div class="line">        <span class="comment">// initialize the last element of of the</span></div>
-<div class="line">        <span class="comment">// list parameter correctly</span></div>
+<div class="line">        // this assertion should fail since we didn&#39;t</div>
+<div class="line">        // initialize the last element of of the</div>
+<div class="line">        // list parameter correctly</div>
 <div class="line">        assert(global_cursor-&gt;value</div>
 <div class="line">          == parameter_cursor-&gt;value);</div>
 <div class="line">        global_cursor = global_cursor-&gt;next;</div>
 <div class="line">        parameter_cursor = parameter_cursor-&gt;next;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Now we'll try to find the bug in <code>check_list</code> by generating a harness for it.</p>
+</div><!-- fragment --><p>Now we’ll try to find the bug in <code>check_list</code> by generating a harness for it.</p>
 <div class="fragment"><div class="line">$ goto-cc -o list_example.gb list_example.c</div>
 <div class="line">$ goto-harness \</div>
 <div class="line">   --harness-function-name harness \</div>
@@ -229,42 +235,42 @@ The function call harness generator</h3>
 <li><code>min-null-tree-depth</code> this is the minimum depth at which pointers can be nullpointers for generated values - in this case, this sets the <em>minimum</em> length for our linked lists to one.</li>
 <li><code>nondet-globals</code> is non-deterministically initialising global variables.</li>
 </ul>
-<div class="fragment"><div class="line">CBMC version 5.11 (cbmc-5.11-1523-g419a958-dirty) 64-bit x86_64 linux</div>
-<div class="line">[...]</div>
-<div class="line"> </div>
-<div class="line">** Results:</div>
-<div class="line">example.c function initialize_global</div>
-<div class="line">[initialize_global.unwind.0] line 17 unwinding assertion loop 0: SUCCESS</div>
-<div class="line"> </div>
-<div class="line">example.c function initialize_other</div>
-<div class="line">[initialize_other.unwind.0] line 32 unwinding assertion loop 0: SUCCESS</div>
-<div class="line"> </div>
-<div class="line">example.c function check_list</div>
-<div class="line">[check_list.assertion.1] line 42 assertion list_parameter != global_linked_list: SUCCESS</div>
-<div class="line">[check_list.unwind.0] line 50 unwinding assertion loop 0: SUCCESS</div>
-<div class="line">[check_list.assertion.2] line 55 assertion global_cursor-&gt;value == parameter_cursor-&gt;value: FAILURE</div>
-<div class="line"> </div>
-<div class="line">** 1 of 5 failed (2 iterations)</div>
-<div class="line">VERIFICATION FAILED</div>
-</div><!-- fragment --><p>We also have support for arrays (currently only for array function parameters, globals and struct members are considered for the future).</p>
+<pre class="fragment">CBMC version 5.11 (cbmc-5.11-1523-g419a958-dirty) 64-bit x86_64 linux
+[...]
+
+** Results:
+example.c function initialize_global
+[initialize_global.unwind.0] line 17 unwinding assertion loop 0: SUCCESS
+
+example.c function initialize_other
+[initialize_other.unwind.0] line 32 unwinding assertion loop 0: SUCCESS
+
+example.c function check_list
+[check_list.assertion.1] line 42 assertion list_parameter != global_linked_list: SUCCESS
+[check_list.unwind.0] line 50 unwinding assertion loop 0: SUCCESS
+[check_list.assertion.2] line 55 assertion global_cursor-&gt;value == parameter_cursor-&gt;value: FAILURE
+
+** 1 of 5 failed (2 iterations)
+VERIFICATION FAILED
+</pre><p>We also have support for arrays (currently only for array function parameters, globals and struct members are considered for the future).</p>
 <p>Take this example of an implementation of an <code>is_prefix_of</code> function that should return true if the first string parameter <code>prefix</code> is a prefix of the second one <code>string</code>.</p>
-<div class="fragment"><div class="line"><span class="comment">// array_example.c</span></div>
+<div class="fragment"><div class="line">// array_example.c</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> is_prefix_of(</div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *prefix,</div>
-<div class="line">  <span class="keywordtype">int</span> prefix_length,</div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>,</div>
-<div class="line">  <span class="keywordtype">int</span> string_length</div>
+<div class="line">int is_prefix_of(</div>
+<div class="line">  const char *prefix,</div>
+<div class="line">  int prefix_length,</div>
+<div class="line">  const char *string,</div>
+<div class="line">  int string_length</div>
 <div class="line">)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordflow">if</span>(prefix_length &gt; string_length) { <span class="keywordflow">return</span> 0; }</div>
-<div class="line">  <span class="comment">// oops, we should have used prefix_length here</span></div>
-<div class="line">  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; string_length; ++i)</div>
+<div class="line">  if(prefix_length &gt; string_length) { return 0; }</div>
+<div class="line">  // oops, we should have used prefix_length here</div>
+<div class="line">  for(int i = 0; i &lt; string_length; ++i)</div>
 <div class="line">  {</div>
-<div class="line">    <span class="comment">// we&#39;ll get an out of bounds error here!</span></div>
-<div class="line">    <span class="keywordflow">if</span>(prefix[i] != <span class="keywordtype">string</span>[i]) { <span class="keywordflow">return</span> 0; }</div>
+<div class="line">    // we&#39;ll get an out of bounds error here!</div>
+<div class="line">    if(prefix[i] != string[i]) { return 0; }</div>
 <div class="line">  }</div>
-<div class="line">  <span class="keywordflow">return</span> 1;</div>
+<div class="line">  return 1;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>We can compile and run it like this:</p>
 <div class="fragment"><div class="line">$ goto-cc -o array_example.gb array_example.c</div>
@@ -277,10 +283,9 @@ The function call harness generator</h3>
 <div class="line">  array_example.gb array_example_harness.c</div>
 <div class="line">$ cbmc --function harness --unwind 10 --pointer-check array_example_harness.c array_example.c</div>
 </div><!-- fragment --><p>We have the additional option <code>associated-array-size</code> here. This is in the format <code>&lt;array-parameter-name&gt;:&lt;array-size-parameter-name&gt;</code> and will cause the array parameter with name<code>array-parameter-name</code> to be initialised as an array, with the parameter <code>array-size-parameter-name</code> holding its size (it should have some integral type like <code>int</code> or <code>size_t</code>).</p>
-<p>Running the example shows the bug highlighted in the comments:</p>
-<div class="fragment"><div class="line">[...]</div>
-<div class="line">[is_prefix_of.pointer_dereference.6] line 14 dereference failure: pointer outside object bounds in prefix[(signed long int)i]: FAILURE</div>
-</div><!-- fragment --><p>By default, arrays are created with a minimum size of 1 and a maximum size of 2. These limits can be set with the <code>--min-array-size</code> and <code>--max-array-size</code> options.</p>
+<p>Running the example shows the bug highlighted in the comments: </p><pre class="fragment">[...]
+[is_prefix_of.pointer_dereference.6] line 14 dereference failure: pointer outside object bounds in prefix[(signed long int)i]: FAILURE
+</pre><p>By default, arrays are created with a minimum size of 1 and a maximum size of 2. These limits can be set with the <code>--min-array-size</code> and <code>--max-array-size</code> options.</p>
 <p>If you have a function that takes an array parameter, but without an associated size parameter, you can also use the <code>--treat-pointer-as-array &lt;parameter-name&gt;</code> option.</p>
 <hr  />
 <p>If you want to non-deterministically initialise a pointer as a C string (character array with last element &lsquo;&rsquo;\0'`) then you can do that like this:</p>
@@ -303,72 +308,71 @@ The function call harness generator</h3>
 <div class="line">  nondet_string.gb nondet_string_harness.c</div>
 <div class="line">$ cbmc --function harness nondet_string_harness.c nondet_string.c --unwind 10</div>
 </div><!-- fragment --><p>Note that C strings are supported by the same mechanism behind the non-deterministic initialisation of pointers and arrays, so the same command line arguments apply, in particular <code>--associated-array-size</code>.</p>
-<p>This will result in:</p>
-<div class="fragment"><div class="line">[...]</div>
-<div class="line"> </div>
-<div class="line">** Results:</div>
-<div class="line">main.c function function</div>
-<div class="line">[function.assertion.1] line 5 assertion pointer[size-1] == &#39;\0&#39;: SUCCESS</div>
-<div class="line"> </div>
-<div class="line">** 0 of 1 failed (1 iterations)</div>
-<div class="line">VERIFICATION SUCCESSFUL</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md111"></a>
+<p>This will result in: </p><pre class="fragment">[...]
+
+** Results:
+main.c function function
+[function.assertion.1] line 5 assertion pointer[size-1] == '\0': SUCCESS
+
+** 0 of 1 failed (1 iterations)
+VERIFICATION SUCCESSFUL
+</pre><h2><a class="anchor" id="the-memory-snapshot-harness"></a>
 The memory snapshot harness</h2>
 <p>The <code>function-call</code> harness is used in situations in which we want to analyze a function in an arbitrary environment. If we want to analyze a function starting from a <em>real</em> program state, we can use the <code>memory-snapshot</code> harness instead.</p>
 <p>The snapshot of the program state of interest may be taken at a particular program location within a function (using the <code>memory-analyzer</code> tool). In that case we want to generate a harness that behaves as if execution starts at a particular program location. The initial program location can be specified via the options <code>--initial-goto-location &lt;function&gt;[:&lt;location-number&gt;]</code> or <code>--initial-source-location &lt;file&gt;:&lt;line-number&gt;</code>.</p>
 <p>Say we want to check the assertion in the following code:</p>
-<div class="fragment"><div class="line"><span class="comment">// main.c</span></div>
-<div class="line"><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="fragment"><div class="line">// main.c</div>
+<div class="line">#include &lt;assert.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> x;</div>
-<div class="line"><span class="keywordtype">int</span> y;</div>
-<div class="line"><span class="keywordtype">int</span> z;</div>
+<div class="line">int x;</div>
+<div class="line">int y;</div>
+<div class="line">int z;</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// complex function which returns 1</span></div>
-<div class="line"><span class="keywordtype">int</span> get_one()</div>
+<div class="line">// complex function which returns 1</div>
+<div class="line">int get_one()</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordtype">int</span> i;</div>
+<div class="line">  int i;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">for</span>(i = 0; i &lt; 100001; i++)</div>
+<div class="line">  for(i = 0; i &lt; 100001; i++)</div>
 <div class="line">  {</div>
-<div class="line">    <span class="keywordflow">if</span>(rand() &amp;&amp; ((i &amp; 1) == 1))</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    if(rand() &amp;&amp; ((i &amp; 1) == 1))</div>
+<div class="line">      break;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">return</span> i &amp; 1;</div>
+<div class="line">  return i &amp; 1;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// return a random value (!= 0)</span></div>
-<div class="line"><span class="keywordtype">int</span> get_random_value()</div>
+<div class="line">// return a random value (!= 0)</div>
+<div class="line">int get_random_value()</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordtype">int</span> r;</div>
-<div class="line">  <span class="keywordflow">while</span>((r = rand()) == 0) {}</div>
-<div class="line">  <span class="keywordflow">return</span> r;</div>
+<div class="line">  int r;</div>
+<div class="line">  while((r = rand()) == 0) {}</div>
+<div class="line">  return r;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> clip(<span class="keywordtype">int</span> i)</div>
+<div class="line">int clip(int i)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordflow">if</span>(i &gt; 99)</div>
+<div class="line">  if(i &gt; 99)</div>
 <div class="line">  {</div>
 <div class="line">    i = 99;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">return</span> i;</div>
+<div class="line">  return i;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">int main()</div>
 <div class="line">{</div>
 <div class="line">  x = get_random_value();</div>
 <div class="line">  y = get_one();</div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// snapshot taken here (line 46)</span></div>
+<div class="line">  // snapshot taken here (line 46)</div>
 <div class="line"> </div>
 <div class="line">  z = clip(x);</div>
 <div class="line"> </div>
 <div class="line">  assert(y + z &lt;= 100);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">  return 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Assume we are interested in the code represented by the <code>clip()</code> function and its effect on the assertion below. To that end, we want to take a memory snapshot after the calls to <code>get_random_value()</code> and <code>get_one()</code>.</p>
 <p>In order to take the snapshot with <code>memory-analyzer</code>, we need to first compile the program which <code>goto-gcc</code>, which produces a binary containing both native machine code and the corresponding goto program:</p>
@@ -393,16 +397,16 @@ The memory snapshot harness</h2>
 <div class="line">  main.gb main-mod.gb</div>
 </div><!-- fragment --><p>We can now verify the resulting goto program with <code>cbmc</code>:</p>
 <div class="fragment"><div class="line">$ cbmc --function harness main-mod.gb</div>
-</div><!-- fragment --><p>This will result in:</p>
-<div class="fragment"><div class="line">[...]</div>
-<div class="line"> </div>
-<div class="line">** Results:</div>
-<div class="line">main.c function main</div>
-<div class="line">[main.assertion.1] line 50 assertion y + z &lt;= 100: SUCCESS</div>
-<div class="line"> </div>
-<div class="line">** 0 of 1 failed (1 iterations)</div>
-<div class="line">VERIFICATION SUCCESSFUL</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><p>This will result in: </p><pre class="fragment">[...]
+
+** Results:
+main.c function main
+[main.assertion.1] line 50 assertion y + z &lt;= 100: SUCCESS
+
+** 0 of 1 failed (1 iterations)
+VERIFICATION SUCCESSFUL
+</pre><p>Last modified: 2022-09-21 18:16:17 -0400 </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
