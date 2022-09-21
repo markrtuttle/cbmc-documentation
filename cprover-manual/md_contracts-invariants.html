@@ -65,7 +65,7 @@ $(function() {
 <div class="title">contracts-invariants </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>CPROVER Manual TOC</p>
+<div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
 <h1><a class="anchor" id="invariant-clauses"></a>
 Invariant Clauses</h1>
 <p>An <em>invariant</em> clause specifies a property that must be preserved by every iteration of a loop. In general a loop has infinitely many invariants. For instance, <code>true</code> is a trivial invariant that holds before the loop, and after each iteration of the loop (thus, inductive). However, <code>true</code> is rarely useful – it is an extremely imprecise abstraction of a loop, which is generally not <em>sufficient</em> to prove any subsequent assertions.</p>
@@ -154,7 +154,7 @@ Semantics</h3>
 <li>At instrumented code point (2), when we <code>havoc</code> the modified variables, this set of modified variables is automatically computed using alias analysis of l-values appearing in the loop body. However, the analysis is incomplete and may fail to characterize the set for complex loops. In such cases, the user must manually annotate the set of modified variables using an <a class="el" href="md_contracts-assigns.html">*assigns clause*</a>.</li>
 <li>At instrumented code point (6), when we <em>assume</em> <code>false</code>, observe that this assumption only exists within the <code>lb &lt;= ub</code> conditional. Therefore, only the symbolic execution path <em>inside</em> this conditional block terminates. The code outside of the conditional block continues to be symbolically executed, and subsequent assertions do not become vacuously <code>true</code>.</li>
 </ul>
-<p>Last modified: 2022-09-21 18:16:17 -0400 </p>
+<p>Last modified: 2022-09-21 18:26:09 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
