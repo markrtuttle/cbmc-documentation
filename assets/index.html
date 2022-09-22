@@ -72,17 +72,18 @@ XML Spec</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
 xml_spec.xsd</h2>
 <p>The<code>xml_spec.xsd</code> file is an XSD specification of the trace. You can validate an output xml file from CBMC using the following invocation:</p>
-<p><code>bash $ cbmc --xml-ui main.c | \ xmllint --schema xml_spec.xsd --xpath "cprover/result/goto_trace" -</code></p>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<div class="fragment"><div class="line">$ cbmc --xml-ui main.c | \</div>
+<div class="line">  xmllint --schema xml_spec.xsd --xpath &quot;cprover/result/goto_trace&quot; -</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
 xml_spec.tex</h2>
 <p>This is a LaTeX document describing the specification of the trace. It can be compiled to pdf using:</p>
-<p><code>bash $ pdflatex -shell-escape xml_spec.tex</code></p>
-<p>This requires:</p>
+<div class="fragment"><div class="line">$ pdflatex -shell-escape xml_spec.tex</div>
+</div><!-- fragment --><p>This requires:</p>
 <ul>
 <li>texlive-latex-base</li>
 <li>texlive-latex-extra (for minted package)</li>
 </ul>
-<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
+<p>Last modified: 2022-09-21 21:07:40 -0400 </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

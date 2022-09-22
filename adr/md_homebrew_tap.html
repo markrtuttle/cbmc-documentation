@@ -68,58 +68,66 @@ $(function() {
 <div class="textblock"><p>CBMC archives versions into a tap which you can use to quickly download and build various historical versions.</p>
 <p>The tap is available at <a href="https://github.com/diffblue/homebrew-cbmc">https://github.com/diffblue/homebrew-cbmc</a>.</p>
 <p>Any version installed from the tap will need to be built from source locally.</p>
-<h1><a class="anchor" id="autotoc_md0"></a>
+<h1><a class="anchor" id="autotoc_md1"></a>
 Managing &lt;tt&gt;brew tap&lt;/tt&gt;-based CBMC installations</h1>
 <ul>
-<li><p class="startli">Add the CBMC tap using the following command:</p>
-<p class="startli"><code>sh $ brew tap diffblue/cbmc</code></p>
-</li>
-<li><p class="startli">Install any of the available CBMC versions in the following manner:</p>
-<p class="startli"><code>sh $ brew install diffblue/cbmc/cbmc@5.54.0</code></p>
-</li>
-<li><p class="startli">To remove the version of CBMC installed you need to issue</p>
-<p class="startli"><code>sh $ brew remove diffblue/cbmc/cbmc@5.54.0</code></p>
-</li>
-<li><p class="startli">To remove the tap altogether, you need to issue</p>
-<p class="startli"><code>sh $ brew untap diffblue/cbmc</code></p>
-</li>
+<li>Add the CBMC tap using the following command:</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<div class="fragment"><div class="line">$ brew tap diffblue/cbmc</div>
+</div><!-- fragment --><ul>
+<li>Install any of the available CBMC versions in the following manner:</li>
+</ul>
+<div class="fragment"><div class="line">$ brew install diffblue/cbmc/cbmc@5.54.0</div>
+</div><!-- fragment --><ul>
+<li>To remove the version of CBMC installed you need to issue</li>
+</ul>
+<div class="fragment"><div class="line">$ brew remove diffblue/cbmc/cbmc@5.54.0</div>
+</div><!-- fragment --><ul>
+<li>To remove the tap altogether, you need to issue</li>
+</ul>
+<div class="fragment"><div class="line">$ brew untap diffblue/cbmc</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 CBMC maintainer instructions</h1>
 <ul>
-<li><p class="startli">You can clone the <a href="https://github.com/diffblue/homebrew-cbmc">CBMC tap</a> locally by issuing:</p>
-<p class="startli"><code>sh $ brew tap diffblue/cbmc</code></p>
-<p class="startli">That instruction is going to clone the above tap repository locally. Afterwards, you can proceed with installing the formulas present, edit them, etc.</p>
-<p class="startli">If you wish to set up a new tap for any reason, you can use <code>brew tap-new</code> like the following example:</p>
-<p class="startli"><code>sh $ brew tap-new &lt;developer&gt;/homebrew_cbmc</code></p>
-</li>
-<li><p class="startli">For any edit, the second step is to <code>cd</code> into the repository. To do that easily, it's best to ask Homebrew to give you the location of the repository:</p>
-<p class="startli"><code>sh $ cd $(brew --repo diffblue/cbmc)</code></p>
-</li>
-<li><p class="startli">You can extract versions of CBMC previously available in <code>homebrew/core</code> to the tap with the following instruction:</p>
-<p class="startli"><code>sh $ brew extract cbmc diffblue/cbmc --version=&lt;ver&gt;</code></p>
-<p class="startli">For example <code>$ brew extract cbmc diffblue/cbmc --version=5.54.0</code> will have as an end result a new file under <code>Formula/cbmc@5.54.0.rb</code> that will contain the formula that we had submitted for that version of CBMC in the <code>homebrew/core</code> repository.</p>
-</li>
-<li><p class="startli">If you want to edit a specific version formula, you can do that by issueing</p>
-<p class="startli"><code>sh $ brew edit cbmc@5.54.0</code></p>
-<p class="startli">with the appropriate version tag. This will open the formula on the default editor in your system to allow you to make changes.</p>
-<p class="startli">These changes are only going to be reflected locally - but you can <code>cd</code> to the repository, commit and then push to the tap (this is allowed only for people who have permission to push to the tap - mainly, the Diffblue open source team).</p>
-</li>
+<li>You can clone the <a href="https://github.com/diffblue/homebrew-cbmc">CBMC tap</a> locally by issuing:</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<div class="fragment"><div class="line">$ brew tap diffblue/cbmc</div>
+</div><!-- fragment --><p>That instruction is going to clone the above tap repository locally. Afterwards, you can proceed with installing the formulas present, edit them, etc.</p>
+<p>If you wish to set up a new tap for any reason, you can use <code>brew tap-new</code> like the following example:</p>
+<div class="fragment"><div class="line">$ brew tap-new &lt;developer&gt;/homebrew_cbmc</div>
+</div><!-- fragment --><ul>
+<li>For any edit, the second step is to <code>cd</code> into the repository. To do that easily, it's best to ask Homebrew to give you the location of the repository:</li>
+</ul>
+<div class="fragment"><div class="line">$ cd $(brew --repo diffblue/cbmc)</div>
+</div><!-- fragment --><ul>
+<li>You can extract versions of CBMC previously available in <code>homebrew/core</code> to the tap with the following instruction:</li>
+</ul>
+<div class="fragment"><div class="line">$ brew extract cbmc diffblue/cbmc --version=&lt;ver&gt;</div>
+</div><!-- fragment --><p>For example <code>$ brew extract cbmc diffblue/cbmc --version=5.54.0</code> will have as an end result a new file under <code>Formula/cbmc@5.54.0.rb</code> that will contain the formula that we had submitted for that version of CBMC in the <code>homebrew/core</code> repository.</p>
+<ul>
+<li>If you want to edit a specific version formula, you can do that by issueing</li>
+</ul>
+<div class="fragment"><div class="line">$ brew edit cbmc@5.54.0</div>
+</div><!-- fragment --><p>with the appropriate version tag. This will open the formula on the default editor in your system to allow you to make changes.</p>
+<p>These changes are only going to be reflected locally - but you can <code>cd</code> to the repository, commit and then push to the tap (this is allowed only for people who have permission to push to the tap - mainly, the Diffblue open source team).</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Notes</h1>
 <ul>
 <li>Bootstrapping the repository with <code>brew tap --new</code> created two github actions <code>.github/workflows/publish.yml</code> and <code>.github/workflows/tests.yml</code> which we are not using at the moment but could serve to make future automation easier.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Known Limitations</h1>
 <ul>
 <li>Different CBMC versions can co-exist in the same machine, but homebrew needs a symbolic link to be established because of how it manages the <code>$PATH</code> and installation directories for binaries.</li>
-<li><p class="startli">If already have a version of CBMC from the tap installed, and you want to install another version, then you need to take an extra step after installation to setup the appropriate symlinks by using the <code>brew link</code> instruction:</p>
-<p class="startli"><code>sh $ cbmc --version # version installed by brew 5.54.0 $ brew install diffblue/cbmc/cbmc@5.55.0 $ brew link --overwrite cbmc@5.55.0 $ cbmc --version 5.55.0</code></p>
-</li>
+<li>If already have a version of CBMC from the tap installed, and you want to install another version, then you need to take an extra step after installation to setup the appropriate symlinks by using the <code>brew link</code> instruction:</li>
 </ul>
-<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
+<div class="fragment"><div class="line">$ cbmc --version   # version installed by brew</div>
+<div class="line">5.54.0</div>
+<div class="line">$ brew install diffblue/cbmc/cbmc@5.55.0</div>
+<div class="line">$ brew link --overwrite cbmc@5.55.0</div>
+<div class="line">$ cbmc --version</div>
+<div class="line">5.55.0</div>
+</div><!-- fragment --><p>Last modified: 2022-09-21 21:07:40 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

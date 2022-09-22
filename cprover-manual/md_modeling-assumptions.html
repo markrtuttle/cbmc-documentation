@@ -66,37 +66,65 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="modeling-with-assumptions"></a>
 Modeling with Assumptions</h2>
 <p>Assumptions are used to restrict nondeterministic choices made by the program. As an example, suppose we wish to model a nondeterministic choice that returns a number from 1 to 100. There is no integer type with this range. We therefore use __CPROVER_assume to restrict the range of a nondeterministically chosen integer:</p>
-<p>```C unsigned int nondet_uint();</p>
-<p>unsigned int one_to_hundred() { unsigned int result=nondet_uint(); __CPROVER_assume(result&gt;=1 &amp;&amp; result&lt;=100); return result; } ```</p>
-<p>This function returns the desired integer from 1 to 100. You must ensure that the condition given as an assumption is actually satisfiable by some nondeterministic choice, otherwise the model checking step will pass vacuously.</p>
+<div class="fragment"><div class="line">unsigned int nondet_uint();</div>
+<div class="line"> </div>
+<div class="line">unsigned int one_to_hundred()</div>
+<div class="line">{</div>
+<div class="line">  unsigned int result=nondet_uint();</div>
+<div class="line">  __CPROVER_assume(result&gt;=1 &amp;&amp; result&lt;=100);</div>
+<div class="line">  return result;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This function returns the desired integer from 1 to 100. You must ensure that the condition given as an assumption is actually satisfiable by some nondeterministic choice, otherwise the model checking step will pass vacuously.</p>
 <p>Also note that assumptions are never retroactive. They only affect assertions (or other properties) that follow them in program order. This is best illustrated with an example. In the following fragment the assumption has no effect on the assertion, which means that the assertion will fail:</p>
-<p><code>C x=nondet_uint(); assert(x==100); __CPROVER_assume(x==100);</code></p>
-<p>Assumptions do restrict the search space, but only for assertions that follow. As an example, this program will pass:</p>
-<p>```C int main() { int x;</p>
-<p>__CPROVER_assume(x&gt;=1 &amp;&amp; x&lt;=100000);</p>
-<p>x*=-1;</p>
-<p>__CPROVER_assert(x&lt;0, "x is negative"); } ```</p>
-<p>Beware that nondeterminism cannot be used to obtain the effect of universal quantification in assumptions. For example:</p>
-<p>```C int main() { int a[10], x, y;</p>
-<p>x=nondet_int(); y=nondet_int(); __CPROVER_assume(x&gt;=0 &amp;&amp; x&lt;10 &amp;&amp; y&gt;=0 &amp;&amp; y&lt;10);</p>
-<p>__CPROVER_assume(a[x]&gt;=0);</p>
-<p>assert(a[y]&gt;=0); } ```</p>
-<p>This code fails, as there is a choice of x and y which results in a counterexample (any choice in which x and y are different).</p>
-<h2><a class="anchor" id="autotoc_md172"></a>
+<div class="fragment"><div class="line">x=nondet_uint();</div>
+<div class="line">assert(x==100);</div>
+<div class="line">__CPROVER_assume(x==100);</div>
+</div><!-- fragment --><p>Assumptions do restrict the search space, but only for assertions that follow. As an example, this program will pass:</p>
+<div class="fragment"><div class="line">int main() {</div>
+<div class="line">  int x;</div>
+<div class="line"> </div>
+<div class="line">  __CPROVER_assume(x&gt;=1 &amp;&amp; x&lt;=100000);</div>
+<div class="line"> </div>
+<div class="line">  x*=-1;</div>
+<div class="line"> </div>
+<div class="line">  __CPROVER_assert(x&lt;0, &quot;x is negative&quot;);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Beware that nondeterminism cannot be used to obtain the effect of universal quantification in assumptions. For example:</p>
+<div class="fragment"><div class="line">int main() {</div>
+<div class="line">  int a[10], x, y;</div>
+<div class="line"> </div>
+<div class="line">  x=nondet_int();</div>
+<div class="line">  y=nondet_int();</div>
+<div class="line">  __CPROVER_assume(x&gt;=0 &amp;&amp; x&lt;10 &amp;&amp; y&gt;=0 &amp;&amp; y&lt;10);</div>
+<div class="line"> </div>
+<div class="line">  __CPROVER_assume(a[x]&gt;=0);</div>
+<div class="line"> </div>
+<div class="line">  assert(a[y]&gt;=0);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This code fails, as there is a choice of x and y which results in a counterexample (any choice in which x and y are different).</p>
+<h2><a class="anchor" id="coverage"></a>
 Coverage</h2>
 <p>You can ask CBMC to give coverage information regarding <code>__CPROVER_assume</code> statements. This is useful when you need, for example, to check which assume statements may have led to an emptying of the search state space, resulting in <code>assert</code> statements being vaccuously passed.</p>
 <p>To use that invoke CBMC with the <code>--cover assume</code> option. For example, for a file:</p>
-<p>```c</p>
-<h1><a class="anchor" id="autotoc_md173"></a>
-include &lt;assert.h&gt;</h1>
-<p>int main() { int x; __CPROVER_assume(x &gt; 0); __CPROVER_assume(x &lt; 0); assert(0 == 1); } ```</p>
-<p>CBMC invoked with <code>cbmc --cover assume test.c</code> will report:</p>
-<p><code>sh [main.1] file assume_assert.c line 6 function main assert(false) before assume(x &gt; 0): SATISFIED [main.2] file assume_assert.c line 6 function main assert(false) after assume(x &gt; 0): SATISFIED [main.3] file assume_assert.c line 7 function main assert(false) before assume(x &lt; 0): SATISFIED [main.4] file assume_assert.c line 7 function main assert(false) after assume(x &lt; 0): FAILED</code></p>
-<p>When an <code>assert(false)</code> statement before the assume has the property status <code>SATISFIED</code>, but is followed by an <code>assert(false)</code> statement <em>after</em> the assume statement that has status <code>FAILED</code>, this is an indication that this specific assume statement (on the line reported) is one that is emptying the search space for model checking.</p>
-<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
+<div class="fragment"><div class="line">#include &lt;assert.h&gt;</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line">  int x;</div>
+<div class="line">  __CPROVER_assume(x &gt; 0);</div>
+<div class="line">  __CPROVER_assume(x &lt; 0);</div>
+<div class="line">  assert(0 == 1);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>CBMC invoked with <code>cbmc --cover assume test.c</code> will report:</p>
+<div class="fragment"><div class="line">[main.1] file assume_assert.c line 6 function main assert(false) before assume(x &gt; 0): SATISFIED</div>
+<div class="line">[main.2] file assume_assert.c line 6 function main assert(false) after assume(x &gt; 0): SATISFIED</div>
+<div class="line">[main.3] file assume_assert.c line 7 function main assert(false) before assume(x &lt; 0): SATISFIED</div>
+<div class="line">[main.4] file assume_assert.c line 7 function main assert(false) after assume(x &lt; 0): FAILED</div>
+</div><!-- fragment --><p>When an <code>assert(false)</code> statement before the assume has the property status <code>SATISFIED</code>, but is followed by an <code>assert(false)</code> statement <em>after</em> the assume statement that has status <code>FAILED</code>, this is an indication that this specific assume statement (on the line reported) is one that is emptying the search space for model checking.</p>
+<p>Last modified: 2022-09-21 21:07:40 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

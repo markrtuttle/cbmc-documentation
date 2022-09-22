@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_5fguide_40328',['user_guide',['../md_user_guide.html',1,'']]]
+  ['tutorials_40333',['Tutorials',['../tutorial.html',1,'cprover_documentation']]]
 ];

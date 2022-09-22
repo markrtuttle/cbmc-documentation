@@ -66,55 +66,89 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
-<h2><a class="anchor" id="autotoc_md134"></a>
+<h2><a class="anchor" id="goto-instrument"></a>
 Goto Instrument</h2>
 <p>This is a tool that implements a variety of instrumentation passes modifying a pre-existing GOTO binary, or rather producing the modified binary as output.</p>
-<p><code>sh $ goto-instrument in.gb out.gb &lt;instrumentation-options&gt;</code></p>
-<h3><a class="anchor" id="autotoc_md135"></a>
+<div class="fragment"><div class="line">$ goto-instrument in.gb out.gb &lt;instrumentation-options&gt;</div>
+</div><!-- fragment --><h3><a class="anchor" id="diagnosis-options"></a>
 Diagnosis Options</h3>
-<h3><a class="anchor" id="autotoc_md136"></a>
+<h3><a class="anchor" id="safety-checks"></a>
 Safety Checks</h3>
-<h3><a class="anchor" id="autotoc_md137"></a>
+<h3><a class="anchor" id="semantic-transformations"></a>
 Semantic Transformations</h3>
-<h4><a class="anchor" id="autotoc_md138"></a>
+<h4><a class="anchor" id="generate-function-body"></a>
 Generate Function Body</h4>
 <p>This transformation inserts implementation of functions without definition, i.e. a body. The user is allowed to choose the behavior to be implemented by those functions from a predefined list. The command-line option to select the behavior is <code>--generate-function-body-options &lt;option&gt;</code>.</p>
 <ul>
 <li><code>assert-false</code>: The body consists of a single command: <code>assert(0);</code></li>
 <li><code>assume-false</code>: The body consists of a single command: <code>assume(0);</code></li>
-<li><code>nondet-return</code>: The body only returns a non-deterministic value of it's return type.</li>
+<li><code>nondet-return</code>: The body only returns a non-deterministic value of it’s return type.</li>
 <li><code>assert-false-assume-false</code>: Two commands as above.</li>
 <li><code>havoc[,params:&lt;p-regex&gt;][,globals:&lt;g-regex&gt;]</code>: Assign non-deterministic values to the targets of pointer-to-non-constant parameters matching the <code>p-regex</code>, and non-constant globals matching the <code>g-regex</code> and then (in case of non-void function) returning as with <code>nondet-return</code>.</li>
 </ul>
-<p>Let's demonstrate using the havoc on a simple example:</p>
-<p>```C // main.c int global; const int c_global;</p>
-<p>int function(int *param, const int *c_param); ```</p>
-<p>Often we want to avoid overwriting internal symbols, i.e. those with <code>__</code> prefix, which is done using the pattern <code>(?!__)</code>.</p>
-<p>&lsquo;sh $ goto-cc main.c -o main.gb $ goto-instrument main.gb main-out.gb \ --generate-function-body-options 'havoc,params:(?!__).*,globals:(?!__).*&rsquo; \ &ndash;generate-funtion-body function`</p>
-<p>Leads to a binary equivalent to the following C code:</p>
-<p><code>C // main-mod.c int function(int *param, const int *c_param) { *param = nondet_int(); global = nondet_int(); return nondet_int(); }</code></p>
-<p>Which parameters should be modified can be specified either by a regular expression (as above) or by a semicolon-separated list of their numbers. For example <code>havoc,params:0;3;4</code> will assign non-deterministic values to the 1st, 4th, and 5th parameter.</p>
+<p>Let’s demonstrate using the havoc on a simple example:</p>
+<div class="fragment"><div class="line">// main.c</div>
+<div class="line">int global;</div>
+<div class="line">const int c_global;</div>
+<div class="line"> </div>
+<div class="line">int function(int *param, const int *c_param);</div>
+</div><!-- fragment --><p>Often we want to avoid overwriting internal symbols, i.e.&#160;those with <code>__</code> prefix, which is done using the pattern <code>(?!__)</code>.</p>
+<div class="fragment"><div class="line">$ goto-cc main.c -o main.gb</div>
+<div class="line">$ goto-instrument main.gb main-out.gb \</div>
+<div class="line">  --generate-function-body-options &#39;havoc,params:(?!__).*,globals:(?!__).*&#39; \</div>
+<div class="line">  --generate-funtion-body function</div>
+</div><!-- fragment --><p>Leads to a binary equivalent to the following C code:</p>
+<div class="fragment"><div class="line">// main-mod.c</div>
+<div class="line">int function(int *param, const int *c_param) {</div>
+<div class="line">  *param = nondet_int();</div>
+<div class="line">  global = nondet_int();</div>
+<div class="line">  return nondet_int();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Which parameters should be modified can be specified either by a regular expression (as above) or by a semicolon-separated list of their numbers. For example <code>havoc,params:0;3;4</code> will assign non-deterministic values to the 1st, 4th, and 5th parameter.</p>
 <p>Finally, the user can also request different implementation for a number of call-sites of a single function. The option <code>--generate-havocing-body</code> inserts new functions for selected call-sites and replaces the calls to the origin function with calls to the respective new functions.</p>
-<p>```C // main.c int function(int *first, int *second, int *third);</p>
-<p>int main() { int a = 10; int b = 10; int c = 10;</p>
-<p>function(&amp;a, &amp;b, &amp;c); function(&amp;a, &amp;b, &amp;c); } ```</p>
-<p>The user can specify different behavior for each call-site as follows:</p>
-<p>&lsquo;$ goto-cc main.c -o main.gb $ goto-instrument main.gb main-mod.gb \ --generate-havocing-body 'function,1,params:0;2,2,params:1&rsquo;`</p>
-<p>Results in a binary equivalent to:</p>
-<p>```C // main-mod.c int function_1(int *first, int *second, int *third) { *first = nondet_int(); *third = nondet_int(); }</p>
-<p>int function_2(int *first, int *second, int *third) { *second = nondet_int(); }</p>
-<p>int main() { int a = 10; int b = 10; int c = 10;</p>
-<p>function_1(&amp;a, &amp;b, &amp;c); function_2(&amp;a, &amp;b, &amp;c); } ```</p>
-<p>Note that only parameters of pointer type can be havoc(ed) and CBMC will produce an error report if given a parameter number associated with a non-pointer parameter. Requesting to havoc a parameter with a number higher than the number of parameters a given function takes will also results in an error report.</p>
-<h3><a class="anchor" id="autotoc_md139"></a>
+<div class="fragment"><div class="line">// main.c</div>
+<div class="line">int function(int *first, int *second, int *third);</div>
+<div class="line"> </div>
+<div class="line">int main() {</div>
+<div class="line">  int a = 10;</div>
+<div class="line">  int b = 10;</div>
+<div class="line">  int c = 10;</div>
+<div class="line"> </div>
+<div class="line">  function(&amp;a, &amp;b, &amp;c);</div>
+<div class="line">  function(&amp;a, &amp;b, &amp;c);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The user can specify different behavior for each call-site as follows: </p><pre class="fragment">$ goto-cc main.c -o main.gb
+$ goto-instrument main.gb  main-mod.gb \
+  --generate-havocing-body 'function,1,params:0;2,2,params:1'
+</pre><p>Results in a binary equivalent to:</p>
+<div class="fragment"><div class="line">// main-mod.c</div>
+<div class="line">int function_1(int *first, int *second, int *third) {</div>
+<div class="line">  *first = nondet_int();</div>
+<div class="line">  *third = nondet_int();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int function_2(int *first, int *second, int *third) {</div>
+<div class="line">  *second = nondet_int();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int main() {</div>
+<div class="line">  int a = 10;</div>
+<div class="line">  int b = 10;</div>
+<div class="line">  int c = 10;</div>
+<div class="line"> </div>
+<div class="line">  function_1(&amp;a, &amp;b, &amp;c);</div>
+<div class="line">  function_2(&amp;a, &amp;b, &amp;c);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note that only parameters of pointer type can be havoc(ed) and CBMC will produce an error report if given a parameter number associated with a non-pointer parameter. Requesting to havoc a parameter with a number higher than the number of parameters a given function takes will also results in an error report.</p>
+<h3><a class="anchor" id="loop-transformations"></a>
 Loop Transformations</h3>
-<h3><a class="anchor" id="autotoc_md140"></a>
+<h3><a class="anchor" id="memory-model-instrumentations"></a>
 Memory Model Instrumentations</h3>
-<h3><a class="anchor" id="autotoc_md141"></a>
+<h3><a class="anchor" id="slicing"></a>
 Slicing</h3>
-<h3><a class="anchor" id="autotoc_md142"></a>
+<h3><a class="anchor" id="further-transformations"></a>
 Further Transformations</h3>
-<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
+<p>Last modified: 2022-09-21 21:07:40 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -1,32 +1,6 @@
 var modules =
 [
-    [ "analyses", "group__analyses.html", [
-      [ "Initial setup", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md80", null ],
-      [ "Whirlwind tour of the tools", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md81", [
-        [ "Compiling with <tt>goto-cc</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md82", null ],
-        [ "Viewing goto-programs", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md83", null ]
-      ] ],
-      [ "Learning about goto-programs", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md84", [
-        [ "First steps with <tt>goto-instrument</tt>", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md85", null ],
-        [ "Goto-program basics", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_howto.html#autotoc_md86", null ]
-      ] ],
-      [ "Usage", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_memory-analyzer.html#autotoc_md87", [
-        [ "Motivation", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_restrict-function-pointer.html#autotoc_md94", null ],
-        [ "Example", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_restrict-function-pointer.html#autotoc_md95", null ],
-        [ "Loading from file", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_architectural_restrict-function-pointer.html#autotoc_md96", null ]
-      ] ],
-      [ "Automatic Program Verification with SATABS", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md97", [
-        [ "Requirements", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md98", null ],
-        [ "Choosing and Installing a Model Checker", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md99", null ],
-        [ "Installing SATABS", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md100", null ],
-        [ "Requirements", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md101", null ],
-        [ "Working with Claims", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md102", null ],
-        [ "Further Reading", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md103", null ],
-        [ "Sound Abstractions", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md104", null ],
-        [ "Spurious Counterexamples", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md105", null ],
-        [ "Automatic Refinement", "md__home_runner_work_cbmc-documentation_cbmc-documentation_doc_satabs-user-manual.html#autotoc_md106", null ]
-      ] ]
-    ] ],
+    [ "analyses", "group__analyses.html", null ],
     [ "ansi-c", "group__ansi-c.html", null ],
     [ "assembler", "group__assembler.html", null ],
     [ "big-int", "group__big-int.html", null ],
@@ -49,6 +23,7 @@ var modules =
     [ "solvers", "group__solvers.html", null ],
     [ "util", "group__util.html", null ],
     [ "xmllang", "group__xmllang.html", null ],
+    [ "_hidden", "group__module__hidden.html", "group__module__hidden" ],
     [ "janalyzer", "group__janalyzer.html", null ],
     [ "java_bytecode", "group__java__bytecode.html", null ],
     [ "jbmc", "group__jbmc.html", null ],

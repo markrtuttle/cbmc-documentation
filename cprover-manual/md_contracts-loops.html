@@ -66,7 +66,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
-<h1><a class="anchor" id="autotoc_md73"></a>
+<h1><a class="anchor" id="loop-contracts"></a>
 Loop Contracts</h1>
 <p>CBMC offers support for loop contracts, which includes three basic clauses:</p>
 <ul>
@@ -76,45 +76,92 @@ Loop Contracts</h1>
 </ul>
 <p>These clauses formally describe an abstraction of a loop for the purpose of a proof. CBMC also provides a series of built-in constructs to aid writing loop contracts (e.g., <em>history variables</em> and <em>quantifiers</em>).</p>
 <p>When a function contract is checked, the tool automatically havocs all static variables of the program (to start the analysis in an arbitrary state), in the same way as using <code>--nondet-static</code> would do. If one wishes not to havoc some static variables, then <code>--nondet-static-exclude name-of-variable</code> can be used.</p>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="overview"></a>
 Overview</h2>
 <p>Consider an implementation of the <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">binary search algorithm</a> below.</p>
-<p>```c</p>
-<h1><a class="anchor" id="autotoc_md75"></a>
-include &lt;assert.h&gt;</h1>
-<h1><a class="anchor" id="autotoc_md76"></a>
-include &lt;stdlib.h&gt;</h1>
-<h1><a class="anchor" id="autotoc_md77"></a>
-include &lt;stdbool.h&gt;</h1>
-<h1><a class="anchor" id="autotoc_md78"></a>
-define NOT_FOUND (-1)</h1>
-<p>int binary_search(int val, int *buf, int size) { if(size &lt;= 0 \|\| buf == NULL) return NOT_FOUND;</p>
-<p>int lb = 0, ub = size - 1; int mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1;</p>
-<p>while(lb &lt;= ub) { if(buf[mid] == val) break; if(buf[mid] &lt; val) lb = mid + 1; else ub = mid - 1; mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1; } return lb &gt; ub ? NOT_FOUND : mid; }</p>
-<p>int main() { int val, size; int *buf = size &gt;= 0 ? malloc(size * sizeof(int)) : NULL;</p>
-<p>int idx = binary_search(val, buf, size); if(idx != NOT_FOUND) assert(buf[idx] == val); } ```</p>
-<p>The function stores a lower bound <code>lb</code> and an upper bound <code>ub</code> initialized to the bounds on the buffer <code>buf</code>, i.e., to <code>0</code> and <code>size-1</code> respectively. In each iteration, the midpoint <code>mid</code> is compared against the target value <code>val</code> and in case of a mismatch either the lower half or the upper half of the buffer is searched recursively. A developer might be interested in verifying two high-level properties on the loop on all possible buffers <code>buf</code> and values <code>val</code>: 1. an out-of-bound access should never occur (at <code>buf[mid]</code> lookup) 2. the loop must eventually always terminate</p>
-<p>To prove the first (memory-safety) property, we may declare <a class="el" href="md_contracts-invariants.html">*loop invariants*</a> that must be preserved across all loop iterations. In this case, two invariant clauses would together imply that <code>buf[mid]</code> lookup is always safe. The first invariant clause would establish that the bounds (<code>lb</code> and <code>ub</code>) are always valid: <code>c __CPROVER_loop_invariant(0L &lt;= lb &amp;&amp; lb - 1L &lt;= ub &amp;&amp; ub &lt; size)</code> Note that in the second conjunct, the <code>lb - 1 == ub</code> case is possible when the value <code>val</code> is not found in the buffer <code>buf</code>. The second invariant clause would establish that the midpoint <code>mid</code> is always a valid index. In this particular case we can in fact establish a stronger invariant, that <code>mid</code> is indeed always the midpoint of <code>lb</code> and <code>ub</code> in every iteration: <code>c __CPROVER_loop_invariant(mid == (lb + ub) / 2L)</code></p>
-<p>To prove the second (termination) property, we may declare a <a class="el" href="md_contracts-decreases.html">*decreases clause*</a> that indicates a bounded numeric measure which must monotonically decrease with each loop iteration. In this case, it is easy to see that <code>lb</code> and <code>ub</code> are approaching closer together with each iteration, since either <code>lb</code> must increase or <code>ub</code> must decrease in each iteration. <code>c __CPROVER_decreases(ub - lb)</code></p>
-<p>The loop together with all its contracts is shown below.</p>
-<p>```c</p>
-<h1><a class="anchor" id="autotoc_md79"></a>
-include &lt;assert.h&gt;</h1>
-<h1><a class="anchor" id="autotoc_md80"></a>
-include &lt;stdlib.h&gt;</h1>
-<h1><a class="anchor" id="autotoc_md81"></a>
-include &lt;stdbool.h&gt;</h1>
-<h1><a class="anchor" id="autotoc_md82"></a>
-define NOT_FOUND (-1)</h1>
-<p>int binary_search(int val, int *buf, int size) { if(size &lt;= 0 \|\| buf == NULL) return NOT_FOUND;</p>
-<p>int lb = 0, ub = size - 1; int mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1;</p>
-<p>while(lb &lt;= ub) __CPROVER_loop_invariant(0L &lt;= lb &amp;&amp; lb - 1L &lt;= ub &amp;&amp; ub &lt; size) __CPROVER_loop_invariant(mid == ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1) __CPROVER_decreases(ub - lb) { if(buf[mid] == val) break; if(buf[mid] &lt; val) lb = mid + 1; else ub = mid - 1; mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1; } return lb &gt; ub ? NOT_FOUND : mid; }</p>
-<p>int main() { int val, size; int *buf = size &gt;= 0 ? malloc(size * sizeof(int)) : NULL;</p>
-<p>int idx = binary_search(val, buf, size); if(idx != NOT_FOUND) assert(buf[idx] == val); } ```</p>
-<p>With CBMC we can now generate an unbounded proof using these contracts:</p>
-<p><code>sh goto-cc -o binary_search.goto binary_search.c goto-instrument --apply-loop-contracts binary_search.goto binary_search_inst.goto cbmc binary_search_inst.goto --pointer-check --bounds-check --signed-overflow-check</code></p>
-<p>The first command compiles the program to a GOTO binary, next we instrument the loops using the annotated loop contracts, and finally we verify the instrumented GOTO binary with desired checks.</p>
-<h2><a class="anchor" id="autotoc_md83"></a>
+<div class="fragment"><div class="line">#include &lt;assert.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
+<div class="line">#include &lt;stdbool.h&gt;</div>
+<div class="line"> </div>
+<div class="line">#define NOT_FOUND (-1)</div>
+<div class="line"> </div>
+<div class="line">int binary_search(int val, int *buf, int size)</div>
+<div class="line">{</div>
+<div class="line">  if(size &lt;= 0 || buf == NULL) return NOT_FOUND;</div>
+<div class="line"> </div>
+<div class="line">  int lb = 0, ub = size - 1;</div>
+<div class="line">  int mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1;</div>
+<div class="line"> </div>
+<div class="line">  while(lb &lt;= ub)</div>
+<div class="line">  {</div>
+<div class="line">     if(buf[mid] == val) break;</div>
+<div class="line">     if(buf[mid] &lt; val)</div>
+<div class="line">       lb = mid + 1;</div>
+<div class="line">     else</div>
+<div class="line">       ub = mid - 1;</div>
+<div class="line">     mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1;</div>
+<div class="line">  }</div>
+<div class="line">  return lb &gt; ub ? NOT_FOUND : mid;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int main() {</div>
+<div class="line">  int val, size;</div>
+<div class="line">  int *buf = size &gt;= 0 ? malloc(size * sizeof(int)) : NULL;</div>
+<div class="line"> </div>
+<div class="line">  int idx = binary_search(val, buf, size);</div>
+<div class="line">  if(idx != NOT_FOUND)</div>
+<div class="line">    assert(buf[idx] == val);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The function stores a lower bound <code>lb</code> and an upper bound <code>ub</code> initialized to the bounds on the buffer <code>buf</code>, i.e., to <code>0</code> and <code>size-1</code> respectively. In each iteration, the midpoint <code>mid</code> is compared against the target value <code>val</code> and in case of a mismatch either the lower half or the upper half of the buffer is searched recursively. A developer might be interested in verifying two high-level properties on the loop on all possible buffers <code>buf</code> and values <code>val</code>: 1. an out-of-bound access should never occur (at <code>buf[mid]</code> lookup) 2. the loop must eventually always terminate</p>
+<p>To prove the first (memory-safety) property, we may declare <a class="el" href="md_contracts-invariants.html">*loop invariants*</a> that must be preserved across all loop iterations. In this case, two invariant clauses would together imply that <code>buf[mid]</code> lookup is always safe. The first invariant clause would establish that the bounds (<code>lb</code> and <code>ub</code>) are always valid:</p>
+<div class="fragment"><div class="line">__CPROVER_loop_invariant(0L &lt;= lb &amp;&amp; lb - 1L &lt;= ub &amp;&amp; ub &lt; size)</div>
+</div><!-- fragment --><p>Note that in the second conjunct, the <code>lb - 1 == ub</code> case is possible when the value <code>val</code> is not found in the buffer <code>buf</code>. The second invariant clause would establish that the midpoint <code>mid</code> is always a valid index. In this particular case we can in fact establish a stronger invariant, that <code>mid</code> is indeed always the midpoint of <code>lb</code> and <code>ub</code> in every iteration:</p>
+<div class="fragment"><div class="line">__CPROVER_loop_invariant(mid == (lb + ub) / 2L)</div>
+</div><!-- fragment --><p>To prove the second (termination) property, we may declare a <a class="el" href="md_contracts-decreases.html">*decreases clause*</a> that indicates a bounded numeric measure which must monotonically decrease with each loop iteration. In this case, it is easy to see that <code>lb</code> and <code>ub</code> are approaching closer together with each iteration, since either <code>lb</code> must increase or <code>ub</code> must decrease in each iteration.</p>
+<div class="fragment"><div class="line">__CPROVER_decreases(ub - lb)</div>
+</div><!-- fragment --><p>The loop together with all its contracts is shown below.</p>
+<div class="fragment"><div class="line">#include &lt;assert.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
+<div class="line">#include &lt;stdbool.h&gt;</div>
+<div class="line"> </div>
+<div class="line">#define NOT_FOUND (-1)</div>
+<div class="line"> </div>
+<div class="line">int binary_search(int val, int *buf, int size)</div>
+<div class="line">{</div>
+<div class="line">  if(size &lt;= 0 || buf == NULL) return NOT_FOUND;</div>
+<div class="line"> </div>
+<div class="line">  int lb = 0, ub = size - 1;</div>
+<div class="line">  int mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1;</div>
+<div class="line"> </div>
+<div class="line">  while(lb &lt;= ub)</div>
+<div class="line">  __CPROVER_loop_invariant(0L &lt;= lb &amp;&amp; lb - 1L &lt;= ub &amp;&amp; ub &lt; size)</div>
+<div class="line">  __CPROVER_loop_invariant(mid == ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1)</div>
+<div class="line">  __CPROVER_decreases(ub - lb)</div>
+<div class="line">  {</div>
+<div class="line">     if(buf[mid] == val) break;</div>
+<div class="line">     if(buf[mid] &lt; val)</div>
+<div class="line">       lb = mid + 1;</div>
+<div class="line">     else</div>
+<div class="line">       ub = mid - 1;</div>
+<div class="line">     mid = ((unsigned int)lb + (unsigned int)ub) &gt;&gt; 1;</div>
+<div class="line">  }</div>
+<div class="line">  return lb &gt; ub ? NOT_FOUND : mid;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int main() {</div>
+<div class="line">  int val, size;</div>
+<div class="line">  int *buf = size &gt;= 0 ? malloc(size * sizeof(int)) : NULL;</div>
+<div class="line"> </div>
+<div class="line">  int idx = binary_search(val, buf, size);</div>
+<div class="line">  if(idx != NOT_FOUND)</div>
+<div class="line">    assert(buf[idx] == val);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>With CBMC we can now generate an unbounded proof using these contracts:</p>
+<div class="fragment"><div class="line">goto-cc -o binary_search.goto binary_search.c</div>
+<div class="line">goto-instrument --apply-loop-contracts binary_search.goto binary_search_inst.goto</div>
+<div class="line">cbmc binary_search_inst.goto --pointer-check --bounds-check --signed-overflow-check</div>
+</div><!-- fragment --><p>The first command compiles the program to a GOTO binary, next we instrument the loops using the annotated loop contracts, and finally we verify the instrumented GOTO binary with desired checks.</p>
+<h2><a class="anchor" id="additional-resources"></a>
 Additional Resources</h2>
 <ul>
 <li><a class="el" href="md_contracts-assigns.html">Assigns Clause</a></li>
@@ -123,7 +170,7 @@ Additional Resources</h2>
 <li><a class="el" href="md_contracts-invariants.html">Invariant Clause</a></li>
 <li><a class="el" href="md_contracts-quantifiers.html">Quantifiers</a></li>
 </ul>
-<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
+<p>Last modified: 2022-09-21 21:07:40 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

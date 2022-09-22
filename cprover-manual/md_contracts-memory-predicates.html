@@ -66,43 +66,94 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href=".">CPROVER Manual TOC</a></p>
-<h1><a class="anchor" id="autotoc_md84"></a>
+<h1><a class="anchor" id="memory-predicates"></a>
 Memory Predicates</h1>
-<h3><a class="anchor" id="autotoc_md85"></a>
+<h3><a class="anchor" id="syntax"></a>
 Syntax</h3>
-<p><code>c bool __CPROVER_is_fresh(void *p, size_t size);</code></p>
-<p>To specify memory footprint we use a special function called <code>__CPROVER_is_fresh</code>. The meaning of <code>__CPROVER_is_fresh</code> is that we are borrowing a pointer from the external environment (in a precondition), or returning it to the calling context (in a postcondition).</p>
-<h3><a class="anchor" id="autotoc_md86"></a>
+<div class="fragment"><div class="line">bool __CPROVER_is_fresh(void *p, size_t size);</div>
+</div><!-- fragment --><p>To specify memory footprint we use a special function called <code>__CPROVER_is_fresh</code>. The meaning of <code>__CPROVER_is_fresh</code> is that we are borrowing a pointer from the external environment (in a precondition), or returning it to the calling context (in a postcondition).</p>
+<h3><a class="anchor" id="parameters"></a>
 Parameters</h3>
-<p><code>__CPROVER_is_fresh</code> takes two arguments: a pointer and an allocation size. The first argument is the pointer to be checked for "freshness" (i.e., not previously allocated), and the second is the expected size in bytes for the memory available at the pointer.</p>
-<h3><a class="anchor" id="autotoc_md87"></a>
+<p><code>__CPROVER_is_fresh</code> takes two arguments: a pointer and an allocation size. The first argument is the pointer to be checked for “freshness” (i.e., not previously allocated), and the second is the expected size in bytes for the memory available at the pointer.</p>
+<h3><a class="anchor" id="return-value"></a>
 Return Value</h3>
 <p>It returns a <code>bool</code> value, indicating whether the pointer is fresh.</p>
-<h3><a class="anchor" id="autotoc_md88"></a>
+<h3><a class="anchor" id="semantics"></a>
 Semantics</h3>
 <p>To illustrate the semantics for <code>__CPROVER_is_fresh</code>, consider the following implementation of <code>sum</code> function.</p>
-<p>```c int *err_signal; // Global variable</p>
-<p>void sum(const uint32_t a, const uint32_t b, uint32_t* out) __CPROVER_requires(__CPROVER_is_fresh(out, sizeof(*out))) __CPROVER_ensures(__CPROVER_is_fresh(err_signal, sizeof(*err_signal))) __CPROVER_assigns(*out, err_signal) { const uint64_t result = ((uint64_t) a) + ((uint64_t) b); err_signal = malloc(sizeof(*err_signal)); if (!err_signal) return; if (result &gt; UINT32_MAX) *err_signal = FAILURE; *out = (uint32_t) result; *err_signal = SUCCESS; } ```</p>
-<h4><a class="anchor" id="autotoc_md89"></a>
+<div class="fragment"><div class="line">int *err_signal; // Global variable</div>
+<div class="line"> </div>
+<div class="line">void sum(const uint32_t a, const uint32_t b, uint32_t* out)</div>
+<div class="line">__CPROVER_requires(__CPROVER_is_fresh(out, sizeof(*out)))</div>
+<div class="line">__CPROVER_ensures(__CPROVER_is_fresh(err_signal, sizeof(*err_signal)))</div>
+<div class="line">__CPROVER_assigns(*out, err_signal)</div>
+<div class="line">{</div>
+<div class="line">  const uint64_t result = ((uint64_t) a) + ((uint64_t) b);</div>
+<div class="line">  err_signal = malloc(sizeof(*err_signal));</div>
+<div class="line">  if (!err_signal) return;</div>
+<div class="line">  if (result &gt; UINT32_MAX) *err_signal = FAILURE;</div>
+<div class="line">  *out = (uint32_t) result;</div>
+<div class="line">  *err_signal = SUCCESS;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4><a class="anchor" id="enforcement"></a>
 Enforcement</h4>
 <p>When checking the contract abstracts a function a <code>__CPROVER_is_fresh</code> in a <em>requires</em> clause will cause fresh memory to be allocated. In an <em>ensures</em> clause it will check that memory was freshly allocated.</p>
-<p>```c int *err_signal; // Global variable</p>
-<p>int __CPROVER_contracts_original_sum(const uint32_t a, const uint32_t b, uint32_t* out) { <br  />
- const uint64_t result = ((uint64_t) a) + ((uint64_t) b); err_signal = malloc(sizeof(*err_signal)); if (!err_signal) return; if (result &gt; UINT32_MAX) *err_signal = FAILURE; *out = (uint32_t) result; *err_signal = SUCCESS; }</p>
-<p>/* Function Contract Enforcement */ int sum(const uint32_t a, const uint32_t b, uint32_t* out) { __CPROVER_assume(__CPROVER_is_fresh(out, sizeof(*out))); // Assumes out is freshly allocated int return_value_sum = __CPROVER_contracts_original_sum(a, b, out); __CPROVER_assert(__CPROVER_is_fresh(err_signal, sizeof(*err_signal)), "Check ensures clause"); return return_value_sum; } ```</p>
-<h4><a class="anchor" id="autotoc_md90"></a>
+<div class="fragment"><div class="line">int *err_signal; // Global variable</div>
+<div class="line"> </div>
+<div class="line">int __CPROVER_contracts_original_sum(const uint32_t a, const uint32_t b, uint32_t* out)</div>
+<div class="line">{    </div>
+<div class="line">  const uint64_t result = ((uint64_t) a) + ((uint64_t) b);</div>
+<div class="line">  err_signal = malloc(sizeof(*err_signal));</div>
+<div class="line">  if (!err_signal) return;</div>
+<div class="line">  if (result &gt; UINT32_MAX) *err_signal = FAILURE;</div>
+<div class="line">  *out = (uint32_t) result;</div>
+<div class="line">  *err_signal = SUCCESS;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">/* Function Contract Enforcement */</div>
+<div class="line">int sum(const uint32_t a, const uint32_t b, uint32_t* out)</div>
+<div class="line">{</div>
+<div class="line">  __CPROVER_assume(__CPROVER_is_fresh(out, sizeof(*out))); // Assumes out is freshly allocated</div>
+<div class="line">  int return_value_sum = __CPROVER_contracts_original_sum(a, b, out);</div>
+<div class="line">  __CPROVER_assert(__CPROVER_is_fresh(err_signal, sizeof(*err_signal)), &quot;Check ensures clause&quot;);</div>
+<div class="line">  return return_value_sum;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4><a class="anchor" id="replacement"></a>
 Replacement</h4>
 <p>In our example, consider that a function <code>foo</code> may call <code>sum</code>.</p>
-<p>```c int *err_signal; // Global variable</p>
-<p>int foo() { uint32_t a; uint32_t b; uint32_t out; sum(a, b, &amp;out); return *err_signal; } ```</p>
-<p>When using a contract as an abstraction in place of a call to the function a <code>__CPROVER_is_fresh</code> in a <em>requires</em> clause will check that the argument supplied is fresh and <code>__CPROVER_is_fresh</code> in an <em>ensures</em> clause will result in a fresh malloc.</p>
-<p>```c int *err_signal; // Global variable</p>
-<p>int foo() { uint32_t a; uint32_t b; uint32_t out;</p>
-<p>/* Function Contract Replacement */ /* Precondition */ __CPROVER_assert(__CPROVER_is_fresh(out, sizeof(*out)), "Check requires clause");</p>
-<p>/* Writable Set */ *(&amp;out) = nondet_uint32_t(); err_signal = nondet_int_pointer();</p>
-<p>/* Postconditions */ __CPROVER_assume(__CPROVER_is_fresh(err_signal, sizeof(*err_signal))); // Assumes out is allocated</p>
-<p>return *err_signal; } ```</p>
-<p>Last modified: 2022-09-21 19:02:04 -0400 </p>
+<div class="fragment"><div class="line">int *err_signal; // Global variable</div>
+<div class="line"> </div>
+<div class="line">int foo()</div>
+<div class="line">{</div>
+<div class="line">  uint32_t a;</div>
+<div class="line">  uint32_t b;</div>
+<div class="line">  uint32_t out;</div>
+<div class="line">  sum(a, b, &amp;out);</div>
+<div class="line">  return *err_signal;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>When using a contract as an abstraction in place of a call to the function a <code>__CPROVER_is_fresh</code> in a <em>requires</em> clause will check that the argument supplied is fresh and <code>__CPROVER_is_fresh</code> in an <em>ensures</em> clause will result in a fresh malloc.</p>
+<div class="fragment"><div class="line">int *err_signal; // Global variable</div>
+<div class="line"> </div>
+<div class="line">int foo()</div>
+<div class="line">{</div>
+<div class="line">  uint32_t a;</div>
+<div class="line">  uint32_t b;</div>
+<div class="line">  uint32_t out;</div>
+<div class="line">    </div>
+<div class="line">  /* Function Contract Replacement */</div>
+<div class="line">  /* Precondition */</div>
+<div class="line">  __CPROVER_assert(__CPROVER_is_fresh(out, sizeof(*out)), &quot;Check requires clause&quot;);</div>
+<div class="line">    </div>
+<div class="line">  /* Writable Set */</div>
+<div class="line">  *(&amp;out) = nondet_uint32_t();</div>
+<div class="line">  err_signal = nondet_int_pointer();</div>
+<div class="line">    </div>
+<div class="line">  /* Postconditions */</div>
+<div class="line">  __CPROVER_assume(__CPROVER_is_fresh(err_signal, sizeof(*err_signal))); // Assumes out is allocated</div>
+<div class="line"> </div>
+<div class="line">  return *err_signal;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Last modified: 2022-09-21 21:07:40 -0400 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
