@@ -1,24 +1,23 @@
 <map id="/home/runner/work/cbmc&#45;documentation/cbmc&#45;documentation/src/cpp/cpp_using.h" name="/home/runner/work/cbmc&#45;documentation/cbmc&#45;documentation/src/cpp/cpp_using.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,272,61"/>
 <area shape="rect" id="node2" href="$cpp__name_8h.html" title=" " alt="" coords="88,109,189,136"/>
-<area shape="rect" id="node3" href="$expr_8h.html" title=" " alt="" coords="270,184,357,211"/>
-<area shape="rect" id="node11" href="$src_2util_2invariant_8h.html" title=" " alt="" coords="139,632,231,659"/>
-<area shape="rect" id="node4" href="$as__const_8h.html" title=" " alt="" coords="669,707,760,733"/>
-<area shape="rect" id="node5" href="$deprecate_8h.html" title=" " alt="" coords="184,259,283,285"/>
-<area shape="rect" id="node6" href="$type_8h.html" title=" " alt="" coords="614,259,677,285"/>
-<area shape="rect" id="node19" href="$validation__mode_8h.html" title=" " alt="" coords="83,408,226,435"/>
-<area shape="rect" id="node20" href="$validate__types_8h.html" title=" " alt="" coords="133,333,264,360"/>
-<area shape="rect" id="node21" href="$validate__expressions_8h.html" title=" " alt="" coords="307,259,479,285"/>
-<area shape="rect" id="node22" title=" " alt="" coords="503,259,590,285"/>
-<area shape="rect" id="node7" href="$source__location_8h.html" title=" " alt="" coords="577,483,713,509"/>
-<area shape="rect" id="node17" href="$validate_8h.html" title=" " alt="" coords="339,333,426,360"/>
-<area shape="rect" id="node8" href="$irep_8h.html" title=" " alt="" coords="483,557,541,584"/>
-<area shape="rect" id="node9" title=" " alt="" coords="264,707,323,733"/>
-<area shape="rect" id="node15" href="$optional_8h.html" title=" " alt="" coords="815,557,902,584"/>
-<area shape="rect" id="node10" title=" " alt="" coords="551,632,614,659"/>
-<area shape="rect" id="node13" href="$irep__ids_8h.html" title=" " alt="" coords="639,632,724,659"/>
-<area shape="rect" id="node14" href="$forward__list__as__map_8h.html" title=" " alt="" coords="358,632,527,659"/>
-<area shape="rect" id="node12" title=" " alt="" coords="114,707,206,733"/>
-<area shape="rect" id="node16" title=" " alt="" coords="799,632,950,659"/>
-<area shape="rect" id="node18" href="$exception__utils_8h.html" title=" " alt="" coords="309,408,443,435"/>
+<area shape="rect" id="node3" href="$expr_8h.html" title=" " alt="" coords="209,184,295,211"/>
+<area shape="rect" id="node10" href="$src_2util_2invariant_8h.html" title=" " alt="" coords="73,632,165,659"/>
+<area shape="rect" id="node4" href="$as__const_8h.html" title=" " alt="" coords="603,707,693,733"/>
+<area shape="rect" id="node5" href="$type_8h.html" title=" " alt="" coords="473,259,535,285"/>
+<area shape="rect" id="node18" href="$validation__mode_8h.html" title=" " alt="" coords="65,408,207,435"/>
+<area shape="rect" id="node19" href="$validate__types_8h.html" title=" " alt="" coords="115,333,245,360"/>
+<area shape="rect" id="node20" href="$validate__expressions_8h.html" title=" " alt="" coords="166,259,338,285"/>
+<area shape="rect" id="node21" title=" " alt="" coords="362,259,449,285"/>
+<area shape="rect" id="node6" href="$source__location_8h.html" title=" " alt="" coords="436,483,572,509"/>
+<area shape="rect" id="node16" href="$validate_8h.html" title=" " alt="" coords="321,333,407,360"/>
+<area shape="rect" id="node7" href="$irep_8h.html" title=" " alt="" coords="416,557,475,584"/>
+<area shape="rect" id="node8" title=" " alt="" coords="197,707,256,733"/>
+<area shape="rect" id="node14" href="$optional_8h.html" title=" " alt="" coords="749,557,835,584"/>
+<area shape="rect" id="node9" title=" " alt="" coords="485,632,547,659"/>
+<area shape="rect" id="node12" href="$irep__ids_8h.html" title=" " alt="" coords="572,632,657,659"/>
+<area shape="rect" id="node13" href="$forward__list__as__map_8h.html" title=" " alt="" coords="291,632,461,659"/>
+<area shape="rect" id="node11" title=" " alt="" coords="47,707,139,733"/>
+<area shape="rect" id="node15" title=" " alt="" coords="733,632,883,659"/>
+<area shape="rect" id="node17" href="$exception__utils_8h.html" title=" " alt="" coords="291,408,424,435"/>
 </map>

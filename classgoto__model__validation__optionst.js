@@ -7,8 +7,6 @@ var classgoto__model__validation__optionst =
     [ "goto_model_validation_optionst", "classgoto__model__validation__optionst.html#a9bd6a420f8b13ee5915d4845dbf693a3", null ],
     [ "goto_model_validation_optionst", "classgoto__model__validation__optionst.html#a66c52eb696f7477ca70c2f7ec4bab173", null ],
     [ "set_all_flags", "classgoto__model__validation__optionst.html#ada762270ca5b6b40104240482ced6bd5", null ],
-    [ "check_called_functions", "classgoto__model__validation__optionst.html#a790e6884dbc25c7eabbdd30992b4b5d5", null ],
     [ "check_returns_removed", "classgoto__model__validation__optionst.html#ad44b76406073a44355c6e649bc65c052", null ],
-    [ "entry_point_exists", "classgoto__model__validation__optionst.html#ae0be206b21f3a448dad167d7ba5f8065", null ],
-    [ "function_pointer_calls_removed", "classgoto__model__validation__optionst.html#abf2135d8affe2bd653017a9f5dfb3f4d", null ]
+    [ "entry_point_exists", "classgoto__model__validation__optionst.html#ae0be206b21f3a448dad167d7ba5f8065", null ]
 ];

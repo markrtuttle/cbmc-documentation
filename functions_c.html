@@ -534,6 +534,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="classdereference__exprt.html#a02f682cad8f409bb6dd1f9cba9675308">dereference_exprt</a>
 , <a class="el" href="classequal__exprt.html#a0fa224b6616c2f24166a2e0b065f9d9a">equal_exprt</a>
 , <a class="el" href="classexprt.html#a80beb900443eeaae5220b394af06da0d">exprt</a>
+, <a class="el" href="classfind__first__set__exprt.html#aca98e63a27bcc784527c66bf16269065">find_first_set_exprt</a>
 , <a class="el" href="classfixedbv__typet.html#ad7e9bd61cba610362a46181c3ea98522">fixedbv_typet</a>
 , <a class="el" href="classfloatbv__typet.html#a8008e0fcf2527ed6029ea01295d182d1">floatbv_typet</a>
 , <a class="el" href="classfunction__pointer__obeys__contract__exprt.html#a8d2c12e254dcff21c43edb13ebbbd1a0">function_pointer_obeys_contract_exprt</a>
@@ -586,9 +587,6 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>check_call_sequencet()
 : <a class="el" href="classcheck__call__sequencet.html#a1d54b1112c649c4ea61b276d1b4408fe">check_call_sequencet</a>
 </li>
-<li>check_called_functions
-: <a class="el" href="classgoto__model__validation__optionst.html#a790e6884dbc25c7eabbdd30992b4b5d5">goto_model_validation_optionst</a>
-</li>
 <li>check_class_cast()
 : <a class="el" href="classjava__bytecode__instrumentt.html#aca0970c414ae79b7e14b2f9af9732615">java_bytecode_instrumentt</a>
 </li>
@@ -612,6 +610,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>check_frame_conditions_function()
 : <a class="el" href="classcode__contractst.html#a3d27bda0b7c2ca8427b40343129d221a">code_contractst</a>
+</li>
+<li>check_history_expr_return_value()
+: <a class="el" href="classc__typecheck__baset.html#a05e157cfcaf3396341bccbc967e7cb2c">c_typecheck_baset</a>
 </li>
 <li>check_inclusion_assignment()
 : <a class="el" href="classinstrument__spec__assignst.html#ade6c7179cc745650ae999323d414b2e5">instrument_spec_assignst</a>
@@ -1832,10 +1833,10 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classconstant__index__ranget.html#a88a38fba49083aed1403f2503ba74f6e">constant_index_ranget</a>
 </li>
 <li>constant_interval_exprt()
-: <a class="el" href="classconstant__interval__exprt.html#acbecadfac828ab4ea83696c2092fed7e">constant_interval_exprt</a>
+: <a class="el" href="classconstant__interval__exprt.html#a2adb9210f889a304d0d2c0d8bf64fe65">constant_interval_exprt</a>
 </li>
 <li>constant_pointer_abstract_objectt()
-: <a class="el" href="classconstant__pointer__abstract__objectt.html#af0aca55185340274f3603c7d66c13327">constant_pointer_abstract_objectt</a>
+: <a class="el" href="classconstant__pointer__abstract__objectt.html#aac320b806530905977b98d52de12373d">constant_pointer_abstract_objectt</a>
 </li>
 <li>constant_pointer_abstract_pointert
 : <a class="el" href="classconstant__pointer__abstract__objectt.html#a4b30511f998c13f6687af7a932ef0949">constant_pointer_abstract_objectt</a>
@@ -1887,7 +1888,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="structsymex__configt.html#a7be7cd7de9a9519cdedfccbd0735c58e">symex_configt</a>
 </li>
 <li>constant_propagator_ait()
-: <a class="el" href="classconstant__propagator__ait.html#a1617b6490006a2156b10257057e5de01">constant_propagator_ait</a>
+: <a class="el" href="classconstant__propagator__ait.html#ace6fc29b796506646c038b97beafaea9">constant_propagator_ait</a>
 </li>
 <li>constant_propagator_domaint
 : <a class="el" href="classconstant__propagator__ait.html#adb9e8cfc48b7e4c07266a0dc397f2537">constant_propagator_ait</a>
@@ -2002,7 +2003,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="structc__wranglert_1_1contract__clauset.html#af93aa1ad41c1a81815fcd7585e432793">c_wranglert::contract_clauset</a>
 , <a class="el" href="structc__wranglert_1_1loop__invariantt.html#a4d37a9c26c7b6dbc0d54e540a77c4e30">c_wranglert::loop_invariantt</a>
 , <a class="el" href="classformat__textt.html#a69553582e92ec295fa0f8471e425cced">format_textt</a>
-, <a class="el" href="classrefined__string__exprt.html#ae113496ac4b028a659133110d921d37c">refined_string_exprt</a>
+, <a class="el" href="classrefined__string__exprt.html#abb5032990b8d91c8d0d9421df32d66f1">refined_string_exprt</a>
 </li>
 <li>context_abstract_object_ptrt
 : <a class="el" href="classcontext__abstract__objectt.html#a1ab159a0a1f3342b9c38b1b7bf1151d2">context_abstract_objectt</a>
@@ -2105,8 +2106,8 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>convert()
 : <a class="el" href="classcpp__declarator__convertert.html#aaf3f55e56481b7bfebe79030b8a3ac12">cpp_declarator_convertert</a>
-, <a class="el" href="classcpp__typecheckt.html#aa6996c3a9cff168bdce60daa75896183">cpp_typecheckt</a>
-, <a class="el" href="classexpr2ct.html#ac016add9a0d643ba311f449ed36a001b">expr2ct</a>
+, <a class="el" href="classcpp__typecheckt.html#a02a0f2eae666ae14b436f20b694a1208">cpp_typecheckt</a>
+, <a class="el" href="classexpr2ct.html#a556df0d1173c0fea1c48bce88cf9fb44">expr2ct</a>
 , <a class="el" href="classexpr2javat.html#ad4716007a4d53681fad44ce209fe6260">expr2javat</a>
 , <a class="el" href="classexpr2stlt.html#a38fbb943dbc55d648a7946e6bd973502">expr2stlt</a>
 , <a class="el" href="classfloat__bvt.html#a8d424487b5116961f7913f99c3997180">float_bvt</a>
@@ -2216,6 +2217,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>convert_binary_overflow()
 : <a class="el" href="classboolbvt.html#aa405a9f6360c1bceec89e681ecbbe4ab">boolbvt</a>
+</li>
+<li>convert_binding()
+: <a class="el" href="classexpr2ct.html#a30c4c868b660fb7ffc7bd1f992a6e51d">expr2ct</a>
 </li>
 <li>convert_bitreverse()
 : <a class="el" href="classboolbvt.html#af65e2176205dcf5a85b06484278435f4">boolbvt</a>
@@ -2599,7 +2603,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>convert_function()
 : <a class="el" href="classcpp__typecheckt.html#a4effaa28a3658ebc484bd94547d8ffe6">cpp_typecheckt</a>
-, <a class="el" href="classexpr2ct.html#aeca40e5076a30fc2a01cb1acd99632be">expr2ct</a>
+, <a class="el" href="classexpr2ct.html#a81f0c03e9977eaa2bb161626a44193dc">expr2ct</a>
 , <a class="el" href="classgoto__convert__functionst.html#ab9bce3e32ded5d0e7f80665fcc7fb63d">goto_convert_functionst</a>
 </li>
 <li>convert_function_application()
@@ -2721,7 +2725,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classjava__bytecode__convert__methodt.html#ab06c07cc7a9d804af7a30bfd3f56f951">java_bytecode_convert_methodt</a>
 </li>
 <li>convert_index()
-: <a class="el" href="classboolbvt.html#a21ca3c8ae10a75bc8063183d524d5627">boolbvt</a>
+: <a class="el" href="classboolbvt.html#a1483d831b860a77459facebef2b81295">boolbvt</a>
 , <a class="el" href="classexpr2ct.html#a8f0ba2c6285cbbd0267fc4bbbcbcd0b6">expr2ct</a>
 , <a class="el" href="classsmt2__convt.html#a92a941e1bd7f11f4ff90101f40edb443">smt2_convt</a>
 </li>
@@ -3066,7 +3070,6 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>convert_quantifier()
 : <a class="el" href="classboolbvt.html#a5df3a1617336f6f1773b4aafb71fcece">boolbvt</a>
-, <a class="el" href="classexpr2ct.html#a1e598fda4399208ab8252df5356f3baf">expr2ct</a>
 </li>
 <li>convert_rec()
 : <a class="el" href="classexpr2cppt.html#ad094e0c40ecb5909d2896dcfc1d35ae2">expr2cppt</a>
@@ -3118,7 +3121,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classexpr2ct.html#a6efc74465552004bb07716b64e3afcc8">expr2ct</a>
 </li>
 <li>convert_single_method()
-: <a class="el" href="classjava__bytecode__languaget.html#a7ca64b6efbe16dbcfeaf9152849311f8">java_bytecode_languaget</a>
+: <a class="el" href="classjava__bytecode__languaget.html#ad383ff8c19c4382d5b347e0896591e35">java_bytecode_languaget</a>
 </li>
 <li>convert_single_method_code()
 : <a class="el" href="classjava__bytecode__languaget.html#aa6a05e35d0848beb9a4ad1181ef74394">java_bytecode_languaget</a>
@@ -3142,7 +3145,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>convert_struct()
 : <a class="el" href="classboolbvt.html#af538026be24266b5a0651000b3638e00">boolbvt</a>
 , <a class="el" href="classexpr2cppt.html#a13b97f7ea84aae1da9aabe47f0b00b47">expr2cppt</a>
-, <a class="el" href="classexpr2ct.html#a7fd46343d1636b1c0e84cad6e4981dcc">expr2ct</a>
+, <a class="el" href="classexpr2ct.html#a4643851e5a6dab7242641c8078c65718">expr2ct</a>
 , <a class="el" href="classexpr2javat.html#a51ed3ff483c24ec51267dee379f409f7">expr2javat</a>
 , <a class="el" href="classsmt2__convt.html#a8d9df7391d5704fcb054d9b0ad5ca03c">smt2_convt</a>
 </li>
@@ -3150,7 +3153,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classexpr2ct.html#aa2cefadd42584009281702a8f8f25f93">expr2ct</a>
 </li>
 <li>convert_struct_type()
-: <a class="el" href="classexpr2ct.html#af55a5adbc56082c24751c9422ff2ab82">expr2ct</a>
+: <a class="el" href="classexpr2ct.html#ac63c4f965d62325ffa6cb05897d15898">expr2ct</a>
 </li>
 <li>convert_sub_tree()
 : <a class="el" href="classjson__irept.html#aa39b37078cf8cc72ef016bfd65bf5a3f">json_irept</a>
@@ -3255,7 +3258,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classgoto__convertt.html#a0effc3273dec39d5ea51f5e3c5060a14">goto_convertt</a>
 </li>
 <li>convert_with()
-: <a class="el" href="classboolbvt.html#a0326e0dfdcdd592422359881e00b503e">boolbvt</a>
+: <a class="el" href="classboolbvt.html#a8c8bcc6125cfbf510cbe8775ce0c9b94">boolbvt</a>
 , <a class="el" href="classexpr2ct.html#ac7e358e4f9f19f3012ed53e0b83e1784">expr2ct</a>
 , <a class="el" href="classsmt2__convt.html#aaff22045e19cd027407a320a893c90b0">smt2_convt</a>
 </li>
@@ -3341,7 +3344,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classansi__c__parsert.html#ade3366e548369bc6cac530712f27e977">ansi_c_parsert</a>
 </li>
 <li>copy_on_write_pointeet()
-: <a class="el" href="classcopy__on__write__pointeet.html#a19aff0e06f26040e44de116a2e0942e4">copy_on_write_pointeet&lt; Num &gt;</a>
+: <a class="el" href="classcopy__on__write__pointeet.html#add899a54738ad27487b27af1346c0793">copy_on_write_pointeet&lt; Num &gt;</a>
 </li>
 <li>copy_on_writet()
 : <a class="el" href="classcopy__on__writet.html#ae82f27875fce9d68ba9daed712da6336">copy_on_writet&lt; T &gt;</a>
@@ -3361,8 +3364,8 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="classqdimacs__cnft.html#ac28e35be742da463c222db6b52c6d021">qdimacs_cnft</a>
 </li>
 <li>copy_to_operands()
-: <a class="el" href="classexprt.html#a14d87756ddc8a5338e77896eadd2cd8e">exprt</a>
-, <a class="el" href="classnullary__exprt.html#aa416c741b6fced481b2770f1f3613574">nullary_exprt</a>
+: <a class="el" href="classexprt.html#a477ecb575e3644ca2670135b62f98c34">exprt</a>
+, <a class="el" href="classnullary__exprt.html#a563da9b40caa8c20b8a22977eef6e9e5">nullary_exprt</a>
 </li>
 <li>copy_to_subtypes()
 : <a class="el" href="classtype__with__subtypest.html#a7b486d915935b68050c04815be04fcd2">type_with_subtypest</a>
@@ -3404,7 +3407,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classunsigned__union__find.html#aae6b10fe8cd19efdde4295dceb04e9cc">unsigned_union_find</a>
 </li>
 <li>count_trailing_zeros_exprt()
-: <a class="el" href="classcount__trailing__zeros__exprt.html#a8b2d867d3716dcf7a162310e527db551">count_trailing_zeros_exprt</a>
+: <a class="el" href="classcount__trailing__zeros__exprt.html#a012ed38bfe06370574bf9e2d53fc675b">count_trailing_zeros_exprt</a>
 </li>
 <li>count_transitions()
 : <a class="el" href="classautomatont.html#abab060bbcacdd1ee6e4152da57b6288f">automatont</a>
@@ -3531,7 +3534,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="classcpp__typecheckt.html#ad55d0076713713eadbb236c191fa0495">cpp_typecheckt</a>
 </li>
 <li>cpp_declaratort()
-: <a class="el" href="classcpp__declaratort.html#afe01c9e10a92adca7ba20a44124d86e1">cpp_declaratort</a>
+: <a class="el" href="classcpp__declaratort.html#a833177eebc6fa328e24966785745be98">cpp_declaratort</a>
 </li>
 <li>cpp_destructor()
 : <a class="el" href="classcpp__typecheckt.html#a25595acfb054b90292660ebc5045c829">cpp_typecheckt</a>
@@ -3561,7 +3564,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classcpp__namespace__spect.html#adcb8b0f41346863ff908d76c94cc110e">cpp_namespace_spect</a>
 </li>
 <li>cpp_namet()
-: <a class="el" href="classcpp__namet.html#ace0e0aae633bfa95ceb827b831532599">cpp_namet</a>
+: <a class="el" href="classcpp__namet.html#acf9fcb113eeac52e7fd611fbc0723bea">cpp_namet</a>
 </li>
 <li>cpp_new_initializer()
 : <a class="el" href="classgoto__convertt.html#a9e579178386be1f335bf2c0431c01d8c">goto_convertt</a>
@@ -3619,7 +3622,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="classcpp__typecheck__resolvet.html#ae9ffe18191416908e1e7c011f5240861">cpp_typecheck_resolvet</a>
 </li>
 <li>cpp_typecheck_fargst()
-: <a class="el" href="classcpp__typecheck__fargst.html#adf1eda8e66ec2055e627ac427953f5fb">cpp_typecheck_fargst</a>
+: <a class="el" href="classcpp__typecheck__fargst.html#a5707dc464de3e7e904547a407f181078">cpp_typecheck_fargst</a>
 </li>
 <li>cpp_typecheck_resolvet()
 : <a class="el" href="classcpp__typecheck__resolvet.html#a4c3ed560021e6b353cc42f03298b39bf">cpp_typecheck_resolvet</a>
@@ -3749,6 +3752,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>cstate_ptrt
 : <a class="el" href="classai__baset.html#af632d2e7db7cfac347d8e1bcdc592723">ai_baset</a>
 , <a class="el" href="classai__storage__baset.html#ad4cca4d9d076e47c414233a74403ae2e">ai_storage_baset</a>
+</li>
+<li>cstrlen_exprt()
+: <a class="el" href="classcstrlen__exprt.html#a6e5941ea6adba5a40f21601c23f6f80c">cstrlen_exprt</a>
 </li>
 <li>ctokenitt()
 : <a class="el" href="classctokenitt.html#ae697733832d1aca8c1159216adb598a7">ctokenitt</a>

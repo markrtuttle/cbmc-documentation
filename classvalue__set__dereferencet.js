@@ -11,7 +11,6 @@ var classvalue__set__dereferencet =
     [ "memory_model", "classvalue__set__dereferencet.html#af577c9637101f50a1c022c4a88d00662", null ],
     [ "memory_model_bytes", "classvalue__set__dereferencet.html#a12a8eda24dfd0858c882b59a7a7b8fcc", null ],
     [ "should_ignore_value", "classvalue__set__dereferencet.html#ad6e0025b95a47b716e14a9030e024b91", null ],
-    [ "try_add_offset_to_indices", "classvalue__set__dereferencet.html#ac7e79694735a938962ea716d64397d97", null ],
     [ "dereference_callback", "classvalue__set__dereferencet.html#a8a9f4d92aa0adac0fec7704d766b9d2f", null ],
     [ "exclude_null_derefs", "classvalue__set__dereferencet.html#a261f7ea0a71f3efbb3762fbb0f1b8b05", null ],
     [ "language_mode", "classvalue__set__dereferencet.html#aa9ac68328b327df86d02fcde8c901790", null ],

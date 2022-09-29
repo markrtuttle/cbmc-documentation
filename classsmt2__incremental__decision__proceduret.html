@@ -231,6 +231,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a152f406b699263ad8984a6c4ef0fa4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">As part of the decision procedure's overall translation of CBMCs <code>exprt</code>s into SMT terms, some subexpressions are substituted for separate SMT functions.  <a href="classsmt2__incremental__decision__proceduret.html#a152f406b699263ad8984a6c4ef0fa4a0">More...</a><br /></td></tr>
 <tr class="separator:a152f406b699263ad8984a6c4ef0fa4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf55f9e2e824609152ad2dfc5835df61"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="irep_8h.html#a1ad4faefa9ca542d481e74be9cc01c2c">irep_idt</a>, <a class="el" href="classsmt__identifier__termt.html">smt_identifier_termt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmt2__incremental__decision__proceduret.html#aaf55f9e2e824609152ad2dfc5835df61">identifier_table</a></td></tr>
+<tr class="memdesc:aaf55f9e2e824609152ad2dfc5835df61"><td class="mdescLeft">&#160;</td><td class="mdescRight">This maps from the unsorted/untyped string/symbol for the identifiers which we have declared in SMT solver to the corresponding sorted/typed <code><a class="el" href="classsmt__identifier__termt.html" title="Stores identifiers in unescaped and unquoted form.">smt_identifier_termt</a></code>.  <a href="classsmt2__incremental__decision__proceduret.html#aaf55f9e2e824609152ad2dfc5835df61">More...</a><br /></td></tr>
 <tr class="separator:aaf55f9e2e824609152ad2dfc5835df61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf66dddd4bdb0cd0030e3c492ffa0971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__tracking_8h.html#a82f38e2f57d09b07c6804208e832cb8c">smt_object_mapt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmt2__incremental__decision__proceduret.html#aaf66dddd4bdb0cd0030e3c492ffa0971">object_map</a></td></tr>
 <tr class="memdesc:aaf66dddd4bdb0cd0030e3c492ffa0971"><td class="mdescLeft">&#160;</td><td class="mdescRight">This map is used to track object related state.  <a href="classsmt2__incremental__decision__proceduret.html#aaf66dddd4bdb0cd0030e3c492ffa0971">More...</a><br /></td></tr>
@@ -1083,7 +1084,10 @@ template&lt;typename t_exprt &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00141">141</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
+<p>This maps from the unsorted/untyped string/symbol for the identifiers which we have declared in SMT solver to the corresponding sorted/typed <code><a class="el" href="classsmt__identifier__termt.html" title="Stores identifiers in unescaped and unquoted form.">smt_identifier_termt</a></code>. </p>
+<p>This enables type checking the parse trees of responses received back from the solver. It is required because without the definitive sorts we would need to attempt to infer the sorts of identifiers from the surrounding terms which would be a looser check with a more complex implementation. </p>
+
+<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00148">148</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1215,7 @@ template&lt;typename t_exprt &gt; </div>
 <p>This map is used to track object related state. </p>
 <p>See documentation in <a class="el" href="object__tracking_8h.html">object_tracking.h</a> for details. </p>
 
-<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00144">144</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00151">151</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1242,7 @@ template&lt;typename t_exprt &gt; </div>
 <p>The size of each object is separately defined as a pre-solving step. </p>
 <p><code>object_size_defined[object ID]</code> is set to true for objects where the size has been defined. This is used to avoid defining the size of the same object multiple times in the case where multiple rounds of solving are carried out. </p>
 
-<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00150">150</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00157">157</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
 
 </div>
 </div>
@@ -1265,7 +1269,7 @@ template&lt;typename t_exprt &gt; </div>
 <p>Implementation of the SMT formula for the object size function. </p>
 <p>This is stateful because it depends on the configuration of the number of object bits and how many bits wide the size type is configured to be. </p>
 
-<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00154">154</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00161">161</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1295,7 @@ template&lt;typename t_exprt &gt; </div>
 
 <p>Precalculated type sizes used for pointer arithmetic. </p>
 
-<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00156">156</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="smt2__incremental__decision__procedure_8h_source.html#l00163">163</a> of file <a class="el" href="smt2__incremental__decision__procedure_8h_source.html">smt2_incremental_decision_procedure.h</a>.</p>
 
 </div>
 </div>

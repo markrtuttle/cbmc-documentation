@@ -23,12 +23,12 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="free__form__cmdline_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="load__java__class_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-52.5 200,-52.5 200,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/unit/testing&#45;utils/free_form</text>
-<text text-anchor="middle" x="100" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_cmdline.cpp</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/jbmc/unit/java&#45;testing&#45;utils</text>
+<text text-anchor="middle" x="100" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/load_java_class.cpp</text>
 </a>
 </g>
 </g>
@@ -41,12 +41,12 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="load__java__class_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="free__form__cmdline_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="218,-0.5 218,-52.5 418,-52.5 418,-0.5 218,-0.5"/>
 <text text-anchor="start" x="226" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/cbmc</text>
 <text text-anchor="start" x="226" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;documentation/cbmc&#45;documentation</text>
-<text text-anchor="start" x="226" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/jbmc/unit/java&#45;testing&#45;utils</text>
-<text text-anchor="middle" x="318" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/load_java_class.cpp</text>
+<text text-anchor="start" x="226" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/unit/testing&#45;utils/free_form</text>
+<text text-anchor="middle" x="318" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_cmdline.cpp</text>
 </a>
 </g>
 </g>

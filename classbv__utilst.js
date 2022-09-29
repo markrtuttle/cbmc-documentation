@@ -61,7 +61,7 @@ var classbv__utilst =
     [ "shift", "classbv__utilst.html#ac1353b18f0f5b513617d29e82c453154", null ],
     [ "shift", "classbv__utilst.html#a971a1cf1b68239674b28889818fdbcbe", null ],
     [ "sign_bit", "classbv__utilst.html#a5f5953aec35c4d86c138fe6d81821118", null ],
-    [ "sign_extension", "classbv__utilst.html#a8d892e04b031d8e5d58d916a70d4bdd0", null ],
+    [ "sign_extension", "classbv__utilst.html#af40320556789c5486c9eb4a508710fbc", null ],
     [ "signed_divider", "classbv__utilst.html#a74aa1c5f63c43f8acf44bd827a104751", null ],
     [ "signed_less_than", "classbv__utilst.html#a04210bf02f6a8361b9f9f267a94f6c47", null ],
     [ "signed_multiplier", "classbv__utilst.html#a7b81b231e2b8dd71c27a6cbb2d2088c7", null ],
@@ -74,7 +74,7 @@ var classbv__utilst =
     [ "verilog_bv_has_x_or_z", "classbv__utilst.html#acafee38a096ea699587999c43c0b12ae", null ],
     [ "verilog_bv_normal_bits", "classbv__utilst.html#a4bebcc118758252242c0e85cdec8e2ef", null ],
     [ "wallace_tree", "classbv__utilst.html#a41116a3032159fa84dfaaa9e382611f0", null ],
-    [ "zero_extension", "classbv__utilst.html#a63202c10fea01b9b814a8ef996378af6", null ],
-    [ "zeros", "classbv__utilst.html#afd20bc505af66f0dbfa2901294e7725f", null ],
+    [ "zero_extension", "classbv__utilst.html#a6a6b1df9bee31a938d9ac1784e4f2381", null ],
+    [ "zeros", "classbv__utilst.html#ae986aefedce9f329365ce0fc2c66096e", null ],
     [ "prop", "classbv__utilst.html#aef0f752b25a57504702825fb537e0fa9", null ]
 ];

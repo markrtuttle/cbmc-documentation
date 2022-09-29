@@ -119,11 +119,14 @@ $(document).ready(function(){initNavTree('classvector__typet.html',''); initResi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a52d3c8f34dfead9e59f1ac5bece23a61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvector__typet.html#a52d3c8f34dfead9e59f1ac5bece23a61">vector_typet</a> (const <a class="el" href="classtypet.html">typet</a> &amp;_subtype, const <a class="el" href="classconstant__exprt.html">constant_exprt</a> &amp;_size)</td></tr>
-<tr class="separator:a52d3c8f34dfead9e59f1ac5bece23a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01dd543d94e17e62b38ba8aed65f0a05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvector__typet.html#a01dd543d94e17e62b38ba8aed65f0a05">vector_typet</a> (<a class="el" href="classtypet.html">typet</a> <a class="el" href="classvector__typet.html#adb32d62ccb2158739abc4127bcabe06b">index_type</a>, <a class="el" href="classtypet.html">typet</a> <a class="el" href="classvector__typet.html#ad382a3b88f4f2a79391ec112868db54a">element_type</a>, <a class="el" href="classconstant__exprt.html">constant_exprt</a> <a class="el" href="classvector__typet.html#aab0ed47eb7936114e49965e4b1a4a4bc">size</a>)</td></tr>
+<tr class="separator:a01dd543d94e17e62b38ba8aed65f0a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb32d62ccb2158739abc4127bcabe06b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtypet.html">typet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvector__typet.html#adb32d62ccb2158739abc4127bcabe06b">index_type</a> () const</td></tr>
 <tr class="memdesc:adb32d62ccb2158739abc4127bcabe06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of any index expression into an instance of this type.  <a href="classvector__typet.html#adb32d62ccb2158739abc4127bcabe06b">More...</a><br /></td></tr>
 <tr class="separator:adb32d62ccb2158739abc4127bcabe06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81603ace84b5e56c334f850fc19677f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtypet.html">typet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvector__typet.html#a81603ace84b5e56c334f850fc19677f5">index_type_nonconst</a> ()</td></tr>
+<tr class="memdesc:a81603ace84b5e56c334f850fc19677f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of any index expression into an instance of this type.  <a href="classvector__typet.html#a81603ace84b5e56c334f850fc19677f5">More...</a><br /></td></tr>
+<tr class="separator:a81603ace84b5e56c334f850fc19677f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad382a3b88f4f2a79391ec112868db54a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classtypet.html">typet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvector__typet.html#ad382a3b88f4f2a79391ec112868db54a">element_type</a> () const</td></tr>
 <tr class="memdesc:ad382a3b88f4f2a79391ec112868db54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the elements of the vector.  <a href="classvector__typet.html#ad382a3b88f4f2a79391ec112868db54a">More...</a><br /></td></tr>
 <tr class="separator:ad382a3b88f4f2a79391ec112868db54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,10 +332,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The vector type. </p>
 <p>Used to represent the short vectors used by CPU instruction sets such as MMX, SSE and AVX. They all provide registers that are something like 8 x int32, for example, and corresponding operations that operate element-wise on their operand vectors. Compared to <a class="el" href="classarray__typet.html">array_typet</a>, <a class="el" href="classvector__typet.html" title="The vector type.">vector_typet</a> has a fixed size whereas <a class="el" href="classarray__typet.html" title="Arrays with given size.">array_typet</a> has no element-wise operators. Note that <code><a class="el" href="remove__vector_8h.html">remove_vector.h</a></code> removes this data type by compilation into arrays. </p>
 
-<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l00995">995</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l01007">1007</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a52d3c8f34dfead9e59f1ac5bece23a61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52d3c8f34dfead9e59f1ac5bece23a61">&#9670;&nbsp;</a></span>vector_typet()</h2>
+<a id="a01dd543d94e17e62b38ba8aed65f0a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01dd543d94e17e62b38ba8aed65f0a05">&#9670;&nbsp;</a></span>vector_typet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,14 +343,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">vector_typet::vector_typet </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classtypet.html">typet</a> &amp;&#160;</td>
-          <td class="paramname"><em>_subtype</em>, </td>
+          <td class="paramtype"><a class="el" href="classtypet.html">typet</a>&#160;</td>
+          <td class="paramname"><em>index_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classconstant__exprt.html">constant_exprt</a> &amp;&#160;</td>
-          <td class="paramname"><em>_size</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtypet.html">typet</a>&#160;</td>
+          <td class="paramname"><em>element_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classconstant__exprt.html">constant_exprt</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -357,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="std__types_8cpp_source.html#l00241">241</a> of file <a class="el" href="std__types_8cpp_source.html">std_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="std__types_8cpp_source.html#l00247">247</a> of file <a class="el" href="std__types_8cpp_source.html">std_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The type of the elements of the vector. </p>
 <p>This method is preferred over .<a class="el" href="classtype__with__subtypet.html#a73479f67c82551dd96a93d78b2e06f33">subtype()</a>, which will eventually be deprecated. </p>
 
-<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l01014">1014</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l01034">1034</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +427,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The type of the elements of the vector. </p>
 <p>This method is preferred over .<a class="el" href="classtype__with__subtypet.html#a73479f67c82551dd96a93d78b2e06f33">subtype()</a>, which will eventually be deprecated. </p>
 
-<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l01006">1006</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l01026">1026</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
 
 </div>
 </div>
@@ -439,7 +448,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The type of any index expression into an instance of this type. </p>
 
-<p class="definition">Definition at line <a class="el" href="std__types_8cpp_source.html#l00247">247</a> of file <a class="el" href="std__types_8cpp_source.html">std_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="std__types_8cpp_source.html#l00257">257</a> of file <a class="el" href="std__types_8cpp_source.html">std_types.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a81603ace84b5e56c334f850fc19677f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81603ace84b5e56c334f850fc19677f5">&#9670;&nbsp;</a></span>index_type_nonconst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtypet.html">typet</a>&amp; vector_typet::index_type_nonconst </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The type of any index expression into an instance of this type. </p>
+<p>This is added as a comment now for backwards compatibility, but will eventually be the first subtype. </p>
+
+<p class="definition">Definition at line <a class="el" href="std__types_8h_source.html#l01018">1018</a> of file <a class="el" href="std__types_8h_source.html">std_types.h</a>.</p>
 
 </div>
 </div>
@@ -475,7 +514,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="std__types_8cpp_source.html#l00253">253</a> of file <a class="el" href="std__types_8cpp_source.html">std_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="std__types_8cpp_source.html#l00269">269</a> of file <a class="el" href="std__types_8cpp_source.html">std_types.cpp</a>.</p>
 
 </div>
 </div>
